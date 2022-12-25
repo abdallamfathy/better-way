@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
-import Loader from "./Loader"
+import Loader from "./Loader";
+import Hero from "./Hero";
 
-export { Navbar, Loader };
+export { Navbar, Loader , Hero};

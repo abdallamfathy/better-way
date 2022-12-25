@@ -1,11 +1,11 @@
 import React from 'react'
-import {Navbar} from './index'
+import {Navbar , Hero} from './index'
 
 const Home = () => {
   return (
     <>
         <Navbar/>
-
+        <Hero/>
     </>
   )
 }
