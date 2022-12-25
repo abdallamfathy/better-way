@@ -1,5 +1,6 @@
-import {Navbar , Loader} from './components'
 import {useEffect , useState} from "react"
+import Home from "./components/Home"
+import Loader from "./components/Loader"
 
 function App() {
   const [loading , setLoading] = useState(true)
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <>
-      {!loading && <Navbar/>}
+      {!loading && <Home/>}
       {loading && <Loader/>}
     </>
   )
