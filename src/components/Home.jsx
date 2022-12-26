@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar , Hero, Clients, TopSales, Latest} from './index'
+import {Navbar , Hero, Clients, TopSales, Latest, Footer} from './index'
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
         <Clients/>
         <TopSales/>
         <Latest/>
+        <Footer/>
     </>
   )
 }
