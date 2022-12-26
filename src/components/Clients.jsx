@@ -11,7 +11,7 @@ const Clients = () => {
     <>
       <div className='mt-20 mx-72 '>
         <div className='flex justify-center items-center my-20'>
-          <h2 className='text-white text-6xl font-bold'>شركائنا</h2>
+          <h2 className='text-[#E8F6EF] text-6xl font-bold'>شركائنا</h2>
         </div>
         <div className='flex justify-center items-center gap-6'>
           <div>

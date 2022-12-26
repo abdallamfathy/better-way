@@ -13,7 +13,7 @@ return (
     <>
         <div className='mt-36 mx-72'>
         <div className='flex justify-center items-center my-36'>
-        <h2 className='text-white text-6xl font-bold'>اقوي العروض</h2>
+        <h2 className='text-[#E8F6EF] text-6xl font-bold'>اقوي العروض</h2>
         </div>
         <div className='flex justify-center items-center h-96'>
     

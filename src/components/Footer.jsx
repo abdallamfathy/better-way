@@ -13,8 +13,8 @@ import { FaSnapchat } from "react-icons/fa";
 
 const Footer = () => {
 return (
-    <div className="bg-[#222222]">
-    <div className=" mt-36   mx-72 grid  grid-cols-5 justify-end text-white ">
+    <div className="bg-[#4C4C6D]">
+    <div className=" mt-36   mx-72 grid  grid-cols-5 justify-end text-[#E8F6EF] ">
         <div className="col-span-1 flex-col items-end flex ">
         <h1 className="2xl:text-3xl text-xl font-bold relative  my-8">خريطة الموقع</h1>
         <div className="flex flex-col">
@@ -72,7 +72,7 @@ return (
             <img
               src={message}
               alt="message"
-              className="relative left-2 col-span-1 "
+              className="relative left-2 col-span-1 text-[#E8F6EF] "
             />
           </div>
           <div className="grid grid-flow-row  grid-cols-4  relative left-4 row-start-3 my-4 pb-8 ">

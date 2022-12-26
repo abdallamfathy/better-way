@@ -10,7 +10,7 @@ function App() {
   
 
   return (
-    <div className="bg-gray-100">
+    <div className="bg-[#B8DFD8] ">
       {!loading && <Home/>}
       {loading && <Loader/>}
     </div>
