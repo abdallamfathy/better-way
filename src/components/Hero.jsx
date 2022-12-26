@@ -20,30 +20,46 @@ const Hero = () => {
       spaceBetween={50}
       slidesPerView={1}
       navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide>
-        <div className='bg-blue-900 h-screen w-screen flex justify-center items-center gap-10 px-10'>
+        <div className='bg-blue-900 h-screen w-screen flex justify-center items-center gap-56 px-10'>
           <img src={slide1} alt="sliderImage" className="w-[600px] h-96" />
           <div className="text-right text-white flex flex-col gap-6 w-[600px]">
           <h2 className="text-7xl font-bold">تسوق معنا</h2>
-          <p className="text-5xl font-semibold">الان مع افضل العروض و المساعمات يمكنك ان تحصل علي بطافتك الخيالية العروض و اكلمساعمات يمكنك ان تحصل علي بطافتك الخيالية</p>
+          <p className="text-3xl font-semibold">الان مع افضل العروض و المساعمات يمكنك ان تحصل علي بطافتك الخيالية العروض و اكلمساعمات يمكنك ان تحصل علي بطافتك الخيالية</p>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-blue-500 h-96 w-96'></div>
+        <div className='bg-red-900 h-screen w-screen flex justify-center items-center gap-10 px-10'>
+          <img src={slide1} alt="sliderImage" className="w-[600px] h-96" />
+          <div className="text-right text-white flex flex-col gap-6 w-[600px]">
+          <h2 className="text-7xl font-bold">تسوق معنا</h2>
+          <p className="text-3xl font-semibold">الان مع افضل العروض و المساعمات يمكنك ان تحصل علي بطافتك الخيالية العروض و اكلمساعمات يمكنك ان تحصل علي بطافتك الخيالية</p>
+          </div>
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-green-500 h-96 w-96'></div>
+        <div className='bg-yellow-900 h-screen w-screen flex justify-center items-center gap-10 px-10'>
+          <img src={slide1} alt="sliderImage" className="w-[600px] h-96" />
+          <div className="text-right text-white flex flex-col gap-6 w-[600px]">
+          <h2 className="text-7xl font-bold">تسوق معنا</h2>
+          <p className="text-3xl font-semibold">الان مع افضل العروض و المساعمات يمكنك ان تحصل علي بطافتك الخيالية العروض و اكلمساعمات يمكنك ان تحصل علي بطافتك الخيالية</p>
+          </div>
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-yellow-500 h-96 w-96'></div>
+        <div className='bg-green-900 h-screen w-screen flex justify-center items-center gap-10 px-10'>
+          <img src={slide1} alt="sliderImage" className="w-[600px] h-96" />
+          <div className="text-right text-white flex flex-col gap-6 w-[600px]">
+          <h2 className="text-7xl font-bold">تسوق معنا</h2>
+          <p className="text-3xl font-semibold">الان مع افضل العروض و المساعمات يمكنك ان تحصل علي بطافتك الخيالية العروض و اكلمساعمات يمكنك ان تحصل علي بطافتك الخيالية</p>
+          </div>
+        </div>
       </SwiperSlide>
-      ...
+     
     </Swiper>
 
         </div>
