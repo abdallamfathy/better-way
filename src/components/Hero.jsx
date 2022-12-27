@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <>
     
-    <div className='flex justify-center items-center h-44 bg- mx-3 my-20'>
+    <div className='flex justify-center items-center h-44 bg-[#2d4059] mx-3 my-20'>
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -24,22 +24,22 @@ const Hero = () => {
       cubeEffect={true}
     >
       <SwiperSlide>
-        <div className='bg-[#2D4059] text-txt  h-36 flex justify-center items-center text-center mx-2'>
-          <div className="text-black">
+        <div className='bg-[#00020581] text-txt  h-36 flex justify-center items-center text-center mx-2'>
+          <div className="">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-[#EEEEEE] text-txt  h-36 flex justify-center items-center text-center mx-2'>
-          <div className="text-black">
+        <div className='bg-[#eeeeee40] text-txt  h-36 flex justify-center items-center text-center mx-2'>
+          <div className="">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className='bg-[#FF5722] text-txt  h-36 flex justify-center items-center text-center mx-2'>
-          <div className="text-black">
+          <div className="">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>

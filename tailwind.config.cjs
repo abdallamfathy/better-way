@@ -9,7 +9,8 @@ module.exports = {
         nave: "#101010",
         web: "#222831",
         txt: "#EEEEEE",
-        but : "#FF5722", 
+        but : "#FF5722",
+        bg : "#2D4059"
 
     },
   },
