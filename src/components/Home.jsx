@@ -8,8 +8,8 @@ const Home = () => {
         <Hero/>
         <Flash/>
         <TopBrands/>
-        {/* 
         <TopSales/>
+        {/* 
         <Latest/>
         <Footer/> */}
     </>
