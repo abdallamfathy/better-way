@@ -6,10 +6,10 @@ const Home = () => {
     <>
         <Navbar/>
         <Hero/>
-        <Clients/>
+        {/* <Clients/>
         <TopSales/>
         <Latest/>
-        <Footer/>
+        <Footer/> */}
     </>
   )
 }
