@@ -10,7 +10,7 @@ function App() {
   
 
   return (
-    <div className="bg-web ">
+    <div className="bg-web overflow-x-hidden ">
       {!loading && <Home/>}
       {loading && <Loader/>}
     </div>
