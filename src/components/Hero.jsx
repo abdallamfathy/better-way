@@ -24,21 +24,21 @@ const Hero = () => {
       cubeEffect={true}
     >
       <SwiperSlide>
-        <div className='bg-[#2D4059] text-[#EEEEEE]  h-36 flex justify-center items-center text-center mx-2'>
+        <div className='bg-[#2D4059] text-txt  h-36 flex justify-center items-center text-center mx-2'>
           <div className="text-black">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-[#EEEEEE] text-[#EEEEEE]  h-36 flex justify-center items-center text-center mx-2'>
+        <div className='bg-[#EEEEEE] text-txt  h-36 flex justify-center items-center text-center mx-2'>
           <div className="text-black">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-[#FF5722] text-[#EEEEEE]  h-36 flex justify-center items-center text-center mx-2'>
+        <div className='bg-[#FF5722] text-txt  h-36 flex justify-center items-center text-center mx-2'>
           <div className="text-black">
             <h2>Join us now with sale 35%</h2>
           </div>

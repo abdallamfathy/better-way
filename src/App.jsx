@@ -10,7 +10,7 @@ function App() {
   
 
   return (
-    <div className="bg-[#222831] ">
+    <div className="bg-web ">
       {!loading && <Home/>}
       {loading && <Loader/>}
     </div>

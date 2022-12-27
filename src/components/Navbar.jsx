@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className='bg-[#101010] '>
+        <nav className='bg-nave '>
         <div className='sm:hiden flex justify-between items-center mx-5'>
           <div className='flex justify-center items-center'>
         <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>
