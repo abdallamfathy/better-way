@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.png'
-import {BiSearchAlt , IoMdArrowDropdown} from 'react-icons/all'
-import {HiMenuAlt3} from 'react-icons/hi'
+import {BiSearchAlt , IoMdArrowDropdown , CgProfile} from 'react-icons/all'
+import {AiOutlineMenu} from 'react-icons/ai'
 
 const Navbar = () => {
 
@@ -15,9 +15,15 @@ const Navbar = () => {
   return (
     <>
         <nav className='bg-[#4C4C6D] '>
-        <div className='sm:hiden flex justify-between items-center mr-5'>
-        <img src={logo} alt="logo" className='w-40 h-28 ' />
-        <HiMenuAlt3 className='w-12 h-14 text-white' onClick={() => toggleMenu()}/>
+        <div className='sm:hiden flex justify-between items-center mx-5'>
+          <div className='flex justify-center items-center'>
+        <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>
+          <img src={logo} alt="logo" className='w-28 h-24 ' />
+
+          </div>
+        <div>
+        <CgProfile className='w-10 h-12 text-white'/>
+        </div>
         </div>
 
         {/* Mobile version  */}
