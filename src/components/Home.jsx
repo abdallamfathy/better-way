@@ -9,8 +9,8 @@ const Home = () => {
         <Flash/>
         <TopBrands/>
         <TopSales/>
-        {/* 
         <Latest/>
+        {/* 
         <Footer/> */}
     </>
   )

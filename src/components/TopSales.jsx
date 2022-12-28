@@ -20,7 +20,7 @@ return (
     <div className='flex justify-center items-center  bg-btn py-1'>
       <h2 className='text-txt  text-lg'>TOP PLACES</h2>
     </div>
-  <div className='m-3'>
+  <div className='m-3 pb-3'>
 
     <Swiper
       // install Swiper modules
