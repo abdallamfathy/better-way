@@ -33,44 +33,74 @@ return (
         <SwiperSlide> 
                 <div>
                 <img src={logo7} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+                <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo2} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
-</div>
+            <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+                </div>
         </SwiperSlide>
         <SwiperSlide> 
                 <div>
                 <img src={logo6} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+                <div className="rounded-t-full   w-20 p-1 bg-btn bg-opacity-80 text-center   absolute top-0 ">
+                <h2 className="text-[8px] text-txt">11%</h2>
+                </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo3} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+            <div className="rounded-t-full   w-20 p-1 bg-btn bg-opacity-80 text-center   absolute top-0 ">
+                <h2 className="text-[8px] text-txt">11%</h2>
+                </div>
 </div>
         </SwiperSlide>
         <SwiperSlide> 
                 <div>
                 <img src={logo4} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+                <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo5} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+            <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo7} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+            <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo8} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+            <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo2} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+            <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
 </div>
         </SwiperSlide>
         <SwiperSlide> 
             <div>         <img src={logo4} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
+            <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-2">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
 </div>
         </SwiperSlide>
         
