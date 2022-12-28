@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <>
     
-    <div className='flex justify-center items-center h-44  m-3'>
+    <div className='flex justify-center items-center h-36  mx-3 my-6'>
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}

@@ -16,11 +16,11 @@ import 'swiper/css/scrollbar';
 const TopSales = () => {
 return (
     <>
-    <div className=''>
+    <div className='my-7'>
     <div className='flex justify-center items-center  bg-bg py-1'>
       <h2 className='text-txt  text-lg'>LATEST DEALS</h2>
     </div>
-  <div className='m-3 pb-3'>
+  <div className='mx-3 my-5 '>
 
     <Swiper
       // install Swiper modules

@@ -18,7 +18,7 @@ import 'swiper/css/scrollbar';
 const Flash = () => {
 return (
     <>
-        <div className='h-24 flex justify-center items-center  m-3'>
+        <div className='h-24 flex justify-center items-center  my-6'>
 
             <Swiper
       // install Swiper modules
