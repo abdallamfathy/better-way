@@ -11,7 +11,7 @@ import logo6 from "../assets/topBrands/logo6.jpg"
 const TopBrands = () => {
   return (
     <>
-        <div className='mb-7 '>
+        <div className='my-7 '>
         <div className='flex justify-center items-center  bg-bg py-1'>
           <h2 className='text-txt  text-lg'>TOP BRANDS</h2>
         </div>

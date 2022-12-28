@@ -18,12 +18,16 @@ import 'swiper/css/scrollbar';
 const Flash = () => {
 return (
     <>
-        <div className='h-24 flex justify-center items-center  my-6 mx-3'>
+       <div className='my-7'>
+       <div className='flex justify-center items-center  bg-bg py-1'>
+          <h2 className='text-txt  text-lg'>TOP OFFERS</h2>
+        </div>
+        <div className='h-24 flex justify-center my-5 -mb-2  mx-3'>
 
             <Swiper
       // install Swiper modules
     modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
-    spaceBetween={5}
+    spaceBetween={10}
     slidesPerView={4.5}
     scrollbar
     autoplay = {{delay : 500}}
@@ -48,8 +52,8 @@ return (
         <SwiperSlide> 
                 <div>
                 <img src={logo6} alt="logo" className='rounded-2xl w-20 h-20  brightness-75 object-cover ' />
-                <div className="rounded-t-full   w-20 p-1 bg-btn bg-opacity-80 text-center   absolute top-0 ">
-                <h2 className="text-[8px] text-txt">11%</h2>
+                <div className="rounded-tr-2xl   w-10 p-1 bg-btn bg-opacity-80 text-center   absolute left-10 top-0 ">
+                <h2 className="text-[10px] text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>
@@ -108,6 +112,7 @@ return (
     
     </Swiper>
             </div>
+       </div>
 
     </>
 )
