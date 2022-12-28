@@ -17,7 +17,7 @@ const TopBrands = () => {
         </div>
       <div className='mx-3 my-5'>
 
-        <div className='flex flex-wrap  justify-center items-center gap-3.5 '>
+        <div className='flex flex-wrap  justify-center items-center gap-[1.68rem] '>
           <div>
             <img src={logo1} alt="logo" className='w-28 h-16 rounded-md' />
           </div>
