@@ -3,6 +3,8 @@ import logo1 from "../assets/topBrands/logo1.jpg"
 import logo2 from "../assets/topBrands/logo2.jpg"
 import logo3 from "../assets/topBrands/logo3.jpg"
 import logo4 from "../assets/topBrands/logo4.jpg"
+import logo5 from "../assets/topBrands/logo5.jpg"
+import logo6 from "../assets/topBrands/logo6.jpg"
 
 
 
@@ -20,13 +22,13 @@ const TopBrands = () => {
             <img src={logo1} alt="logo" className='w-28 h-16 rounded-md' />
           </div>
           <div>
-            <img src={logo3} alt="logo" className='w-28 h-16 rounded-md' />
-          </div>
-          <div>
             <img src={logo2} alt="logo" className='w-28 h-16 rounded-md' />
           </div>
           <div>
-            <img src={logo2} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo6} alt="logo" className='w-28 h-16 rounded-md' />
+          </div>
+          <div>
+            <img src={logo5} alt="logo" className='w-28 h-16 rounded-md' />
           </div>
           <div>
             <img src={logo4} alt="logo" className='w-28 h-16 rounded-md' />
