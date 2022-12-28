@@ -50,7 +50,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-32 right-1">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-1">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -76,7 +76,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-32 right-1">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-1">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -130,7 +130,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-32 right-1">
+    <div className="rounded-full p-1   bg-btn bg-opacity-80 border border-white absolute top-1 right-1">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
