@@ -8,7 +8,7 @@ import logo6 from '../assets/flash/6.jpg'
 import logo7 from '../assets/flash/7.jpg'
 import logo8 from '../assets/flash/8.jpg'
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide  } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
@@ -18,14 +18,15 @@ import 'swiper/css/scrollbar';
 const Flash = () => {
 return (
     <>
-        <div className='bg-bg h-24 flex justify-center items-center  my-3'>
+        <div className='h-24 flex justify-center items-center  my-3'>
 
             <Swiper
       // install Swiper modules
-    modules={[Navigation, Pagination, Scrollbar, A11y]}
+    modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
     spaceBetween={5}
     slidesPerView={4.5}
     scrollbar
+    autoplay = {{delay : 500}}
     onSwiper={(swiper) => console.log(swiper)}
     onSlideChange={() => console.log('slide change')}
     >
