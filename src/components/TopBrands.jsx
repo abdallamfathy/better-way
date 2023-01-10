@@ -11,30 +11,30 @@ import logo6 from "../assets/topBrands/logo6.jpg"
 const TopBrands = () => {
   return (
     <>
-        <div className='my-7 '>
-        <div className='flex justify-center items-center  bg-bg py-1'>
-          <h2 className='text-txt  text-lg'>TOP BRANDS</h2>
+        <div className='my-7 md:my-20 md:mx-40 '>
+        <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
+          <h2 className='text-txt  text-lg md:text-xl md:font-semibold'>TOP BRANDS</h2>
         </div>
-      <div className='mx-3 my-5'>
+      <div className='mx-3 my-5 md:m-10'>
 
-        <div className='flex flex-wrap  justify-center items-center gap-[1.68rem] '>
+        <div className='flex flex-wrap  justify-center items-center gap-[1.68rem] md:gap-x-20 md:gap-10'>
           <div>
-            <img src={logo1} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo1} alt="logo" className='w-28 h-16 rounded-md md:w-96 md:h-36' />
           </div>
           <div>
-            <img src={logo2} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo2} alt="logo" className='w-28 h-16 rounded-md md:w-96 md:h-36' />
           </div>
           <div>
-            <img src={logo6} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo6} alt="logo" className='w-28 h-16 rounded-md md:w-96 md:h-36' />
           </div>
           <div>
-            <img src={logo5} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo5} alt="logo" className='w-28 h-16 rounded-md md:w-96 md:h-36' />
           </div>
           <div>
-            <img src={logo4} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo4} alt="logo" className='w-28 h-16 rounded-md md:w-96 md:h-36' />
           </div>
           <div>
-            <img src={logo3} alt="logo" className='w-28 h-16 rounded-md' />
+            <img src={logo3} alt="logo" className='w-28 h-16 rounded-md md:w-96 md:h-36' />
           </div>
         </div>
         </div>
