@@ -11,7 +11,7 @@ const Categories = () => {
         <div className='w-full h-full'>
             <ul className='flex flex-col gap- w-full h-full'>
                 {categories.map((category) => (
-                    <div className='flex items-center gap-2 hover:bg-slate-300 hover:text-black w-full  h-12 '>
+                    <div className='flex items-center gap-4 hover:bg-slate-300 hover:text-black w-full  h-12 '>
                     <li><AiOutlineCar/></li>
                     <li className='text-lg font-normal' key={category.id}>{category.name}</li>
                     </div>

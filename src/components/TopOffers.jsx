@@ -15,14 +15,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-const Flash = () => {
+const TopOffers = () => {
 return (
     <>
-       <div className='my-7'>
-       <div className='flex justify-center items-center  bg-bg py-1'>
+       <div className='my-7 md:my-20 md:mx-40'>
+       <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
           <h2 className='text-txt  text-lg'>TOP OFFERS</h2>
         </div>
-        <div className='h-24 flex justify-center my-5 -mb-2  mx-3'>
+        <div className='h-24 flex justify-center my-5 -mb-2  mx-3 md:hidden'>
 
             <Swiper
       // install Swiper modules
@@ -112,10 +112,103 @@ return (
     
     </Swiper>
             </div>
+
+
+            {/* desktop version */}
+        <div className='h-44 flex justify-center my-5 -mb-2   max-sm:hidden'>
+
+            <Swiper
+      // install Swiper modules
+    modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
+    spaceBetween={5}
+    slidesPerView={7}
+    scrollbar
+    autoplay = {{delay : 500}}
+    onSwiper={(swiper) => console.log(swiper)}
+    onSlideChange={() => console.log('slide change')}
+    >
+        <SwiperSlide> 
+                <div>
+                <img src={logo7} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+                <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+                </div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo2} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+                </div>
+        </SwiperSlide>
+        <SwiperSlide> 
+                <div className='w-full h-full relative  overflow-hidden'>
+                <img src={logo6} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+                <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl ">
+                <h2 className="text-[9px] text-txt">11%</h2>
+                </div>
+                </div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo3} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[8px] text-txt">11%</h2>
+                </div>
+</div>
+        </SwiperSlide>
+        <SwiperSlide> 
+                <div>
+                <img src={logo4} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+                <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+                </div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo5} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+</div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo7} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+</div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo8} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+</div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo2} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+</div>
+        </SwiperSlide>
+        <SwiperSlide> 
+            <div>         <img src={logo4} alt="logo" className='rounded-2xl w-44 h-40  brightness-75 object-cover ' />
+            <div className="rounded-tr-2xl rotate-45 overflow-hidden  w-12   bg-btn bg-opacity-80 text-center   absolute left-10 top-2 xl">
+                <h2 className="text-[7px] text-txt">11%</h2>
+                </div>
+</div>
+        </SwiperSlide>
+        
+
+    
+    </Swiper>
+            </div>
        </div>
 
     </>
 )
 }
 
-export default Flash
+export default TopOffers
