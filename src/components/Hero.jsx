@@ -7,38 +7,43 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Categories from "./Categories";
 
 const Hero = () => {
   return (
     <>
     
-    <div className='flex justify-center items-center h-36  mx-3 my-6'>
+    <div className='flex justify-center items-center h-36  mx-3 my-6 gap-6 sm:mx-40 sm:m-20 sm:h-[500px]'>
+      <div className="w-1/4 bg-gray-500 z-50 h-full hover:shadow-lg hover:shadow-slate-600 rounded-md  max-sm:hidden">
+        <Categories/>
+      </div>
+    <div className="w-3/4">
     <Swiper
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={70}
-      slidesPerView={1.3}
+      spaceBetween={20}
+      slidesPerView={1}
       navigation
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
       cubeEffect={true}
     >
       <SwiperSlide>
-        <div className='bg-[#00020581] text-txt  h-36 w-80 flex justify-center items-center text-center '>
+        <div className='bg-[#00020581] text-txt  h-36 w-80 flex justify-center items-center text-center rounded-md sm:h-[500px] sm:w-full'>
           <div className="">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-[#eeeeee40] text-txt  h-36 w-80 flex justify-center items-center text-center '>
+        <div className='bg-[#eeeeee40] text-txt  h-36 w-80 flex justify-center items-center text-center rounded-md sm:h-[500px] sm:w-full '>
           <div className="">
             <h2>Join us now with sale 35%</h2>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className='bg-[#FF5722] text-txt  h-36 w-80 flex justify-center items-center text-center '>
+        <div className='bg-[#FF5722] text-txt  h-36 w-80 flex justify-center items-center text-center rounded-md sm:h-[500px] sm:w-full'>
           <div className="">
             <h2>Join us now with sale 35%</h2>
           </div>
@@ -46,6 +51,7 @@ const Hero = () => {
       </SwiperSlide>
      
     </Swiper>
+    </div>
 
         </div>
     </>
