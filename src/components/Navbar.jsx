@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo from '../assets/logo.png'
 import {BiSearchAlt , IoMdArrowDropdown , CgProfile} from 'react-icons/all'
 import {AiOutlineMenu} from 'react-icons/ai'
+import Categories from './Categories'
 
 const Navbar = () => {
 
@@ -28,11 +29,8 @@ const Navbar = () => {
 
         {/* Mobile version  */}
 
-        <div className={show ? 'flex flex-col justify-center items-center bg-[#0000f0] h-screen w-10/12' : 'hidden'}>
-        <div className='flex flex-col justify-center items-center h-screen w-10'>
-        s
-        
-        </div>
+        <div className={show ? 'flex flex-col justify-start items-start bg-bg  h-screen w-full' : 'hidden'}>
+        <Categories/>
         </div>
 
 

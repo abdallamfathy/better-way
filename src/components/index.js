@@ -6,7 +6,8 @@ import Flash from "./Flash";
 import TopBrands from "./TopBrands"
 import TopSales from "./TopSales";
 import Latest from "./Latest";
+import Categories from "./Categories";
 
 
 
-export { Navbar, Footer ,  Loader , Hero , TopBrands , TopSales , Latest  , Flash};
+export { Navbar, Footer ,  Loader , Hero , TopBrands , TopSales , Latest  , Flash , Categories };
