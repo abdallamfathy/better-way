@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.png'
-import {BiSearchAlt , IoMdArrowDropdown , CgProfile} from 'react-icons/all'
-import {AiOutlineMenu} from 'react-icons/ai'
+import {BiSearchAlt , IoMdArrowDropdown , CgProfile, GiHamburgerMenu} from 'react-icons/all'
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import Categories from './Categories'
 
 const Navbar = () => {
@@ -18,7 +18,8 @@ const Navbar = () => {
         <nav className='bg-bg '>
         <div className='sm:hiden flex justify-between items-center mx-5'>
           <div className='flex justify-center items-center'>
-        <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>
+        {!show && <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>}
+        {show && <AiOutlineClose className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>}
           <img src={logo} alt="logo" className='w-28 h-24 ' />
 
           </div>
