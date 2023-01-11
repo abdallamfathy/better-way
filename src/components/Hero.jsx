@@ -24,8 +24,6 @@ const Hero = () => {
       spaceBetween={20}
       slidesPerView={1}
       navigation
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
       cubeEffect={true}
     >
       <SwiperSlide>

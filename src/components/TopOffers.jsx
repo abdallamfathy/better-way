@@ -31,8 +31,6 @@ return (
     slidesPerView={4.5}
     scrollbar
     autoplay = {{delay : 500}}
-    onSwiper={(swiper) => console.log(swiper)}
-    onSlideChange={() => console.log('slide change')}
     >
         <SwiperSlide> 
                 <div>
@@ -124,8 +122,6 @@ return (
     slidesPerView={7}
     scrollbar
     autoplay = {{delay : 500}}
-    onSwiper={(swiper) => console.log(swiper)}
-    onSlideChange={() => console.log('slide change')}
     >
         <SwiperSlide> 
                 <div>
