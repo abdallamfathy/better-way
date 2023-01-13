@@ -15,12 +15,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-const TopOffers = () => {
+const SpecialOffers = () => {
 return (
     <>
        <div className='my-7 md:my-20 md:mx-40'>
        <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
-          <h2 className='text-txt  text-lg md:text-xl md:font-semibold'>TOP OFFERS</h2>
+          <h2 className='text-txt  text-lg md:text-xl md:font-semibold'>SPECIAL OFFERS</h2>
         </div>
         <div className='h-24 flex justify-center my-5 -mb-2  mx-3 md:hidden'>
 
@@ -207,4 +207,4 @@ return (
 )
 }
 
-export default TopOffers
+export default SpecialOffers

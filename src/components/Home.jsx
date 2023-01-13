@@ -1,12 +1,12 @@
 import React from 'react'
-import {Navbar , Hero, TopBrands, TopSales, Latest, Footer, TopOffers} from './index'
+import {Navbar , Hero, TopBrands, TopSales, Latest, Footer, SpecialOffers} from './index'
 
 const Home = () => {
   return (
     <>
         <Navbar/>
         <Hero/>
-        <TopOffers/>
+        <SpecialOffers/>
         <TopBrands/>
         <TopSales/>
         <Latest/>
