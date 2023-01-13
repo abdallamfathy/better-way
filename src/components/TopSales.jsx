@@ -40,12 +40,12 @@ return (
         <h2 className="text-btn">ZARA FOR MEN</h2>
         <h3>WOMEN CLOTHES</h3>
     </div>
-    <div className="flex w-10 text-btn bg-bg rounded-md h-6 px-2 justify-center items-center">
-    <RiStarSFill/>
-    <RiStarSFill/>
-    <RiStarSFill/>
-    <RiStarSFill/>
-    <RiStarSLine/>
+    <div className="flex w text-btn bg-bg rounded-md h-6  justify-center items-center">
+    <RiStarSFill className="w-20"/>
+    <RiStarSFill className="w-20"/>
+    <RiStarSFill className="w-20"/>
+    <RiStarSFill className="w-20"/>
+    <RiStarSLine className="w-20"/>
     </div>
     </div>
     <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-1">
@@ -141,8 +141,8 @@ return (
     <Swiper
       // install Swiper modules
     modules={[Navigation, Pagination, Scrollbar, A11y]}
-    spaceBetween={200}
-    slidesPerView={10}
+    spaceBetween={100}
+    slidesPerView={7}
     >
     
     <SwiperSlide>
@@ -151,7 +151,7 @@ return (
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={zara} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
+    <div className="flex items-center justify-center gap-4">
     <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">ZARA FOR MEN</h2>
         <h3>WOMEN CLOTHES</h3>
@@ -164,21 +164,21 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
-        <h2 className="text-[8px] text-txt">11%</h2>
     </div>
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
+        <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     
 </div>
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl shadow-white" >
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col ">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={cafe} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2">
+    <div className=" mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">CILANTRO CAFE</h2>
         <h3>CAFE AND RESTAURANT</h3>
     </div>
@@ -190,21 +190,21 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
-        <h2 className="text-[8px] text-txt">11%</h2>
     </div>
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
+        <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     
 </div>
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl ">
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={tie} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2">
+    <div className="mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">TIE HOUSE FOR MEN</h2>
         <h3>MEN CLOTHES</h3>
     </div>
@@ -216,7 +216,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -225,12 +225,12 @@ return (
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl shadow-2xl">
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={restaurant} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2 ">
+    <div className="mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">SAIGON RESTAURANT</h2>
         <h3>CAFE & RESTAURANT</h3>
     </div>
@@ -242,7 +242,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -251,12 +251,12 @@ return (
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl">
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={zara} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2 ">
+    <div className="mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">ZARA FOR MEN</h2>
         <h3>WOMEN CLOTHES</h3>
     </div>
@@ -268,7 +268,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -277,12 +277,12 @@ return (
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl shadow-white" >
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={cafe} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2 ">
+    <div className="mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">CILANTRO CAFE</h2>
         <h3>CAFE AND RESTAURANT</h3>
     </div>
@@ -294,7 +294,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -303,12 +303,12 @@ return (
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl ">
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={tie} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2 ">
+    <div className="mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">TIE HOUSE FOR MEN</h2>
         <h3>MEN CLOTHES</h3>
     </div>
@@ -320,7 +320,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>
@@ -329,12 +329,12 @@ return (
 </SwiperSlide>
     <SwiperSlide>
 <div className="w-48 h-56 bg-white rounded-2xl shadow-2xl">
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col">
     <a href="#">
         <img className="rounded-t-2xl w-48 h-36" src={restaurant} alt="product image" />
     </a>
-    <div className="flex items-center gap-4">
-    <div className="mx-2 mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
+    <div className="flex items-center justify-between mx-2 ">
+    <div className="mt-5  text-black text-[12px] font-semibold flex flex-col items-start justify-start">
         <h2 className="text-btn">SAIGON RESTAURANT</h2>
         <h3>CAFE & RESTAURANT</h3>
     </div>
@@ -346,7 +346,7 @@ return (
     <RiStarSLine/>
     </div>
     </div>
-    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white relative bottom-40 left-28 w-6">
+    <div className="rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute bottom-48 left-36 w-6">
         <h2 className="text-[8px] text-txt">11%</h2>
     </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar , Hero, TopBrands, TopSales, Latest, Footer, SpecialOffers} from './index'
+import {Navbar , Hero, TopBrands, TopSales, LatestDeals, Footer, SpecialOffers} from './index'
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <SpecialOffers/>
         <TopBrands/>
         <TopSales/>
-        <Latest/>
+        <LatestDeals/>
         {/* 
         <Footer/> */}
     </>

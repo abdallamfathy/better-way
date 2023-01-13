@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const TopSales = () => {
+const LatestDeals = () => {
 return (
     <>
     <div className='my-7'>
@@ -141,6 +141,6 @@ return (
 )
 }
 
-export default TopSales
+export default LatestDeals
 
 
