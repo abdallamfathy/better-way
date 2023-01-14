@@ -1,35 +1,79 @@
 export const categories = [
     {
         id: 1,
-        name: "Electronics",
+        name: "Super Market",
 },
 {
         id: 2,
-        name: "Fashion",
+        name: "Cafe",
 },
 {
         id: 3,
-        name: "Home & Kitchen",
+        name: "Restaurant",
 },
 {       
         id: 4,
-        name: "Sports",
+        name: "Cars",
 },
 {
         id: 5,
-        name: "Books",
+        name: "Fashion",
 },
 {
         id: 6,
-        name: "Toys",
+        name: "Health Care",
 },
 {
         id: 7,
-        name: "Baby",
+        name: "Education",
 
 },
+// {
+//         id: 8,
+//         name: "Jewerly",
+// },
+// {
+//         id: 9,
+//         name: "Net Cafe & Gaming",
+// },
+// {
+//         id: 10,
+//         name: "Accessories",
+        
+// },
+// {
+//         id: 11,
+//         name: "Coiffeur & Beauty Care",
+        
+// },
+// {
+//         id: 12,
+//         name: "Renew Your Home",
+        
+// },
+// {
+//         id: 13,
+//         name: "Sports & Fitness",
+        
+// },
+// {
+//         id: 14,
+//         name: "Advertisement",
+        
+// },
+// {
+//         id: 15,
+//         name: "Travel & Tourism",
+        
+// },
+// {
+//         id: 16,
+//         name: "Electronics",
+        
+// },
 {
-        id: 8,
-        name: "Beauty",
-}
+        id: 17,
+        name: "Other",
+        
+},
 ]

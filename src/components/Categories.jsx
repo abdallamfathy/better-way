@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiOutlineCar } from 'react-icons/ai'
+import { FaHospitalUser } from 'react-icons/fa'
 import { categories } from '../assets/Constants'
 
 const Categories = () => {
@@ -12,7 +13,7 @@ const Categories = () => {
             <ul className='flex flex-col gap- w-full h-full'>
                 {categories.map((category) => (
                     <div className='flex items-center gap-4 hover:bg-slate-300 hover:text-black w-full  h-12 '>
-                    <li className='font-medium text-lg'><AiOutlineCar/></li>
+                    <li className='font-medium text-lg'><FaHospitalUser/></li>
                     <li className='text-[14px] font-medium' key={category.id}>{category.name}</li>
                     </div>
                 ))}
