@@ -18,7 +18,7 @@ return (
     <>
     <div className='my-7 md:my-20 md:mx-40'>
     <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
-      <h2 className='text-txt  text-lg md:text-xl md:font-semibold'>LATEST DEALS</h2>
+      <h2 className='text-txt  text-lg md:text-2xl md:font-semibold'>LATEST DEALS</h2>
     </div>
   <div className='mx-3 my-5 md:hidden '>
 
