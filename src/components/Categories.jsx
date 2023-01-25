@@ -6,9 +6,6 @@ import { categories } from '../assets/Constants'
 const Categories = () => {
   return (
     <div className='flex flex-col items-start gap-4 m-5 text-white'>
-        <div>
-            <h1 className='text-2xl font-bold mb-4 '>OUR CATEGORIES</h1>
-        </div>
         <div className='w-full h-full'>
             <ul className='flex flex-col gap- w-full h-full'>
                 {categories.map((category) => (

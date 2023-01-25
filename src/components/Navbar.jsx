@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo.png'
-import {BiSearchAlt , IoMdArrowDropdown , CgProfile, GiHamburgerMenu} from 'react-icons/all'
+import {BiSearchAlt , IoMdArrowDropdown , CgProfile, GiHamburgerMenu, GiEgypt, GiArabicDoor, FaLanguage, GrLanguage, HiLanguage, GiEgyptianBird, GiEgyptianProfile, GiUsaFlag, FaFlag, GiEuropeanFlag} from 'react-icons/all'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+// import { CgProfile } from 'react-icons/all'
 import Categories from './Categories'
 
 const Navbar = () => {
@@ -10,6 +11,10 @@ const Navbar = () => {
   const [show, setShow] = useState(false)  
   const toggleMenu = (prev) => {
     setShow(!show);
+  }
+  const [lang, setLang] = useState(false)  
+  const toggleLang = (prev) => {
+    setLang(!lang);
   }
 
   return (
@@ -48,6 +53,16 @@ const Navbar = () => {
             <button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button>
             <button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Log In</button>
             </div>
+            {lang ? <div className='flex  gap-2' onClick={() => toggleLang()}>
+              <p className='text-white'>العربية</p>
+            <img src="https://hatscripts.github.io/circle-flags/flags/eg.svg" alt="eg flag" className='w-8 h-8'/>
+            </div> 
+            : !lang ? 
+            <div className='flex  gap-2' onClick={() => toggleLang()}>
+              <p className='text-white'>English</p>
+            <img src="https://hatscripts.github.io/circle-flags/flags/uk.svg" alt="uk flag" className='w-8 h-8'/>
+            </div>
+             : null}
             </div>
         </nav>
     </>

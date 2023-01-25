@@ -28,14 +28,14 @@ export const categories = [
         name: "Education",
 
 },
-// {
-//         id: 8,
-//         name: "Jewerly",
-// },
-// {
-//         id: 9,
-//         name: "Net Cafe & Gaming",
-// },
+{
+        id: 8,
+        name: "Jewerly",
+},
+{
+        id: 9,
+        name: "Net Cafe & Gaming",
+},
 // {
 //         id: 10,
 //         name: "Accessories",
