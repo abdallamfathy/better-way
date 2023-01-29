@@ -16,7 +16,7 @@ import 'swiper/css/scrollbar';
 const TopSales = () => {
 return (
     <>
-    <div className='my-7 md:my-20 md:mx-40'>
+    <div className='my-7 md:my-12 md:mx-40'>
     <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
       <h2 className='text-txt  text-lg md:text-2xl md:font-semibold'>TOP PLACES</h2>
     </div>
