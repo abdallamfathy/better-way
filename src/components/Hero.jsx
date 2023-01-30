@@ -14,7 +14,7 @@ const Hero = () => {
     <>
     
     <div className='flex justify-center items-center h-36  mx-3 my-6 gap-6 sm:mx-40 sm:m-12 sm:h-[500px]'>
-      <div className="w-1/4 bg-gray-500 z-50 h-full hover:shadow-lg hover:shadow-slate-600 rounded-md  max-sm:hidden">
+      <div className="w-1/4 bg-gray-500 z-50 h-full rounded-md  max-sm:hidden">
         <Categories/>
       </div>
     <div className="w-3/4">
