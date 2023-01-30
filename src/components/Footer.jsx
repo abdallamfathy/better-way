@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo2.png";
+import qr from "../assets/qr.jpeg";
 import location from "../assets/location.png";
 import message from "../assets/message.png";
 import call from "../assets/call.png";
@@ -9,7 +10,7 @@ import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
 import whatsapp from "../assets/whatsapp.png";
 // import { Link } from "react-router-dom";
-import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMoneyBill, FaPaypal, FaSnapchat, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
 return (
@@ -22,11 +23,11 @@ return (
           <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2 text-txt">
           <h2 className="font-bold mb-2">LET US HELP YOU</h2>
-          <a href="#" className="text-sm font-light hover:underline">Help Center</a>
-          <a href="#" className="text-sm font-light hover:underline">Contact Us</a>
-          <a href="#" className="text-sm font-light hover:underline">How to shop on BetterWay?</a>
-          <a href="#" className="text-sm font-light hover:underline">How to pay on BetterWay?</a>
-          <a href="#" className="text-sm font-light hover:underline">Dispute Resolution Policy</a>
+          <a href="#" className="text-sm font-light hover:text-btn">Help Center</a>
+          <a href="#" className="text-sm font-light hover:text-btn">Contact Us</a>
+          <a href="#" className="text-sm font-light hover:text-btn">How to shop on BetterWay?</a>
+          <a href="#" className="text-sm font-light hover:text-btn">How to pay on BetterWay?</a>
+          <a href="#" className="text-sm font-light hover:text-btn">Dispute Resolution Policy</a>
           </div>
           <div className="flex flex-col gap-2 text-txt">
           <h2 className="font-bold mb-2">JOIN US ON</h2>
@@ -35,17 +36,18 @@ return (
           <a href="#" className="text-lgfont-light hover:text-btn"><FaInstagram/></a>
           <a href="#" className="text-lg font-light hover:text-btn"><FaYoutube/></a>
           <a href="#" className="text-lg font-light hover:text-btn"><FaWhatsapp/></a>
+          <a href="#" className="text-lg font-light hover:text-btn"><FaTiktok/></a>
           </div>
           </div>
           </div>
           <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2 ">
           <h2 className="font-bold mb-2">ABOUT BETTERWAY EGYPT</h2>
-          <a href="#" className="text-sm font-light hover:underline">BetterWay Logistics Services</a>
-          <a href="#" className="text-sm font-light hover:underline">BetterWay Careers</a>
-          <a href="#" className="text-sm font-light hover:underline">Terms and Conditions</a>
-          <a href="#" className="text-sm font-light hover:underline">Privacy Policy</a>
-          <a href="#" className="text-sm font-light hover:underline">Flash Sales</a>
+          <a href="#" className="text-sm font-light hover:text-btn">BetterWay Logistics Services</a>
+          <a href="#" className="text-sm font-light hover:text-btn">BetterWay Careers</a>
+          <a href="#" className="text-sm font-light hover:text-btn">Terms and Conditions</a>
+          <a href="#" className="text-sm font-light hover:text-btn">Privacy Policy</a>
+          <a href="#" className="text-sm font-light hover:text-btn">Flash Sales</a>
           </div>
           <div className="flex flex-col gap-2 ">
           <h2 className="font-bold mb-2">PAYMENT METHODS</h2>
@@ -59,45 +61,46 @@ return (
           </div>
           </div>
           <div className="flex flex-wrap items-en gap-y-1 w-full mt-8 ">
-          <a href="#" className="text-sm font-light hover:underline w-28">Activ</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Dejavu</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Defacto</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Cottonil</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Casio</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Casio</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Braun</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Apple</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Andora</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">American Eagle</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">American Eagle</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">ADIDAS</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">BetterWay</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">XIAOMI</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Tornado</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Tornado</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Sokany</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">SHEIN</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Samsung</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Ravin</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">OPPO</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Nokia</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">NIVEA</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Mothercare</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Mesery</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Maybelline</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Lenovo</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">LC Waikiki</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">L'Oreal Paris</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Kady</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Izor</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">HP</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Garnier</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Fresh</a>
-          <a href="#" className="text-sm font-light hover:underline w-28">Dice</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Activ</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Dejavu</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Defacto</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Cottonil</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Casio</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Casio</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Braun</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Apple</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Andora</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">American Eagle</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">American Eagle</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">ADIDAS</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">BetterWay</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">XIAOMI</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Tornado</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Tornado</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Sokany</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">SHEIN</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Samsung</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Ravin</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">OPPO</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Nokia</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">NIVEA</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Mothercare</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Mesery</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Maybelline</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Lenovo</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">LC Waikiki</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">L'Oreal Paris</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Kady</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Izor</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">HP</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Garnier</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Fresh</a>
+          <a href="#" className="text-sm font-light hover:text-btn w-28">Dice</a>
           </div>
           </div>
-          <div className="flex justify-end w-1/2 rounded-xl -mt-12">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg"></iframe>
+          <div className="flex flex-col items-center gap-6 justify-center w-1/2 rounded-xl -mt-12">
+          <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg"></iframe>
+          <div><img src={qr} alt="qrcode" className="w-36" /></div>
           </div>
         </div>
       </div>
@@ -106,16 +109,16 @@ return (
         <h1 className="2xl:text-3xl text-xl font-bold relative  my-8">خريطة الموقع</h1>
         <div className="flex flex-col">
             <div className="flex gap-6 flex-wrap justify-end mb-8">
-            <a to="/about" className="underline  text-sm">
+            <a to="/about" className="text-btn  text-sm">
                 للاشتراك
             </a>
-            <a to="/products" className="underline text-sm">
+            <a to="/products" className="text-btn text-sm">
                 اجدد العروض
             </a>
-            <a to="/" className="underline text-sm">
+            <a to="/" className="text-btn text-sm">
                 افضل التقييمات
               </a>
-              <a to="/partners" className="underline text-sm">
+              <a to="/partners" className="text-btn text-sm">
                 شركاءنا 
               </a>
               
