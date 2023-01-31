@@ -53,12 +53,12 @@ const Navbar = () => {
             <button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button>
             <button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Log In</button>
             </div>
-            {lang ? <div className='flex  gap-2' onClick={() => toggleLang()}>
+            {lang ? <div className='flex cursor-pointer  gap-2' onClick={() => toggleLang()}>
               <p className='text-white'>العربية</p>
             <img src="https://hatscripts.github.io/circle-flags/flags/eg.svg" alt="eg flag" className='w-8 h-8'/>
             </div> 
             : !lang ? 
-            <div className='flex  gap-2' onClick={() => toggleLang()}>
+            <div className='flex cursor-pointer gap-2' onClick={() => toggleLang()}>
               <p className='text-white'>English</p>
             <img src="https://hatscripts.github.io/circle-flags/flags/uk.svg" alt="uk flag" className='w-8 h-8'/>
             </div>

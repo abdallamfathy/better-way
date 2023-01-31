@@ -121,7 +121,7 @@ return (
     spaceBetween={15}
     slidesPerView={6}
     scrollbar
-    // autoplay = {{delay : 2000}}
+    autoplay = {{delay : 2000}}
     >
         <SwiperSlide> 
                 <div className=' overflow-hidden'>
