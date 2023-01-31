@@ -120,86 +120,85 @@ return (
     modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
     spaceBetween={15}
     slidesPerView={6}
-    scrollbar
     autoplay = {{delay : 2000}}
     navigation
     >
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo7} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className='h-full overflow-hidden'>
+                <img src={logo7} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo6} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo6} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo2} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo2} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo5} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo5} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo4} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo4} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo3} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo3} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo7} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo7} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo1} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo1} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo3} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo3} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
         </SwiperSlide>        
         <SwiperSlide> 
-                <div className=' overflow-hidden'>
-                <img src={logo6} alt="logo" className='rounded-2xl w-full h-40  brightness-75 object-cover ' />
-                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-36 ">
+                <div className=' h-full overflow-hidden'>
+                <img src={logo6} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
+                <div className=" rotate-45   w-24 h-5   bg-btn bg-opacity-80 text-center  translate-x-28 -translate-y-40 ">
                 <h2 className="text-[14px]  text-txt">11%</h2>
                 </div>
                 </div>
