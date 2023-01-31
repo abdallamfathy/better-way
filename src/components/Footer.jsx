@@ -15,7 +15,7 @@ import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMoney
 const Footer = () => {
 return (
     <div className="bg-bg">
-      <div className="mt-7 md:mt-20 md:mx-40 md:py-10">
+      <div className="mt-7 md:mt-16 md:mx-40 md:py-10">
           <div className="flex -ml-6 -mt-16"><a href="#"><img src={logo} alt="logo" className="w-64"/></a></div>
         <div className="flex flex-wrap justify-between items-start w-full">
           <div className="flex flex-col justify-betwee text-txt  gap-6 w-1/2">

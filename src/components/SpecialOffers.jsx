@@ -18,7 +18,7 @@ import 'swiper/css/scrollbar';
 const SpecialOffers = () => {
 return (
     <>
-       <div className='my-7 md:my-12 md:mx-40'>
+       <div className='my-7 md:my-8 md:mx-40'>
        <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
           <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>SPECIAL OFFERS</h2>
         </div>
@@ -113,7 +113,7 @@ return (
 
 
             {/* desktop version */}
-        <div className='h-full flex justify-center mt-12   max-sm:hidden'>
+        <div className='h-full flex justify-center mt-8   max-sm:hidden'>
 
             <Swiper
       // install Swiper modules
