@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-button-next , .swiper-button-prev {
-    @apply   text-btn  !important 
+.swiper-button-next  {
+    @apply   text-btn bg-web hover:bg-opacity-100 bg-opacity-70 w-10 h-10 rounded-full !important 
+}
+ .swiper-button-prev {
+    @apply   text-btn bg-web hover:bg-opacity-100 bg-opacity-60 w-10 h-10 rounded-full !important 
+}
+.hero  .swiper-button-prev   {
+    @apply   text-btn bg-transparent !important 
+}
+.hero .swiper-button-next   {
+    @apply   text-btn bg-transparent !important 
 }
 
     /* .swiper-button-next::after {
@@ -13,3 +22,9 @@
     display: none;
     } */
 
+    :root {
+        --swiper-navigation-size: 30px;
+      }
+    :root .hero {
+        --swiper-navigation-size: 44px;
+      }

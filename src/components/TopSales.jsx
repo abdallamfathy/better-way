@@ -146,6 +146,7 @@ slidesPerView={2.5}
     modules={[Navigation, Pagination, Scrollbar, A11y]}
     spaceBetween={100}
     slidesPerView={5}
+    navigation
     >
     
     <SwiperSlide>

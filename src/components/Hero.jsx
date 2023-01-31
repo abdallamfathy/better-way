@@ -18,7 +18,7 @@ const Hero = () => {
         <Categories/>
       </div>
     <div className="w-3/4">
-    <Swiper
+    <Swiper className="hero"
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={20}

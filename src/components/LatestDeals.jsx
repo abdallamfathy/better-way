@@ -146,6 +146,7 @@ return (
 modules={[Navigation, Pagination, Scrollbar, A11y]}
 spaceBetween={100}
 slidesPerView={5}
+navigation={true}
 >
 
 <SwiperSlide>
