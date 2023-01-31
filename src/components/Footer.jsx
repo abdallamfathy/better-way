@@ -1,6 +1,9 @@
 import React from "react";
 import logo from "../assets/logo2.png";
+import logo2 from "../assets/logo.png"
 import qr from "../assets/qr.jpeg";
+import googleApp from "../assets/googleApp.png";
+import appleApp from "../assets/appleApp.png";
 import location from "../assets/location.png";
 import message from "../assets/message.png";
 import call from "../assets/call.png";
@@ -10,16 +13,45 @@ import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
 import whatsapp from "../assets/whatsapp.png";
 // import { Link } from "react-router-dom";
-import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMailBulk, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { faEnvelope, faMailForward, faMessage } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
 return (
     <div className="bg-bg">
-      <div className="mt-7 md:mt-16 md:mx-40 md:py-10">
-          <div className="flex -ml-6 -mt-16"><a href="#"><img src={logo} alt="logo" className="w-64"/></a></div>
-        <div className="flex flex-wrap justify-between items-start w-full">
+      <div className="pt-10 flex flex-col gap-10 ">
+          <div className="flex justify-between bg-slate-800 p-10 px-40">
+            <a href="#"><img src={logo} alt="logo" className="w-60"/></a>
+            <div className="flex justify-between">
+              <div className="flex flex-col gap-2 justify-start items-start text-white">
+                <h2>New to BetterWay ?</h2>
+                <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+                <div className="h-14 w-72  bg-white flex justify-center items-center  gap-4 px-0 rounded-md">
+                <FontAwesomeIcon icon={faEnvelope} className="text-gray-300 w-8 h-8" />
+                <input type="text" placeholder="Enter E-mail Address" className="placeholder:text-lg  focus:outline-none text-black"/>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 text-white items-end">
+              <div className="flex gap-2">
+                  {/* <div className="-mt-3">
+                    <img className="w-20 h-20" src={logo2} alt="logo" />
+                  </div> */}
+                  <div className="flex flex-col gap-2">
+                    <h2 className="font-bold">DOWNLOAD BETTERWAY FREE APP</h2>
+                    <p className="text-sm">Get the best shopping experience on your mobile</p>
+                  </div>
+              </div>
+              <div className="flex justify-between gap-4">
+                <img src={googleApp} alt="googleApp"  className="w-36 "/>
+                <img src={appleApp} alt="appleApp"  className="w-36"/>
+              </div>
+            </div>
+            </div>
+        <div className="flex flex-wrap justify-between items-start my-10 md:mx-40">
           <div className="flex flex-col justify-betwee text-txt  gap-6 w-1/2">
-          <div className="flex justify-between  -mt-12">
+          <div className="flex justify-between">
           <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2 text-txt">
           <h2 className="font-bold mb-2">LET US HELP YOU</h2>
@@ -98,89 +130,12 @@ return (
           <a href="#" className="text-sm font-light hover:text-btn w-28">Dice</a>
           </div>
           </div>
-          <div className="flex flex-col items-center gap-6 justify-center w-1/2 rounded-xl -mt-12">
-          <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg"></iframe>
+          <div className="flex flex-col items-center -mr-16 gap-6 justify-center w-1/2  rounded-xl">
+          <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg "></iframe>
           <div><img src={qr} alt="qrcode" className="w-36" /></div>
           </div>
         </div>
       </div>
-    {/* <div className=" mt-36   mx-72 grid  grid-cols-5 justify-end text-[#E8F6EF] ">
-        <div className="col-span-1 flex-col items-end flex ">
-        <h1 className="2xl:text-3xl text-xl font-bold relative  my-8">خريطة الموقع</h1>
-        <div className="flex flex-col">
-            <div className="flex gap-6 flex-wrap justify-end mb-8">
-            <a to="/about" className="text-btn  text-sm">
-                للاشتراك
-            </a>
-            <a to="/products" className="text-btn text-sm">
-                اجدد العروض
-            </a>
-            <a to="/" className="text-btn text-sm">
-                افضل التقييمات
-              </a>
-              <a to="/partners" className="text-btn text-sm">
-                شركاءنا 
-              </a>
-              
-            </div>
-            <div className="flex justify-end gap-3">
-              <a href="https://www.facebook.com/profile.php?id=100086364507234">
-                {" "}
-                <img src={facebook} alt="facebook" />
-              </a>
-              <a href="https://twitter.com/NamaTaiba">
-                {" "}
-                <img src={twitter} alt="twitter" />
-              </a>
-              <a href="https://www.instagram.com/nama_taiba/">
-                {" "}
-                <img src={instagram} alt="instagram" />
-              </a>
-
-              <a href="https://www.snapchat.com/add/nama_taiba?share_id=EdYdd_Y10Pc&locale=en-US">
-                {" "}
-                <FaSnapchat  className="w-[33px] h-[33px]" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-span-2 columns-3 flex-col items-end flex ">
-          <h1 className="2xl:text-3xl text-xl font-bold relative right-6 my-8">اتصل بنا</h1>
-          <div className="grid grid-flow-row  grid-cols-4  relative left-14 row-start-3 mb-6 ">
-            <p className="col-span-3 w-80 relative right-2 text-sm ">
-              الادارة :13 مكتب شارع الوحدة مصر الجديدة القاهرة مصر
-            </p>
-            <img
-              src={location}
-              alt="location"
-              className=" col-span-1 left-2 relative"
-            />
-          </div>
-          
-          <div className="grid grid-flow-row  grid-cols-4  relative left-6 row-start-3 mb-6">
-            <a className="col-span-3 pr-6 text-sm">better-sales@betterway.com</a>
-            <img
-              src={message}
-              alt="message"
-              className="relative left-2 col-span-1 text-[#E8F6EF] "
-            />
-          </div>
-          <div className="grid grid-flow-row  grid-cols-4  relative left-4 row-start-3 my-4 pb-8 ">
-            <a className="col-span-3 pr-6 text-sm ">0231234124 - 012345678</a>
-            <img
-              src={call}
-              alt="call"
-              className="relative left-2 col-span-1 "
-            />
-          </div>
-        </div>
-        <div className=" flex-col   col-span-2 items-end flex">
-          <img src={logo} alt="logo" className=" w-62 h-44" />
-          <p className="text-right 2xl:text-[16px] text-sm    leading-9">
-            تعد شركة بيتر واي شركة رائدة و تستطيع انت ايس اليموانع و يجب ايضا علي الاعامل و يمكنكم زيارة الاموقع من خلال عبر طبيق ممكن ان تشةؤ
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 };
