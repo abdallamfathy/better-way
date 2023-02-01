@@ -1,7 +1,4 @@
 import zara from "../assets/topPlaces/zara.jpg"
-import cafe from "../assets/topPlaces/cafe.jpg"
-import restaurant from "../assets/topPlaces/restaurant.jpg"
-import tie from "../assets/topPlaces/tie.jpg"
 
 import {RiStarSFill , RiStarSLine} from 'react-icons/ri'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -32,7 +29,7 @@ return (
 <div className="w-36 h-44 bg-white rounded-2xl shadow-2xl">
     <div className="flex flex-col justify-center">
     <a href="#">
-        <img className="rounded-t-2xl w-48 h-36" src={restaurant} alt="product image" />
+        <img className="rounded-t-2xl w-48 h-36" src={zara} alt="product image" />
     </a>
     <div className="flex items-center gap-4">
     <div className="mx-2 my-1  text-black text-[6px] font-semibold flex flex-col items-start justify-start">
@@ -58,7 +55,7 @@ return (
 <div className="w-36 h-44 bg-white rounded-2xl ">
     <div className="flex flex-col justify-center">
     <a href="#">
-        <img className="rounded-t-2xl w-48 h-36" src={tie} alt="product image" />
+        <img className="rounded-t-2xl w-48 h-36" src={zara} alt="product image" />
     </a>
     <div className="flex items-center gap-4">
     <div className="mx-2 my-1  text-black text-[6px] font-semibold flex flex-col items-start justify-start">
@@ -85,7 +82,7 @@ return (
 <div className="w-36 h-44 bg-white rounded-2xl shadow-white" >
     <div className="flex flex-col justify-center">
     <a href="#">
-        <img className="rounded-t-2xl w-48 h-36" src={cafe} alt="product image" />
+        <img className="rounded-t-2xl w-48 h-36" src={zara} alt="product image" />
     </a>
     <div className="flex items-center gap-4">
     <div className="mx-2 my-1  text-black text-[6px] font-semibold flex flex-col items-start justify-start">
