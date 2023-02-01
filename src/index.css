@@ -28,3 +28,7 @@
     :root .hero {
         --swiper-navigation-size: 44px;
       }
+
+      ::selection {
+        @apply bg-btn text-nave
+      }

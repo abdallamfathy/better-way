@@ -1,6 +1,7 @@
 import {useEffect , useState} from "react"
-import Home from "./components/Home"
+import {HomePage, Login, Register} from "./pages"
 import Loader from "./components/Loader"
+import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 
 function App() {
   const [loading , setLoading] = useState(true)
@@ -11,7 +12,15 @@ function App() {
 
   return (
     <div className="bg-web overflow-x-hidden ">
-      {!loading && <Home/>}
+      {!loading && 
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
+          </Routes>
+        </Router>
+      }
       {loading && <Loader/>}
     </div>
   )

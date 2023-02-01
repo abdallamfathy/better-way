@@ -4,6 +4,7 @@ import {BiSearchAlt , IoMdArrowDropdown , CgProfile, GiHamburgerMenu, GiEgypt, G
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 // import { CgProfile } from 'react-icons/all'
 import Categories from './Categories'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -50,8 +51,8 @@ const Navbar = () => {
             <button className='bg-gray-200  pl-1 py-2 w-20 border-l border-[#E8F6EF] rounded-r-lg flex items-center gap-1 font-semibold'> <IoMdArrowDropdown/>  Search</button>
             </div>
             <div className='flex gap-4  '>
-            <button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button>
-            <button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Log In</button>
+            <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button></Link>
+            <Link to="/login"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Login</button></Link>
             </div>
             {lang ? <div className='flex cursor-pointer  gap-2' onClick={() => toggleLang()}>
               <p className='text-white'>العربية</p>
