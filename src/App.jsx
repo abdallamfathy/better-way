@@ -1,5 +1,5 @@
 import {useEffect , useState} from "react"
-import {HomePage, Login, Register} from "./pages"
+import {HomePage, Login, Register, Shop} from "./pages"
 import Loader from "./components/Loader"
 import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 
@@ -18,6 +18,7 @@ function App() {
             <Route path="/" element={<HomePage/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
+            <Route path="/shop" element={<Shop/>}/>
           </Routes>
         </Router>
       }
