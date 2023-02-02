@@ -18,7 +18,11 @@ import {
 import { Footer, Navbar } from "../components";
 import zara from "../assets/topPlaces/zara.jpg";
 import brand from "../assets/topBrands/brand.jpg";
+import qr from "../assets/qr.jpeg";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
+import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Shop = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -97,10 +101,11 @@ const Shop = () => {
         </section>
         
         <section>
-            <div className="container flex justify-between gap-2">
+            <div className="Container flex justify-between gap-2">
               <div className="flex flex-col items-start  justify-center  w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
-                <h2 className="text-2xl font-semibold ">Categories</h2>
-                <ul className="p-8">
+                <div className="title"><h2 className="text-2xl font-semibold ">Categories</h2></div>
+                <div className="list p-8">
+                <ul>
                     <li className="m-3">1-Super Market</li>
                     <li className="m-3">2-Cafe</li>
                     <li className="m-3">3-Restaurant</li>
@@ -112,9 +117,45 @@ const Shop = () => {
                     <li className="m-3">9-Net Cafe & Gaming</li>
                     <li className="m-3">10-Others</li>
                 </ul>
+                </div>
               </div>
-              <div className="swiperr my-8 border border-txt rounded-md w-2/3">
-
+              <div className="flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt border border-txt rounded-md">
+                <div className="Title self-start"><h2 className="text-2xl font-semibold ">Shop Informations</h2></div>
+                <div className="Description flex flex-col items-center gap-4 py-8">
+                <div className="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/znnC9q86ptI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div className="Website self-center">
+                    <a href="#" className="underline"> www.hahaha.com </a>
+                </div>
+                <div className="SocialMedia flex gap-4 items-center ">
+                    <a href="#" className="text-lg font-light hover:text-btn"><FaFacebook/></a>
+                    <a href="#" className="text-lgfont-light hover:text-btn"><FaInstagram/></a>
+                    <a href="#" className="text-lg font-light hover:text-btn"><FaWhatsapp/></a>
+                    <a href="#" className="text-lg font-light hover:text-btn"><FaTiktok/></a>
+                    </div>
+                <div className="qrCode"><img src={qr} alt="qrcode" className="w-20 rounded-md" /></div>
+                <div className="Locations flex flex-col  items-center gap-2">
+                        <div className="flex self-start items-center gap-2 ">
+                            <h2 className=" text-lg font-semibold"><FontAwesomeIcon icon={faLocationDot}/></h2>
+                            <p>19 alaa st. masr el gededa , Cairo , Eg</p>
+                        </div>
+                        <div className="flex self-start items-center gap-2 ">
+                            <h2 className=" text-lg font-semibold"><FontAwesomeIcon icon={faLocationDot}/></h2>
+                            <p>39 mounira st. el agouza , Giza , Eg</p>
+                    </div>
+                </div>
+                <div className="Phones flex flex-col  items-center gap-2">
+                        <div className="flex self-start items-center gap-2 ">
+                            <h2 className=" text-lg font-semibold"><FontAwesomeIcon icon={faPhone}/></h2>
+                            <p>0123456789</p>
+                        </div>
+                        <div className="flex self-start items-center gap-2 ">
+                            <h2 className=" text-lg font-semibold"><FontAwesomeIcon icon={faPhone}/></h2>
+                            <p>0123456789</p>
+                    </div>
+                </div>
+                </div>
               </div>
             </div>
         </section>
