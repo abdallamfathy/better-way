@@ -35,8 +35,9 @@ const Shop = () => {
     <>
       <Navbar />
       <div className="mx-40 my-8">
+        <section>
         <div className="flex justify-between gap-2">
-          <div className=" flex flex-col items-center  justify-center gap-10 w-1/3 p-8 my-8  text-white border  border-white rounded-md   ">
+          <div className="flex flex-col items-center  justify-center gap-10 w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
             <div className="h-36 w-36">
               <img src={brand} alt="logo" className="h-full w-full" />
             </div>
@@ -52,18 +53,18 @@ const Shop = () => {
               <h2 className="font-semibold">Branch Location : </h2>
               <p>19 thawra st. madinet nasr, Cairo, Egypt </p>
               {/* <RiStarSFill />
-              <p className="ml-2 text-sm font-bold text-gray-900 dark:text-white">
+              <p className="ml-2 text-sm font-bold text-gray-900 dark:text-txt">
                 4.95
               </p>
               <span className="mx-1.5 h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
               <a
                 href="#"
-                className="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">
+                className="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-txt">
                 73 reviews
               </a> */}
             </div>
           </div>
-          <div className="swiperr my-8 border border-white rounded-md w-2/3">
+          <div className="swiperr my-8 border border-txt rounded-md w-2/3">
             <Swiper
               style={{
                 "--swiper-navigation-color": "#fff",
@@ -93,9 +94,34 @@ const Shop = () => {
             </div>
           </div>
         </div>
+        </section>
+        
+        <section>
+            <div className="container flex justify-between gap-2">
+              <div className="flex flex-col items-start  justify-center  w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
+                <h2 className="text-2xl font-semibold ">Categories</h2>
+                <ul className="p-8">
+                    <li className="m-3">1-Super Market</li>
+                    <li className="m-3">2-Cafe</li>
+                    <li className="m-3">3-Restaurant</li>
+                    <li className="m-3">4-Cars</li>
+                    <li className="m-3">5-Fashion</li>
+                    <li className="m-3">6-Health Care</li>
+                    <li className="m-3">7-Education</li>
+                    <li className="m-3">8-Jewelry</li>
+                    <li className="m-3">9-Net Cafe & Gaming</li>
+                    <li className="m-3">10-Others</li>
+                </ul>
+              </div>
+              <div className="swiperr my-8 border border-txt rounded-md w-2/3">
 
-        <div className="p-8 rounded-md border border-white">
-          <div className="text-left text-white font-bold text-2xl">
+              </div>
+            </div>
+        </section>
+
+        <section>
+        <div className="p-8 rounded-md border border-txt">
+          <div className="text-left text-txt font-bold text-2xl">
             <h2>Related shops</h2>
           </div>
           <div className="m-8">
@@ -108,7 +134,7 @@ const Shop = () => {
                 slidesPerView={5}
                 navigation>
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -130,7 +156,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -138,7 +164,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -160,7 +186,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -168,7 +194,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -190,7 +216,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -198,7 +224,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -220,7 +246,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -228,7 +254,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -250,7 +276,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -258,7 +284,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -280,7 +306,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -288,7 +314,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -310,7 +336,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -318,7 +344,7 @@ const Shop = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <div className="w-60 h-72 bg-white rounded-2xl">
+                  <div className="w-60 h-72 bg-txt rounded-2xl">
                     <div className="flex flex-col h-72">
                       <div className="h-3/4">
                         <img
@@ -340,7 +366,7 @@ const Shop = () => {
                           <RiStarSLine />
                         </div>
                       </div>
-                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                      <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
                         <h2 className="text-sm  text-txt text-center">11%</h2>
                       </div>
                     </div>
@@ -350,6 +376,7 @@ const Shop = () => {
             </div>
           </div>
         </div>
+        </section>
       </div>
       <Footer />
     </>

@@ -30,7 +30,7 @@ export const categories = [
 },
 {
         id: 8,
-        name: "Jewerly",
+        name: "Jewelry",
 },
 {
         id: 9,
