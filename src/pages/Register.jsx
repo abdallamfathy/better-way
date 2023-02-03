@@ -13,7 +13,7 @@ const Register = () => {
                 </div>
                 <div className='flex justify-around gap-24 font-bold  border-b border-b-gray-400'>
                 <Link to="/login"><h2 className='text-center md:w-36 w-32 pb-3'>Login</h2></Link>
-                    <h2 className='border-b-2 border-b-button text-center md:w-36 w-32 pb-3'>Sign Up</h2>
+                    <h2 className='border-b-2 border-b-btn text-center md:w-36 w-32 pb-4 -mb-[0.84px]'>Sign Up</h2>
                 </div>
                 <div className='flex flex-col items-start gap-2'>
                     <h2>Full Name</h2>
@@ -29,7 +29,7 @@ const Register = () => {
                 </div>
                 <div className='flex flex-col items-start gap-2'>
                     <h2>Phone Number</h2>
-                    <input type="number" className='w-60 rounded-md border border-gray-300 h-9 p-2 text-bg' />
+                    <input type="text" className='w-60 rounded-md border border-gray-300 h-9 p-2 text-bg' />
                     </div>
                 <div>
                     <Link to="/"><button className='text-white bg-btn rounded-md drop-shadow-lg h-9 w-60 my-6'>Create an account</button></Link>

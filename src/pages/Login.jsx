@@ -14,8 +14,8 @@ const Login = () => {
                         <h2>What's your email address?</h2>
                         <h2>Type your email to log in or create a BetterWay account.</h2>
                 </div>
-                <div className='flex justify-around gap-24 font-bold  border-b border-b-gray-400 '>
-                    <h2 className='border-b-2 border-b-button text-center md:w-36 w-32 pb-3 '>Login</h2>
+                <div className='flex justify-around gap-24 font-bold  border-b border-b-gray-400'>
+                    <h2 className='border-b-2  border-b-btn text-center md:w-36 w-32 pb-4 -mb-[1px] '>Login</h2>
                     <Link to="/register"><h2 className=' text-center md:w-36 w-32 pb-3 '>Sign Up</h2></Link>
                 </div>
                 <div className='flex flex-col items-start gap-2'>
