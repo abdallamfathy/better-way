@@ -42,7 +42,7 @@ const Shop = () => {
         <section>
         <div className="flex justify-between gap-2">
           <div className="flex flex-col items-center  justify-center gap-10 w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
-            <div className="h-36 w-36">
+            <div className="h-60 w-60">
               <img src={brand} alt="logo" className="h-full w-full" />
             </div>
             <div className="flex text-3xl text-btn rounded-md   justify-center items-center">
@@ -102,24 +102,24 @@ const Shop = () => {
         
         <section>
             <div className="Container flex justify-between gap-2">
-              <div className="flex flex-col items-start  justify-center  w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
-                <div className="title"><h2 className="text-2xl font-semibold ">Categories</h2></div>
-                <div className="list p-8">
-                <ul>
-                    <li className="m-3">1-Super Market</li>
-                    <li className="m-3">2-Cafe</li>
-                    <li className="m-3">3-Restaurant</li>
-                    <li className="m-3">4-Cars</li>
-                    <li className="m-3">5-Fashion</li>
-                    <li className="m-3">6-Health Care</li>
-                    <li className="m-3">7-Education</li>
-                    <li className="m-3">8-Jewelry</li>
-                    <li className="m-3">9-Net Cafe & Gaming</li>
-                    <li className="m-3">10-Others</li>
+              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
+                <div className="Title"><h2 className="text-2xl font-semibold ">Offers</h2></div>
+                <div className="list p-4">
+                <div className="SubTitle"><h2 className="text-xl ">Select your offer :</h2></div>
+                <ul className="p-4">
+                    <li className="m-4"><input type="checkbox" name="1st" />  50% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  45% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  40% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  35% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  30% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  25% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  20% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  15% discount</li>
+                    <li className="m-4"><input type="checkbox" name="1st" />  10% discount</li>
                 </ul>
                 </div>
               </div>
-              <div className="flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt border border-txt rounded-md">
+              <div className="ShopSection flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt border border-txt rounded-md">
                 <div className="Title self-start"><h2 className="text-2xl font-semibold ">Shop Informations</h2></div>
                 <div className="Description flex flex-col items-center gap-4 py-8">
                 <div className="youtube">
@@ -134,7 +134,10 @@ const Shop = () => {
                     <a href="#" className="text-lg font-light hover:text-btn"><FaWhatsapp/></a>
                     <a href="#" className="text-lg font-light hover:text-btn"><FaTiktok/></a>
                     </div>
-                <div className="qrCode"><img src={qr} alt="qrcode" className="w-20 rounded-md" /></div>
+                <div className="QrCode"><img src={qr} alt="qrcode" className="w-20 rounded-md" /></div>
+                <div className="Map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7734482.242858413!2d8.44218099639604!3d61.7525781804408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3189cac0c8c611b%3A0xe730b7f8f7de30bf!2sHahahaha!5e0!3m2!1sen!2seg!4v1675351457785!5m2!1sen!2seg" width="600" height="300" className="rounded-md" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div className="Locations flex flex-col  items-center gap-2">
                         <div className="flex self-start items-center gap-2 ">
                             <h2 className=" text-lg font-semibold"><FontAwesomeIcon icon={faLocationDot}/></h2>
@@ -171,7 +174,7 @@ const Shop = () => {
               <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={100}
+                spaceBetween={200}
                 slidesPerView={5}
                 navigation>
                 <SwiperSlide>
