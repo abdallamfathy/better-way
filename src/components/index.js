@@ -8,7 +8,8 @@ import TopSales from "./TopSales";
 import LatestDeals from "./LatestDeals";
 import Categories from "./Categories";
 import Home from "./Home";
+import Others from "./Others";
 
 
 
-export { Navbar, Footer ,  Loader , Hero , TopBrands , TopSales , LatestDeals  , SpecialOffers , Categories , Home };
+export { Navbar, Footer ,  Loader , Hero , TopBrands , TopSales , LatestDeals  , SpecialOffers , Categories , Home , Others };

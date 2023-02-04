@@ -41,7 +41,7 @@ const Shop = () => {
       <div className="mx-40 my-8">
         <section>
         <div className="flex justify-between gap-2">
-          <div className="flex flex-col items-center  justify-center gap-10 w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
+          <div className="flex flex-col items-center  justify-center gap-10 w-1/3 p-8 my-8  text-txt ">
             <div className="h-60 w-60">
               <img src={brand} alt="logo" className="h-full w-full" />
             </div>
@@ -68,7 +68,7 @@ const Shop = () => {
               </a> */}
             </div>
           </div>
-          <div className="swiperr my-8 border border-txt rounded-md w-2/3">
+          <div className="swiperr my-8 w-2/3">
             <Swiper
               style={{
                 "--swiper-navigation-color": "#fff",
@@ -102,28 +102,24 @@ const Shop = () => {
         
         <section>
             <div className="Container flex justify-between gap-2">
-              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-1/3 p-8 my-8  text-txt border  border-txt rounded-md">
-                <div className="Title"><h2 className="text-2xl font-semibold ">Offers</h2></div>
+              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-1/3 p-8 my-8  text-txt">
+                <div className="Title"><h2 className="text-2xl font-semibold ">Flamingo Cafe</h2></div>
                 <div className="list p-4">
                 <div className="SubTitle"><h2 className="text-xl ">Select your offer :</h2></div>
-                <ul className="p-4">
-                    <li className="m-4"><input type="checkbox" name="1st" />  50% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  45% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  40% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  35% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  30% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  25% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  20% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  15% discount</li>
-                    <li className="m-4"><input type="checkbox" name="1st" />  10% discount</li>
+                <ul className="p-4 text-xl">
+                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
                 </ul>
                 </div>
               </div>
-              <div className="ShopSection flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt border border-txt rounded-md">
+              <div className="ShopSection flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt">
                 <div className="Title self-start"><h2 className="text-2xl font-semibold ">Shop Informations</h2></div>
                 <div className="Description flex flex-col items-center gap-4 py-8">
                 <div className="youtube">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/znnC9q86ptI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="460" height="315" src="https://www.youtube.com/embed/znnC9q86ptI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div className="Website self-center">
                     <a href="#" className="underline"> www.hahaha.com </a>
@@ -136,7 +132,7 @@ const Shop = () => {
                     </div>
                 <div className="QrCode"><img src={qr} alt="qrcode" className="w-20 rounded-md" /></div>
                 <div className="Map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7734482.242858413!2d8.44218099639604!3d61.7525781804408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3189cac0c8c611b%3A0xe730b7f8f7de30bf!2sHahahaha!5e0!3m2!1sen!2seg!4v1675351457785!5m2!1sen!2seg" width="600" height="300" className="rounded-md" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7734482.242858413!2d8.44218099639604!3d61.7525781804408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3189cac0c8c611b%3A0xe730b7f8f7de30bf!2sHahahaha!5e0!3m2!1sen!2seg!4v1675351457785!5m2!1sen!2seg" width="360" height="215" className="rounded-md" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div className="Locations flex flex-col  items-center gap-2">
                         <div className="flex self-start items-center gap-2 ">
@@ -164,7 +160,7 @@ const Shop = () => {
         </section>
 
         <section>
-        <div className="p-8 rounded-md border border-txt">
+        <div className="p-8">
           <div className="text-left text-txt font-bold text-2xl">
             <h2>Related shops</h2>
           </div>

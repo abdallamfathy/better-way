@@ -8,8 +8,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Categories from "./Categories";
+import { useState } from "react";
 
-const Hero = () => {
+const Hero = ({state}) => {
+  const [show, setShow] = useState(state);
+
   return (
     <>
     
@@ -17,7 +20,7 @@ const Hero = () => {
       <div className="w-1/4 bg-gray-500 z-50 h-full rounded-md  max-sm:hidden">
         <Categories/>
       </div>
-    <div className="w-3/4">
+    {!show && <div className="w-3/4">
     <Swiper className="hero"
       // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -49,8 +52,10 @@ const Hero = () => {
       </SwiperSlide>
      
     </Swiper>
-    </div>
+    </div> }
+    {show && <div className="w-3/4 h-full rounded-md bg-yellow-500">
 
+    </div>}
         </div>
     </>
   )

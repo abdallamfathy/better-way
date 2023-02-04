@@ -4,8 +4,16 @@ import { FaCaretSquareLeft, FaHospitalUser, FaMapMarkedAlt, FaRing } from 'react
 import { categories } from '../assets/Constants'
 import { faBars, faBuilding, faCake, faCar, faDiamond, faDiamondTurnRight, faGamepad, faGem, faGraduationCap, faHeartCircleCheck, faHome, faMugHot, faRibbon, faRing, faSchool, faShirt, faShop, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Others from './Others';
+import Hero from './Hero';
 
 const Categories = () => {
+
+    const [show, setShow] = React.useState(false);
+
+    const toggle = () => {
+            setShow(!show);
+    }
   return (
     <div className='flex flex-col items-start gap-4 m-5 text-white'>
         <div className='w-full h-full'>
@@ -52,12 +60,22 @@ const Categories = () => {
                     <li className='font-medium text-xl'><FontAwesomeIcon icon={faGamepad} /></li>
                     <li className='text-lg font-medium' >Net Cafe & Gaming</li>
                     </div>
-                <div className='flex items-center gap-4 cursor-pointer  hover:text-btn w-full  h-12 '>
-                    <li className='font-medium text-xl'><FontAwesomeIcon icon={faBars} /></li>
-                    <li className='text-lg font-medium' >Others</li>
+                <div className='flex items-center gap-4 cursor-pointer  hover:text-btn w-full  h-12'
+                // onMouseEnter={() => toggle()}
+                // onMouseLeave={() => toggle()}
+                >   
+                {/* <Hero state={show}/>     */}
+                    <li className='font-medium text-xl'
+                     >
+                    <FontAwesomeIcon icon={faBars} /></li>
+                    {/* <li className='text-lg font-medium' onClick={toggle}>Others</li> */}
                     </div>
             </ul>
         </div>
+                    {show &&
+                    <div className='translate-x-56 -translate-y-96 w-3/4'>
+                        <Others/>
+                    </div> }
     </div>
   )
 }
