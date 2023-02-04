@@ -41,11 +41,12 @@ const Shop = () => {
       <div className="mx-40 my-8">
         <section>
         <div className="flex justify-between gap-2">
-          <div className="flex flex-col items-center  justify-center gap-10 w-1/3 p-8 my-8  text-txt ">
+          <div className="flex flex-col items-start  justify-center w-1/3 p-8 my-8  text-txt ">
+            <div className="flex flex-col items-center gap-10">
             <div className="h-60 w-60">
               <img src={brand} alt="logo" className="h-full w-full" />
             </div>
-            <div className="flex text-3xl text-btn rounded-md   justify-center items-center">
+            <div className="flex text-3xl text-yellow-400 rounded-md   justify-center items-center">
               <RiStarSFill />
               <RiStarSFill />
               <RiStarSFill />
@@ -68,6 +69,7 @@ const Shop = () => {
               </a> */}
             </div>
           </div>
+          </div>
           <div className="swiperr my-8 w-2/3">
             <Swiper
               style={{
@@ -89,7 +91,7 @@ const Shop = () => {
                 modules={[FreeMode, Navigation, Thumbs]}
                 onSwiper={setThumbsSwiper}
                 spaceBetween={10}
-                slidesPerView={4}
+                slidesPerView={6}
                 freeMode={true}
                 watchSlidesProgress={true}
                 className="mySwiper">
