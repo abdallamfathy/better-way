@@ -43,8 +43,8 @@ const Shop = () => {
         <div className="flex justify-between gap-2">
           <div className="flex flex-col items-start  justify-center w-1/3 p-8 my-8  text-txt ">
             <div className="flex flex-col items-center gap-10">
-            <div className="h-60 w-60">
-              <img src={brand} alt="logo" className="h-full w-full" />
+            <div className="h-80 w-80 bg-txt flex justify-center items-center">
+              <img src={brand} alt="logo" className="h-64 w-64" />
             </div>
             <div className="flex text-3xl text-yellow-400 rounded-md   justify-center items-center">
               <RiStarSFill />
@@ -54,19 +54,12 @@ const Shop = () => {
               <RiStarSLine />
             
             </div>
-            <div className="flex flex-col items-center gap-4">
+            <div>
+              <h2 className="font-bold text-2xl">Gained Points : <span className="text-yellow-500">5</span></h2>
+            </div>
+            <div className="flex flex-col items-center gap-4 ">
               <h2 className="font-semibold">Branch Location : </h2>
               <p>19 thawra st. madinet nasr, Cairo, Egypt </p>
-              {/* <RiStarSFill />
-              <p className="ml-2 text-sm font-bold text-gray-900 dark:text-txt">
-                4.95
-              </p>
-              <span className="mx-1.5 h-1 w-1 rounded-full bg-gray-500 dark:bg-gray-400" />
-              <a
-                href="#"
-                className="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-txt">
-                73 reviews
-              </a> */}
             </div>
           </div>
           </div>
@@ -86,7 +79,7 @@ const Shop = () => {
               className="mySwiper2 rounded-t-md">
               {image}
             </Swiper>
-            <div className=" bg-bg p-8 rounded-b-md">
+            <div className=" bg-bg p-4 rounded-b-md">
               <Swiper
                 modules={[FreeMode, Navigation, Thumbs]}
                 onSwiper={setThumbsSwiper}
@@ -105,16 +98,28 @@ const Shop = () => {
         <section>
             <div className="Container flex justify-between gap-2">
               <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-1/3 p-8 my-8  text-txt">
-                <div className="Title"><h2 className="text-2xl font-semibold ">Flamingo Cafe</h2></div>
+                <div className="Title bg-bg w-full p-5"><h2 className="text-2xl font-semibold ">Flamingo Cafe</h2></div>
                 <div className="list p-4">
-                <div className="SubTitle"><h2 className="text-xl ">Select your offer :</h2></div>
-                <ul className="p-4 text-xl">
-                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> Enjoy a 50% discount on a total bill</li>
+                <div className="SubTitle bg-bg w-full p-5"><h2 className="text-xl ">Select your offer :</h2></div>
+                <ul className="p-4 text-2xl">
+                    <li className="m-4"><input type="checkbox" name="1st" /> 1-  Enjoy a 50% discount on a total bill.</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> 2- Enjoy a 10% discount on the price of Egyptian medicines.</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> 3- Enjoy a 5% discount on imported medicines.</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> 4- Enjoy a 40% discount on a total bill less than 1,000 pounds.</li>
+                    <li className="m-4"><input type="checkbox" name="1st" /> 5- Enjoy a 60% discount on the total bill on special occasions and birthdays.</li>
                 </ul>
+                <div className="flex items-center justify-center gap-4 my-5">
+              <RiStarSFill className="text-yellow-500" />
+              <p className="ml-2 text-sm font-bold  ">
+                4.95
+              </p>
+              <span className="mx-1.5 h-1 w-1 rounded-full bg-gray-500 " />
+              <a
+                href="#"
+                className="text-sm font-medium underline hover:no-underline ">
+                73 reviews
+              </a>
+            </div>
                 </div>
               </div>
               <div className="ShopSection flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt">
@@ -146,7 +151,7 @@ const Shop = () => {
                             <p>39 mounira st. el agouza , Giza , Eg</p>
                     </div>
                 </div>
-                <div className="Phones flex flex-col  items-center gap-2">
+                <div className="Phones flex items-center gap-4">
                         <div className="flex self-start items-center gap-2 ">
                             <h2 className=" text-lg font-semibold"><FontAwesomeIcon icon={faPhone}/></h2>
                             <p>0123456789</p>
