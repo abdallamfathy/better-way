@@ -39,7 +39,7 @@ const Shop = () => {
     <>
       <Navbar />
       <div className="mx-40 my-8">
-        <section>
+        <section className="sectionI">
         <div className="flex justify-between gap-2">
           <div className="flex flex-col items-start  justify-center w-1/3 p-8 my-8  text-txt ">
             <div className="flex flex-col items-center gap-10">
@@ -99,19 +99,41 @@ const Shop = () => {
         </div>
         </section>
         
-        <section>
-            <div className="Container flex justify-between gap-2">
-              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-1/3 p-8 my-8  text-txt">
-                <div className="Title bg-bg w-full p-5"><h2 className="text-2xl font-semibold ">Flamingo Cafe</h2></div>
-                <div className="list p-4">
-                <div className="SubTitle bg-bg w-full p-5"><h2 className="text-xl ">Select your offer :</h2></div>
-                <ul className="p-4 text-2xl">
-                    <li className="m-4"><input type="checkbox" name="1st" /> 1-  Enjoy a 50% discount on a total bill.</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> 2- Enjoy a 10% discount on the price of Egyptian medicines.</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> 3- Enjoy a 5% discount on imported medicines.</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> 4- Enjoy a 40% discount on a total bill less than 1,000 pounds.</li>
-                    <li className="m-4"><input type="checkbox" name="1st" /> 5- Enjoy a 60% discount on the total bill on special occasions and birthdays.</li>
-                </ul>
+        <section className="sectionII">
+            <div className="Container flex justify-between gap-4">
+              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-2/3 p-8 my-8  text-txt">
+                <div className="Description">
+                <div className="Title bg-bg w-full p-5"><h2 className="text-2xl text-center font-semibold ">Flamingo Cafe</h2></div>
+                <div className="bg-bg bg-opacity-20 leading-10 p-5 my-4">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente veniam laborum eligendi cum iusto. Voluptate illo possimus, veritatis tempore molestias, omnis dolores laboriosam reiciendis doloribus ducimus culpa tempora voluptatum!</p>
+                </div>
+                </div>
+                <div className="list ">
+                <div className="SubTitle bg-bg w-full p-5"><h2 className="text-xl text-center ">Select your offer :</h2></div>
+                <div className="flex flex-col gap-8 my-8  text-2xl">
+                    
+                    <div className="flex justify-between w-full">
+                      <p> <input type="radio" name="1st" /> Enjoy a 50% discount on a total bill.</p>
+                      <p className="text-btn font-bold">50%</p>
+                    </div>
+                    
+                    <div className="flex justify-between w-full">
+                      <p><input type="radio" name="1st" /> Enjoy a 10% discount.</p>
+                      <p className="text-btn font-bold">10%</p>
+                    </div>
+                    <div className="flex justify-between w-full">
+                      <p><input type="radio" name="1st" /> Enjoy a discount on the price of Egyptian medicines.</p>
+                      <p className="text-btn font-bold">5%</p>
+                    </div>
+                    <div className="flex justify-between w-full">
+                      <p><input type="radio" name="1st" /> Enjoy a discount on a total bill less than 1,000 pounds.</p>
+                      <p className="text-btn font-bold">40%</p>
+                    </div>
+                    <div className="flex justify-between w-full">
+                      <p><input type="radio" name="1st" /> Enjoy a discount on the total bill on special occasions and birthdays.</p>
+                      <p className="text-btn font-bold">60%</p>
+                    </div>
+                </div>
                 <div className="flex items-center justify-center gap-4 my-5">
               <RiStarSFill className="text-yellow-500" />
               <p className="ml-2 text-sm font-bold  ">
@@ -126,7 +148,7 @@ const Shop = () => {
             </div>
                 </div>
               </div>
-              <div className="ShopSection flex flex-col items-center gap-6 w-2/3 p-8 my-8 text-txt">
+              <div className="ShopSection flex flex-col items-center gap-6 w-1/3 p-8 my-8 text-txt">
                 <div className="Title self-start"><h2 className="text-2xl font-semibold ">Shop Informations</h2></div>
                 <div className="Description flex flex-col items-center gap-4 py-8">
                 <div className="youtube">
@@ -170,14 +192,14 @@ const Shop = () => {
             </div>
         </section>
 
-        <section>
-        <div className="p-8">
+        <section className="sectionIII">
+        <div className="">
           <div className="text-left text-txt font-bold text-2xl">
             <h2>Related shops</h2>
           </div>
-          <div className="m-8">
+          <div className="mt-4">
             {/* desktop version */}
-            <div className="my-8 max-md:hidden">
+            <div className=" max-md:hidden">
               <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
