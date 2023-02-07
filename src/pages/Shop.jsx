@@ -22,7 +22,7 @@ import qr from "../assets/qr.jpeg";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleRight, faArrowCircleRight, faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Shop = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -43,8 +43,8 @@ const Shop = () => {
         <div className="flex justify-between gap-2">
           <div className="flex flex-col items-start  justify-center w-1/3 p-8 my-8  text-txt ">
             <div className="flex flex-col items-center gap-10">
-            <div className="h-80 w-80 bg-txt flex justify-center items-center">
-              <img src={brand} alt="logo" className="h-64 w-64" />
+            <div className="h-80 w-80 flex justify-center items-center">
+              <img src={brand} alt="logo" className="h-72 w-72 outline outline-btn" />
             </div>
             <div className="flex text-3xl text-yellow-400 rounded-md   justify-center items-center">
               <RiStarSFill />
@@ -54,12 +54,16 @@ const Shop = () => {
               <RiStarSLine />
             
             </div>
+            <div className="flex flex-col items-center gap-4 ">
+              <div className="flex gap-2 items-center">
+              <h2 className="font-semibold">Branch Locations </h2>
+              <a href="#"><FontAwesomeIcon icon={faArrowCircleRight}/></a>
+              </div>
+              <p> Cairo </p>
+              <p> Masr el gededa </p>
+            </div>
             <div>
               <h2 className="font-bold text-2xl">Gained Points : <span className="text-yellow-500">5</span></h2>
-            </div>
-            <div className="flex flex-col items-center gap-4 ">
-              <h2 className="font-semibold">Branch Location : </h2>
-              <p>19 thawra st. madinet nasr, Cairo, Egypt </p>
             </div>
           </div>
           </div>
@@ -79,7 +83,7 @@ const Shop = () => {
               className="mySwiper2 rounded-t-md">
               {image}
             </Swiper>
-            <div className=" bg-bg p-4 rounded-b-md">
+            <div className="py-2 rounded-b-md">
               <Swiper
                 modules={[FreeMode, Navigation, Thumbs]}
                 onSwiper={setThumbsSwiper}
