@@ -38,15 +38,15 @@ const Shop = () => {
   return (
     <>
       <Navbar />
-      <div className="mx-40 my-8">
+      <div className="mx-20 my-8">
         <section className="sectionI">
-        <div className="flex justify-between gap-2">
-          <div className="flex flex-col items-start  justify-center w-1/3 p-8 my-8  text-txt ">
+        <div className="flex justify-between">
+          <div className="flex flex-col items-start  justify-center w-1/3 my-8  text-txt ">
             <div className="flex flex-col items-center gap-10">
             <div className="h-80 w-80 flex justify-center items-center">
-              <img src={brand} alt="logo" className="h-72 w-72 outline outline-btn" />
+              <img src={brand} alt="logo" className="h-80 w-80 " />
             </div>
-            <div className="flex text-3xl text-yellow-400 rounded-md   justify-center items-center">
+            <div className="flex text-3xl text-btn rounded-md   justify-center items-center">
               <RiStarSFill />
               <RiStarSFill />
               <RiStarSFill />
