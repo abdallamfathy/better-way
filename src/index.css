@@ -32,3 +32,11 @@
       ::selection {
         @apply bg-btn text-nave
       }
+
+/* .FullStars :last-child {
+  @apply text-btn
+}
+
+.RatingPerc :nth-child(2){
+  @apply bg-btn text-btn !important
+} */
