@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
             <div className='bg-white rounded-lg w-[900px] h-12 flex justify-between '>
             <button className='bg-btn  p-2  w-12 rounded-l-lg'><BiSearchAlt className='w-7 h-7 text-white'/></button>
-            <input type="text" placeholder='' className='bg-white text-black rounded-xl pl-4 py-2 w-96 text-right' />
+            <input type="text" placeholder='' className='bg-white text-black rounded-xl pl-4 py-2 w-96 text-right border-0' />
             <button className='bg-gray-200  pl-1 py-2 w-20 border-l border-[#E8F6EF] rounded-r-lg flex items-center gap-1 font-semibold'> <IoMdArrowDropdown/>  Search</button>
             </div>
             <div className='flex gap-4  '>

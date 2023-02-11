@@ -29,7 +29,7 @@ return (
                 <p>Subscribe to our newsletter to get updates on our latest offers!</p>
                 <div className="h-14 w-72  bg-white flex justify-center items-center  gap-4 px-0 rounded-md">
                 <FontAwesomeIcon icon={faEnvelope} className="text-gray-300 w-8 h-8" />
-                <input type="text" placeholder="Enter E-mail Address" className="placeholder:text-lg  focus:outline-none text-black"/>
+                <input type="text" placeholder="Enter E-mail Address" className="placeholder:text-lg  focus:outline-none text-black border-0"/>
                 </div>
               </div>
             </div>
