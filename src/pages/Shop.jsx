@@ -99,14 +99,11 @@ const Shop = () => {
         </div>
         </section>
         
-        <section className="sectionII">
+        <section className="sectionII my-4">
             <div className="Container flex justify-between gap-4">
-              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-2/3 p-8 my-8  text-txt">
+              <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-2/3   text-txt">
                 <div className="Description">
-                <div className="Title bg-bg w-full p-5"><h2 className="text-2xl text-center font-semibold ">Flamingo Cafe</h2></div>
-                <div className="bg-bg bg-opacity-20 leading-10 p-5 my-4">
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente veniam laborum eligendi cum iusto. Voluptate illo possimus, veritatis tempore molestias, omnis dolores laboriosam reiciendis doloribus ducimus culpa tempora voluptatum!</p>
-                </div>
+                <div className="Title w-full "><h2 className="text-5xl font-semibold ">Flamingo Cafe</h2></div>
                 </div>
                 <div className="list ">
                 <div className="SubTitle bg-bg w-full p-5"><h2 className="text-xl text-center ">Select your offer :</h2></div>
@@ -148,9 +145,8 @@ const Shop = () => {
             </div>
                 </div>
               </div>
-              <div className="ShopSection flex flex-col items-center gap-6 w-1/3 p-8 my-8 text-txt">
-                <div className="Title self-start"><h2 className="text-2xl font-semibold ">Shop Informations</h2></div>
-                <div className="Description flex flex-col items-center gap-4 py-8">
+              <div className="ShopSection flex flex-col items-center gap-6 w-1/3 text-txt">
+                <div className="Description flex flex-col items-center gap-4">
                 <div className="youtube">
                 <iframe width="460" height="315" src="https://www.youtube.com/embed/znnC9q86ptI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
