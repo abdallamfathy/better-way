@@ -324,6 +324,83 @@ const Category = () => {
                 </div>
             </div>
         </section>
+        <section className='sectionIII'>
+            <div className=''>
+                <h2 className='text-2xl'>Recently Visited</h2>
+                <div className='flex gap-1 p-4'>
+                <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
         </div>
         </div>
         <Footer/>
