@@ -33,10 +33,11 @@
         @apply bg-btn text-nave
       }
 
-/* .FullStars :last-child {
+ .FullStars :last-child {
   @apply text-btn
 }
 
-.RatingPerc :nth-child(2){
+/* .RatingPerc  {
   @apply bg-btn text-btn !important
-} */
+}  */
+
