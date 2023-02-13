@@ -41,3 +41,6 @@
   @apply bg-btn text-btn !important
 }  */
 
+.filter :nth-last-child(){
+  @apply border-b border-txt
+}
