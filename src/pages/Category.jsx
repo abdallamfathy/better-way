@@ -145,11 +145,14 @@ const Category = () => {
                                         </div>
                                     </tr>
                                 </table>
-                            </div>
+                            </div> 
+
                     </div>
                 </div>
                 <div className='w-3/4'>
-
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
         </section>
