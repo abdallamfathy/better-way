@@ -1,6 +1,7 @@
 import React from 'react'
 import { Footer, Navbar } from '../components'
 import zara from "../assets/topPlaces/zara.jpg";
+import brand from "../assets/topBrands/brand.jpg";
 import { RiStarSFill } from 'react-icons/ri';
 
 
@@ -16,8 +17,8 @@ const Category = () => {
             </div>
         </section>
         <section className='sectionII'>
-            <div className='flex justify-between'>
-                <div className='w-1/4 bg-bg  rounded-md'>
+            <div className='flex justify-between gap-4'>
+                <div className='w-1/4 h-full bg-bg  rounded-md '>
                     <div className='flex flex-col filter'>
                             <div className='CITY flex flex-col justify-center items-start p-4 border-b border-txt'>
                                 <h1 className='text-2xl font-bold'>CITY</h1>
@@ -150,8 +151,175 @@ const Category = () => {
                     </div>
                 </div>
                 <div className='w-3/4'>
-                    <div>
-                        
+                    <div className='flex flex-wrap gap-1'>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
+                        <div className='border border-txt h-80 w-72 flex flex-col justify-start gap-4 items-start'>
+                            <img src={brand} alt="brand" className='self-center'/>
+                            <div className='flex flex-col gap-1 p-1'>
+                                <h2 className='text-2xl'>Flamingo Cafe</h2>
+                                <div className='text-btn text-xl flex'>
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill />
+                                    <RiStarSFill className='text-txt' />
+                                </div>
+                                <h2>Cairo</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
