@@ -151,174 +151,292 @@ const Category = () => {
                     </div>
                 </div>
                 <div className='w-3/4'>
-                    <div className='flex flex-wrap gap-1'>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                    <div className='flex flex-wrap gap-4'>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                      </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                      </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                    <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
                         </div>
                     </div>
                 </div>
@@ -327,76 +445,162 @@ const Category = () => {
         <section className='sectionIII'>
             <div className=''>
                 <h2 className='text-2xl'>Recently Visited</h2>
-                <div className='flex gap-1 p-4'>
-                <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                <div className='flex gap-4 p-4'>
+                        <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                      </div>
                         </div>
-                        <div className=' h-80 w-72 flex flex-col justify-start gap-4 items-start'>
-                            <img src={brand} alt="brand" className='self-center'/>
-                            <div className='flex flex-col gap-1 p-1'>
-                                <h2 className='text-2xl'>Flamingo Cafe</h2>
-                                <div className='text-btn text-xl flex'>
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill />
-                                    <RiStarSFill className='text-txt' />
-                                </div>
-                                <h2>Cairo</h2>
-                            </div>
+                        <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                        <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                        <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                        <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
+                        </div>
+                        <div className="w-60 h-72 bg-txt rounded-2xl">
+                      <div className="flex flex-col h-72">
+                        <div className="h-3/4">
+                          <img
+                            className="rounded-t-2xl w-full h-full"
+                            src={zara}
+                            alt="product image"
+                          />
+                        </div>
+                        <div className="flex items-center justify-center gap-4 h-1/4">
+                          <div className="mx-2    text-black text-[12px] font-semibold flex flex-col items-start justify-center">
+                            <h2 className="text-btn">ZARA FOR MEN</h2>
+                            <h3>WOMEN CLOTHES</h3>
+                          </div>
+                          <div className="flex w-20 text-btn bg-bg rounded-md h-3 p-2 justify-center items-center">
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                            <RiStarSFill />
+                          </div>
+                        </div>
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
+                          <h2 className="text-sm  text-txt text-center">11%</h2>
+                        </div>
+                      </div>
                         </div>
                 </div>
             </div>
