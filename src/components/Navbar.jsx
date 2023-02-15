@@ -5,6 +5,8 @@ import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 // import { CgProfile } from 'react-icons/all'
 import Categories from './Categories'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
 
@@ -40,8 +42,10 @@ const Navbar = () => {
         </div>
 
 
-        <div className='sm:flex hidden flex-row grow-0 items-center justify-between mx-8 text-[#4C4C6D]  '>
-          
+        <div className='sm:flex hidden flex-row grow-0 items-center justify-between mx-20 text-[#4C4C6D]  '>
+            <div>
+              <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12" />
+            </div>
             <div>
             <img src={logo} alt="logo" className='w-28 h-24 ' />
             </div>
