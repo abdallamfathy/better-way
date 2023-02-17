@@ -1,5 +1,5 @@
 import React from 'react'
-import brand from "../assets/topBrands/brand.jpg"
+import brand from "../../assets/topBrands/brand.jpg"
 
 
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import { AiOutlineCar } from 'react-icons/ai'
 import { FaCaretSquareLeft, FaHospitalUser, FaMapMarkedAlt, FaRing } from 'react-icons/fa'
-import { categories } from '../assets/Constants'
+import { categories } from '../../assets/Constants'
 import { faBars, faBuilding, faCake, faCar, faDiamond, faDiamondTurnRight, faGamepad, faGem, faGraduationCap, faHeartCircleCheck, faHome, faMugHot, faRibbon, faRing, faSchool, faShirt, faShop, faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Others from './Others';
+import Others from '../Others';
 import Hero from './Hero';
 
 const Categories = () => {

@@ -1,8 +1,8 @@
 import { CardCategory } from './CardCategory';
 import React from 'react'
-import { Footer, Navbar } from '../components'
-import zara from "../assets/topPlaces/zara.jpg";
-import brand from "../assets/topBrands/brand.jpg";
+import { Footer, Navbar } from '../../components'
+import zara from "../../assets/topPlaces/zara.jpg";
+import brand from "../../assets/topBrands/brand.jpg";
 import { RiStarSFill } from 'react-icons/ri';
 import Pagination from './Pagination';
 

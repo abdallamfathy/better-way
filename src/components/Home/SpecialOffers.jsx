@@ -1,5 +1,5 @@
 import React from 'react'
-import flash from '../assets/flash/flash.jpg'
+import flash from '../../assets/flash/flash.jpg'
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide  } from 'swiper/react';

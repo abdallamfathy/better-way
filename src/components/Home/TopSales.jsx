@@ -1,4 +1,4 @@
-import zara from "../assets/topPlaces/zara.jpg"
+import zara from "../../assets/topPlaces/zara.jpg"
 
 import {RiStarSFill , RiStarSLine} from 'react-icons/ri'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';

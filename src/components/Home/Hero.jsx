@@ -1,4 +1,4 @@
-import slide1 from "../assets/slider/slider1.png"
+import slide1 from "../../assets/slider/slider1.png"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide  } from 'swiper/react';
 

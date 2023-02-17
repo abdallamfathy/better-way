@@ -1,6 +1,5 @@
 import React from "react";
-import zara from "../assets/topPlaces/zara.jpg";
-import brand from "../assets/topBrands/brand.jpg";
+import zara from "../../assets/topPlaces/zara.jpg";
 import { RiStarSFill } from 'react-icons/ri';
 
 export function CardCategory() {
