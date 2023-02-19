@@ -3,7 +3,7 @@ import zara from "../../assets/topPlaces/zara.jpg";
 import { RiStarSFill } from 'react-icons/ri';
 
 export function CardCategory() {
-  return <div className="w-72 h-72 bg-txt rounded-md">
+  return <div className="w-64 h-72 bg-txt rounded-md">
                       <div className="flex flex-col h-72">
                         <div className="h-3/4">
                           <img className="rounded-t-md w-full h-full" src={zara} alt="product image" />
@@ -20,7 +20,7 @@ export function CardCategory() {
                             <RiStarSFill />
                           </div>
                         </div>
-                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-12 h-12 absolute  z-50 translate-x-56  translate-y-3">
+                        <div className="rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-txt w-12 h-12 absolute  z-50 translate-x-48  translate-y-3">
                           <h2 className=" text-txt text-center">11%</h2>
                         </div>
                       </div>

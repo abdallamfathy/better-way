@@ -22,6 +22,9 @@ const Category = () => {
             <div className='flex justify-between'>
                 <div className='w-1/4  bg-bg  rounded-md '>
                     <div className='flex flex-col filter'>
+                        <div className='SEARCH m-4 '>
+                            <input type="text" placeholder='Search' className='bg-gray-700 text-white rounded-3xl pl-4 py-2 w-72' />
+                        </div>
                     <div className='CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-64'>
                                 <h1 className='text-3xl font-bold'>CATEGORIES</h1>
                                 <table className='m-5 flex flex-col gap-2 w-64 overflow-y-auto'>
@@ -318,7 +321,9 @@ const Category = () => {
                             <div className='OFFERS flex flex-col justify-center items-start p-4 border-b border-txt'>
                                 <h1 className='text-3xl font-bold'>OFFERS</h1>
                                 <table className='m-5 flex flex-col gap-2'>
-                                    <tr>
+                                    <tr><input type="number" placeholder='0' className='w-20 mr-4'  />
+                                    <input type="number" placeholder='100' className='w-20' /></tr>
+                                    {/* <tr>
                                         <div className='flex gap-4 items-center'>
                                         <input type="radio" name="" id="" />
                                         <div className='flex justify-between text-txt text-2xl'>
@@ -349,7 +354,7 @@ const Category = () => {
                                             20% or more
                                         </div>
                                         </div>
-                                    </tr>
+                                    </tr> */}
                                 </table>
                             </div> 
                             <div className='GAINED flex flex-col justify-center items-start p-4'>
@@ -393,7 +398,7 @@ const Category = () => {
                     </div>
                 </div>
                 <div className='w-3/4 flex flex-col items-center justify-between'>
-                    <div className='flex  flex-wrap justify-end gap-1 '>
+                    <div className='flex  flex-wrap justify-end gap-6 '>
                       <CardCategory/>
                       <CardCategory/>
                       <CardCategory/>
@@ -415,7 +420,7 @@ const Category = () => {
                       <CardCategory/>
                       <CardCategory/>
                     </div>
-                    <div>
+                    <div className='my-5'>
                         <Pagination/>
                     </div>
                 </div>
@@ -424,7 +429,7 @@ const Category = () => {
         <section className='sectionIII'>
             <div className=''>
                 <h2 className='text-3xl'>Recently Visited</h2>
-                <div className='flex flex-wrap gap-4 p-6  '>
+                <div className='flex flex-wrap gap-6 p-6  '>
                         <CardCategory   />
                         <CardCategory   />
                         <CardCategory   />
