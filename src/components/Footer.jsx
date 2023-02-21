@@ -20,7 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
 return (
     <div className="bg-bg">
-      <div className="pt-10 flex flex-col gap-10 ">
+      <div className="flex flex-col gap-10 ">
           <div className="flex justify-between bg-slate-800 p-10 px-40">
             <a href="#"><img src={logo} alt="logo" className="w-60"/></a>
             <div className="flex justify-between">
