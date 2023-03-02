@@ -1,6 +1,6 @@
 import React from 'react'
-import {Navbar , Hero, TopBrands, TopSales, LatestDeals, Footer, SpecialOffers} from '../index'
-import SubCategory from './SubCategory'
+import {Navbar , Hero, TopBrands, TopSales, LatestDeals, Footer, SpecialOffers, Categories} from '../index'
+import SubCategory from '../Hero/SubCategory'
 import { CatProvider } from './CatContext'
 
 
@@ -9,7 +9,7 @@ const Home = () => {
     <>
         <Navbar/>
         <CatProvider>
-        <SubCategory/>
+        {/* <SubCategory/> */}
         <Hero/>
         </CatProvider>
         <SpecialOffers/>

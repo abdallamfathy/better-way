@@ -2,39 +2,48 @@ export const categories = [
     {
         id: 1,
         name: "Super Market",
+        icon: "shop"
 },
 {
         id: 2,
         name: "Cafe",
+        icon:"mug-hot"
 },
 {
         id: 3,
         name: "Restaurant",
+        icon:"utensils"
 },
 {       
         id: 4,
         name: "Cars",
+        icon:"car"
 },
 {
         id: 5,
         name: "Fashion",
+        icon:"shirt"
 },
 {
         id: 6,
         name: "Health Care",
+        icon: "heart-circle-check"
 },
 {
         id: 7,
         name: "Education",
+        icon: "graduation-cap"
 
 },
 {
         id: 8,
         name: "Jewelry",
+        icon: "gem"
 },
 {
         id: 9,
         name: "Net Cafe & Gaming",
+        icon: "gamepad"
 },
 // {
 //         id: 10,
@@ -74,6 +83,7 @@ export const categories = [
 {
         id: 17,
         name: "Other",
+        icon: "bars"
         
 },
 ]
