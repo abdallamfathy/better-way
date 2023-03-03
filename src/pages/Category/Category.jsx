@@ -25,16 +25,16 @@ const Category = () => {
             <div className="flex justify-between">
               <div className="w-1/4 h-full bg-bg  rounded-md ">
                 <div className="flex flex-col filter">
-                  <div className="SEARCH m-4 ">
+                  <div className="SEARCH m-6 ">
                     <input
                       type="text"
                       placeholder="Search"
                       className="bg-gray-700 text-white rounded-3xl pl-4 py-2 w-72"
                     />
                   </div>
-                  <div className="CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-64">
+                  <div className="CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-80">
                     <h1 className="text-3xl font-bold">CATEGORIES</h1>
-                    <table className="m-5 flex flex-col gap-2 w-80 overflow-y-auto">
+                    <table className="m-5 flex flex-col gap-2 h-full w-80 overflow-y-auto">
                       <tr>
                         <div className="flex gap-4 items-center">
                           <input type="checkbox" name="" id="" />
@@ -67,9 +67,25 @@ const Category = () => {
                           </div>
                         </div>
                       </tr>
+                      <tr>
+                        <div className="flex gap-4 items-center">
+                          <input type="checkbox" name="" id="" />
+                          <div className="flex justify-between text-2xl">
+                            Cafe & Restaurant
+                          </div>
+                        </div>
+                      </tr>
+                      <tr>
+                        <div className="flex gap-4 items-center">
+                          <input type="checkbox" name="" id="" />
+                          <div className="flex justify-between text-2xl">
+                            Cafe & Restaurant
+                          </div>
+                        </div>
+                      </tr>
                     </table>
                   </div>
-                  <div className="CITY flex flex-col justify-center items-start p-4 border-b border-txt h-64  ">
+                  <div className="CITY flex flex-col justify-center items-start p-4 border-b border-txt h-80  ">
                     <h1 className="text-3xl font-bold">GOVERNORATE</h1>
                     <table className="m-5 flex flex-col gap-2 h-full w-80 overflow-y-auto">
                       <tr>
@@ -234,7 +250,7 @@ const Category = () => {
                       </tr>
                     </table>
                   </div>
-                  <div className="AREA flex flex-col justify-center items-start p-4 border-b border-txt h-64">
+                  <div className="AREA flex flex-col justify-center items-start p-4 border-b border-txt h-80">
                     <h1 className="text-3xl font-bold">AREA</h1>
                     <table className="m-5 flex flex-col gap-2 w-80 overflow-y-auto">
                       <tr>
