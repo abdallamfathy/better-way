@@ -5,6 +5,7 @@ import zara from "../../assets/topPlaces/zara.jpg";
 import brand from "../../assets/topBrands/brand.jpg";
 import { RiStarSFill } from "react-icons/ri";
 import Pagination from "./Pagination";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
@@ -401,6 +402,7 @@ const Category = () => {
                 </div>
               </div>
               <div className="w-3/4 flex flex-col items-center justify-between">
+                <Link to="/shop">
                 <div className="flex  flex-wrap justify-end gap-6 ">
                   <CardCategory />
                   <CardCategory />
@@ -423,6 +425,7 @@ const Category = () => {
                   <CardCategory />
                   <CardCategory />
                 </div>
+                </Link>
                 <div className="my-5">
                   <Pagination />
                 </div>
