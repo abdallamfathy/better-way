@@ -11,6 +11,7 @@ const Navbar = () => {
 
   
   const [show, setShow] = useState(false)  
+  const [showMenu, setShowMenu] = useState(false)
   const toggleMenu = (prev) => {
     setShow(!show);
   }
@@ -41,9 +42,17 @@ const Navbar = () => {
 
 
         <div className='sm:flex hidden flex-row grow-0 items-center justify-between mx-20 text-[#4C4C6D]  '>
-            <div className={`${window.location.pathname === "/" && 'hidden'}`}>
-              <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12 " />
-            </div> 
+            <div className={`${window.location.pathname === "/" && 'hidden'}`}
+             onMouseEnter={() => setShowMenu(!show)}
+             >
+              <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12 cursor-pointer " />
+            </div>
+            {
+              showMenu &&
+               <div className='absolute inset-0 top-20 left-20 bg-web bg-opacity-90 rounded-lg h-[32rem] w-96' onMouseLeave={() => setShowMenu(false)}>
+                  <Categories/>
+              </div>
+            }
             <div>
             <a href="/"><img src={logo} alt="logo" className='w-28 h-24 ' /></a>
             </div>
