@@ -1,18 +1,8 @@
 import React from "react";
-import logo from "../assets/logo2.png";
-import logo2 from "../assets/logo.png"
-import qr from "../assets/qr.jpeg";
-import googleApp from "../assets/googleApp.png";
-import appleApp from "../assets/appleApp.png";
-import location from "../assets/location.png";
-import message from "../assets/message.png";
-import call from "../assets/call.png";
-import facebook from "../assets/facebook.png";
-import twitter from "../assets/twitter.png";
-import instagram from "../assets/instagram.png";
-import linkedin from "../assets/linkedin.png";
-import whatsapp from "../assets/whatsapp.png";
-// import { Link } from "react-router-dom";
+import logo from "../../assets/logo2.png";
+import qr from "../../assets/qr.jpeg";
+import googleApp from "../../assets/googleApp.png";
+import appleApp from "../../assets/appleApp.png";
 import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMailBulk, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { faEnvelope, faMailForward, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Link } from "react-router-dom";
 
 const LatestDeals = () => {
 return (
@@ -138,7 +139,9 @@ return (
     {/* desktop version */}
     <div className='my-8 max-md:hidden'>
 
-<Swiper
+    <Link to="/shop">
+
+    <Swiper
   // install Swiper modules
 modules={[Navigation, Pagination, Scrollbar, A11y]}
 spaceBetween={100}
@@ -363,6 +366,8 @@ navigation={true}
 </SwiperSlide>
 
 </Swiper>
+    </Link>
+
 </div>
   </div>
 </>

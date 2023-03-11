@@ -5,6 +5,7 @@ import Categories from "./Categories";
 import { useState } from "react";
 import SubCategory from './SubCategory';
 import { useCatContext } from '../Home/CatContext';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,7 +17,9 @@ const Hero = ({state}) => {
     
     <div className='flex justify-center items-center h-36  mx-3 my-6 gap-4 sm:mx-40 sm:m-8 sm:h-[500px]'>
       <div className="w-1/4 bg-gray-500 z-50 h-full rounded-md  max-sm:hidden">
+      <Link to="/category">
         <Categories show={show} updateState={updateState}/>
+      </Link>
       </div>
     {
     show  ?

@@ -1,5 +1,5 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "./Layout/Navbar";
+import Footer from "./Layout/Footer";
 import Loader from "./Loader";
 import Hero from "./Hero/Hero";
 import SpecialOffers from "./Home/SpecialOffers";

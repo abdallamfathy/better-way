@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Link } from "react-router-dom";
 
 const TopSales = () => {
 return (
@@ -138,6 +139,7 @@ slidesPerView={2.5}
     {/* desktop version */}
   <div className='my-8 max-md:hidden'>
 
+    <Link to="/shop">
     <Swiper
       // install Swiper modules
     modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -363,6 +365,7 @@ slidesPerView={2.5}
 </SwiperSlide>
     
     </Swiper>
+    </Link>
     </div>
   </div>
 </>

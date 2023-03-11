@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 import {BiSearchAlt , IoMdArrowDropdown , CgProfile, GiHamburgerMenu, GiEgypt, GiArabicDoor, FaLanguage, GrLanguage, HiLanguage, GiEgyptianBird, GiEgyptianProfile, GiUsaFlag, FaFlag, GiEuropeanFlag} from 'react-icons/all'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-// import { CgProfile } from 'react-icons/all'
-import Categories from './Hero/Categories'
-import { Link } from 'react-router-dom'
+import Categories from '../Hero/Categories'
+import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 
@@ -19,7 +18,6 @@ const Navbar = () => {
   const toggleLang = (prev) => {
     setLang(!lang);
   }
-
   return (
     <>
         <nav className='bg-bg '>
@@ -43,11 +41,11 @@ const Navbar = () => {
 
 
         <div className='sm:flex hidden flex-row grow-0 items-center justify-between mx-20 text-[#4C4C6D]  '>
+            <div className={`${window.location.pathname === "/" && 'hidden'}`}>
+              <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12 " />
+            </div> 
             <div>
-              <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12" />
-            </div>
-            <div>
-            <img src={logo} alt="logo" className='w-28 h-24 ' />
+            <a href="/"><img src={logo} alt="logo" className='w-28 h-24 ' /></a>
             </div>
             <div className='bg-white rounded-lg w-[900px] h-12 flex justify-between '>
             <button className='bg-btn  p-2  w-12 rounded-l-lg'><BiSearchAlt className='w-7 h-7 text-white'/></button>
