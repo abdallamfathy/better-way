@@ -25,6 +25,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight, faArrowCircleRight, faArrowDown, faArrowDown19, faArrowDownLong, faArrowDownShortWide, faArrowDownWideShort, faArrowTrendDown, faDownload, faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { Rating } from "flowbite-react";
 import { ProductInfo } from "../components/ProductDetails/ProductInfo";
+import { Offers } from "../components/ProductDetails/Offers";
 
 const Shop = () => {
 
@@ -38,36 +39,10 @@ const Shop = () => {
 
         <section className="sectionII my-4">
           <div className="Container flex justify-between gap-4">
-            <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full w-2/3   text-txt">
-              <div className="Title w-full "><h2 className="text-6xl font-bold text-btn ">Flamingo Cafe</h2></div>
-              <div className="list ">
-                <div className="SubTitle w-full my-4"><h2 className="text-5xl font-semibold">Offers :</h2></div>
-                <div className="Offers flex flex-col gap-8 my-4  text-2xl">
-
-                  <div className="flex justify-between w-full">
-                    <p> <input type="radio" name="1st" /> Enjoy a 50% discount on a total bill.</p>
-                    <p className="text-btn font-bold">50%</p>
-                  </div>
-
-                  <div className="flex justify-between w-full">
-                    <p><input type="radio" name="1st" /> Enjoy a 10% discount.</p>
-                    <p className="text-btn font-bold">10%</p>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <p><input type="radio" name="1st" /> Enjoy a discount on the price of Egyptian medicines.</p>
-                    <p className="text-btn font-bold">5%</p>
-                  </div>
-                  <div className="flex justify-between w-full">
-                    <p><input type="radio" name="1st" /> Enjoy a discount on a total bill less than 1,000 pounds.</p>
-                    <p className="text-btn font-bold">40%</p>
-                  </div>
-                  <div className="flex justify-between gap-4 w-full">
-                    <p><input type="radio" name="1st" /> Enjoy a discount on the total bill on special occasions and birthdays.</p>
-                    <p className="text-btn font-bold">60%</p>
-                  </div>
-                </div>
-              </div>
-              <div className="Description">
+            <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
+              <div className="Title w-full "><h2 className="md:text-6xl text-3xl font-bold text-btn ">Flamingo Cafe</h2></div>
+              <Offers     />
+              {/* <div className="Description">
                 <div className="SubTitle w-full my-4"><h2 className="text-5xl font-semibold">Description :</h2></div>
                 <div className="leading-10 p-5 my-2">
                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente veniam laborum eligendi cum iusto. Voluptate illo possimus, veritatis tempore molestias, omnis dolores laboriosam reiciendis doloribus ducimus culpa tempora voluptatum!</p>
@@ -123,7 +98,7 @@ const Shop = () => {
                   </div>
 
                 </div>
-              </div>
+              </div> */}
 
               <div className="Comments text-txt">
 
@@ -159,7 +134,7 @@ const Shop = () => {
             </div>
 
 
-            <div className="ShopSection flex flex-col items-center gap-6 w-1/3 text-txt">
+            {/* <div className="ShopSection flex flex-col items-center gap-6 w-1/3 text-txt">
               <div className="Description flex flex-col items-center gap-4">
                 <div className="youtube">
                   <iframe width="460" height="315" src="https://www.youtube.com/embed/znnC9q86ptI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -203,7 +178,7 @@ const Shop = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
