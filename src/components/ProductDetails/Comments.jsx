@@ -22,7 +22,6 @@ const Comments = () => {
                   <footer className="mb-5 text-sm "><p>Reviewed in Cairo , Egypt on <time datetime="2017-03-03 19:00">February 3, 2023</time></p></footer>
                   <p className="mb-2 font-light ">This is my third time shopping from BetterWay. They are just fantastic value for money. This one arrived yesterday and the first thing I did was set the time, popped on an identical strap from another Invicta and went in the shower with it to test the waterproofing.... No problems.</p>
                   <p className="mb-3 font-light ">It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well under 100EGP! An absolute bargain.</p>
-                  <a href="#" className="block mb-5 text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">Read more</a>
                 </article>
 
               </div>
