@@ -24,80 +24,16 @@ import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp, 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight, faArrowCircleRight, faArrowDown, faArrowDown19, faArrowDownLong, faArrowDownShortWide, faArrowDownWideShort, faArrowTrendDown, faDownload, faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { Rating } from "flowbite-react";
+import { ProductInfo } from "../components/ProductDetails/ProductInfo";
 
 const Shop = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  let image = [];
-  for (let i = 0; i < 6; i++) {
-    image.push(
-      <SwiperSlide>
-        <img src={zara} alt="image" />
-      </SwiperSlide>
-    );
-  }
   return (
     <>
       <Navbar />
-      <div className="mx-20 my-8">
+      <div className="md:mx-20 md:my-8 m-5">
         <section className="sectionI">
-          <div className="flex justify-between">
-            <div className="flex flex-col items-start  justify-center w-1/3 my-8  text-txt ">
-              <div className="flex flex-col items-center gap-10">
-                <div className="h-96 w-96 flex justify-center items-center">
-                  <img src={brand} alt="logo" className="h-96 w-96 " />
-                </div>
-                <div className="flex text-3xl text-btn rounded-md   justify-center items-center">
-                  <RiStarSFill />
-                  <RiStarSFill />
-                  <RiStarSFill />
-                  <RiStarSFill />
-                  <RiStarSLine />
-
-                </div>
-                <div className="flex flex-col items-center gap-4  text-2xl">
-                  <div className="flex gap-2 items-center">
-                    <h2 className="font-semibold">Branches  </h2>
-                    <a href="#"><FontAwesomeIcon icon={faSortDown} /></a>
-                  </div>
-                  <p> Cairo </p>
-                  <p> Masr el gededa </p>
-                </div>
-                <div>
-                  <h2 className="font-bold text-2xl">Gained Points : <span className="text-btn">5</span></h2>
-                </div>
-              </div>
-            </div>
-            <div className="swiperr my-8 w-2/3">
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                }}
-                modules={[FreeMode, Navigation, Thumbs]}
-                spaceBetween={10}
-                navigation={true}
-                thumbs={{
-                  swiper:
-                    thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
-                }}
-                className="mySwiper2 rounded-t-md">
-                {image}
-              </Swiper>
-              <div className="py-2 rounded-b-md">
-                <Swiper
-                  modules={[FreeMode, Navigation, Thumbs]}
-                  onSwiper={setThumbsSwiper}
-                  spaceBetween={10}
-                  slidesPerView={6}
-                  freeMode={true}
-                  watchSlidesProgress={true}
-                  className="mySwiper">
-                  {image}
-                </Swiper>
-              </div>
-            </div>
-          </div>
+<ProductInfo   />
         </section>
 
         <section className="sectionII my-4">
@@ -278,7 +214,7 @@ const Shop = () => {
             </div>
             <div className="mt-4">
               {/* desktop version */}
-              <div className=" max-md:hidden">
+              {/* <div className=" max-md:hidden">
                 <Swiper
                   // install Swiper modules
                   modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -525,7 +461,7 @@ const Shop = () => {
                     </div>
                   </SwiperSlide>
                 </Swiper>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
