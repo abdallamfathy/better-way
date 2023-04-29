@@ -14,7 +14,7 @@ const Category = () => {
       <div className="mx-20 my-8">
         <div className="flex flex-col gap-6 text-txt">
           <section className="sectionI">
-            <div className="w-full h-96">
+            <div className="w-full md:h-96 h-36 object-cover">
               <img
                 src={zara}
                 alt="image"
@@ -33,7 +33,7 @@ const Category = () => {
                       className="bg-gray-700 text-white rounded-3xl pl-4 py-2 w-72"
                     />
                   </div>
-                  <div className="CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-80">
+                  {/* <div className="CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-80">
                     <h1 className="text-3xl font-bold">CATEGORIES</h1>
                     <table className="m-5 flex flex-col gap-2 h-full w-80 overflow-y-auto">
                       <tr>
@@ -291,7 +291,7 @@ const Category = () => {
                   <div className="DISCOUNT flex flex-col justify-center items-start p-4 border-b border-txt">
                     <h1 className="text-3xl font-bold">DISCOUNT</h1>
                     <div className="m-5 flex flex-col gap-2">
-                      {/* <div className="flex gap-2 items-center">
+                      <div className="flex gap-2 items-center">
                       <p>From</p>
                         <input
                           type="number"
@@ -305,7 +305,7 @@ const Category = () => {
                           className="w-20 text-black font-semibold"
                         />{" "}
                         <p className="text-xl font-bold">%</p>
-                      </div> */}
+                      </div>
                       <div className="flex gap-2 items-center">
                         <p>From</p>
                         <input
@@ -398,10 +398,10 @@ const Category = () => {
                         </div>
                       </tr>
                     </table>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="w-3/4 flex flex-col items-center justify-between">
+              {/* <div className="w-3/4 flex flex-col items-center justify-between">
                 <Link to="/shop">
                 <div className="flex  flex-wrap justify-end gap-6 ">
                   <CardCategory />
@@ -429,7 +429,7 @@ const Category = () => {
                 <div className="my-5">
                   <Pagination />
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
           {/* <section className="sectionIII">
