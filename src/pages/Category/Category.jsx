@@ -7,6 +7,7 @@ import brand from "../../assets/topBrands/brand.jpg";
 import { RiStarSFill } from "react-icons/ri";
 import Pagination from "./Pagination";
 import { Link } from "react-router-dom";
+import { FaBars } from 'react-icons/fa';
 
 const Category = () => {
   return (
@@ -24,9 +25,9 @@ const Category = () => {
             </div>
           </section>
           <section className="sectionII">
-            <div className="flex justify-between">
-              <div className="md:w-1/4 h-full bg-bg  rounded-md ">
-                {/* <Filter     /> */}
+            <div className="flex md:flex-row flex-col max-md:gap-4 justify-between">
+              <div className="md:w-1/4 h-full max-md:hidden bg-bg  rounded-md ">
+                 <Filter     />
               </div>
               <div className="md:w-3/4 flex flex-col items-center justify-between">
                 <Link to="/shop">
