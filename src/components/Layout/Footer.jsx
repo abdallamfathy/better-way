@@ -11,7 +11,7 @@ const Footer = () => {
 return (
     <div className="bg-bg">
       <div className="flex flex-col gap-10 ">
-          <div className="flex justify-between bg-slate-800 p-10 px-40">
+          <div className="md:flex hidden justify-between bg-slate-800 p-10 px-40">
             <a href="#"><img src={logo} alt="logo" className="w-60"/></a>
             <div className="flex justify-between">
               <div className="flex flex-col gap-2 justify-start items-start text-white">
@@ -39,7 +39,7 @@ return (
               </div>
             </div>
             </div>
-        <div className="flex flex-wrap justify-between items-start my-10 md:mx-40">
+        <div className="flex flex-wrap justify-between items-start my-10 md:mx-40 px-10">
           <div className="flex flex-col justify-betwee text-txt  gap-6 w-1/2">
           <div className="flex justify-between">
           <div className="flex flex-col gap-10">
@@ -62,7 +62,7 @@ return (
           </div>
           </div>
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="md:flex hidden flex-col gap-10">
           <div className="flex flex-col gap-2 ">
           <h2 className="font-bold mb-2">ABOUT BETTERWAY EGYPT</h2>
           <a href="#" className="text-sm font-light hover:text-btn">BetterWay Logistics Services</a>
@@ -82,7 +82,7 @@ return (
           </div>
           </div>
           </div>
-          <div className="flex flex-wrap items-en gap-y-1 w-full mt-8 ">
+          <div className="md:flex hidden flex-wrap items-en gap-y-1 w-full mt-8 ">
           <a href="#" className="text-sm font-light hover:text-btn w-28">Activ</a>
           <a href="#" className="text-sm font-light hover:text-btn w-28">Dejavu</a>
           <a href="#" className="text-sm font-light hover:text-btn w-28">Defacto</a>
@@ -120,7 +120,7 @@ return (
           <a href="#" className="text-sm font-light hover:text-btn w-28">Dice</a>
           </div>
           </div>
-          <div className="flex flex-col items-center -mr-16 gap-6 justify-center w-1/2  rounded-xl">
+          <div className="md:flex hidden flex-col items-center -mr-16 gap-6 justify-center w-1/2  rounded-xl">
           <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg "></iframe>
           <div><img src={qr} alt="qrcode" className="w-36" /></div>
           </div>
