@@ -28,6 +28,7 @@ import { ProductInfo } from "../components/ProductDetails/ProductInfo";
 import { Offers } from "../components/ProductDetails/Offers";
 import Comments from "../components/ProductDetails/Comments";
 import Rates from "../components/ProductDetails/Rates";
+import Description from "../components/ProductDetails/Description";
 
 const Shop = () => {
 
@@ -44,13 +45,8 @@ const Shop = () => {
             <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
               <div className="Title w-full "><h2 className="md:text-6xl text-3xl font-bold text-btn ">Flamingo Cafe</h2></div>
               <Offers />
-              {/* <div className="Description">
-                <div className="SubTitle w-full my-4"><h2 className="text-5xl font-semibold">Description :</h2></div>
-                <div className="leading-10 p-5 my-2">
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni sapiente veniam laborum eligendi cum iusto. Voluptate illo possimus, veritatis tempore molestias, omnis dolores laboriosam reiciendis doloribus ducimus culpa tempora voluptatum!</p>
-                </div>
-              </div>
-            */}
+              <Description />
+           
               <Rates/>
 
               <Comments/>
