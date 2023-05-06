@@ -14,14 +14,6 @@ const Categories = ({ show, updateState }) => {
   };
   // font awesome function
   library.add(fas);
-
-
-
-// ...
-// const datas = [];
-// fetch(`${API_BASE_URL}api/v1/shops`)
-//   .then(response => response.json())
-//   .then(data => datas.push(data))
   const [myData, setMyData] = useState(null);
 
   useEffect(() => {
@@ -33,10 +25,6 @@ const Categories = ({ show, updateState }) => {
 
     fetchData();
   }, []);
-  myData?.map((data) => {
-    console.log(data.title);
-  });
-  // console.log(myData);
   return (
     <div className="flex flex-col items-start text-white m-4 w-full">
       <div className="w-full h-full">

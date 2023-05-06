@@ -20,9 +20,9 @@ const Hero = ({state}) => {
         <Categories show={show} updateState={updateState}/>
       </div>
     {
-    show  ?
-     <div className="w-3/4 h-full">
-    <Slider   Navigation={Navigation} Pagination={Pagination} Scrollbar={Scrollbar} A11y={A11y}  />
+      show  ?
+      <div className="w-3/4 h-full">
+       <Slider   Navigation={Navigation} Pagination={Pagination} Scrollbar={Scrollbar} A11y={A11y}  />
     </div> :
     <div className="w-3/4 h-full rounded-md bg-gray-500">
       <SubCategory/>
