@@ -24,7 +24,6 @@ const Category = () => {
 
     fetchData();
   }, [categoryId]);
-  console.log(myData);
   return (
     <>
       <Navbar />

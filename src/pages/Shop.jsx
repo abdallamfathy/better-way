@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -30,9 +30,23 @@ import Comments from "../components/ProductDetails/Comments";
 import Rates from "../components/ProductDetails/Rates";
 import Description from "../components/ProductDetails/Description";
 import ProductData from "../components/ProductDetails/ProductData";
+import API_BASE_URL from "../../config";
+import { useParams } from "react-router-dom";
 
 const Shop = () => {
+  const {shopId}  = useParams();
+  const [myData, setMyData] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`${API_BASE_URL}api/v1/shops/${shopId}`);
+      const data = await response.json();
+      setMyData(data.data);
+    };
+
+    fetchData();
+  }, [shopId]);
+  console.log(myData);
   return (
     <>
       <Navbar />
@@ -55,7 +69,7 @@ const Shop = () => {
 
 
             <div className="ShopSection flex flex-col items-center gap-6 md:w-1/3 text-txt">
-              <ProductData/>
+              <ProductData data={myData}/>
             </div>
           </div>
         </section>

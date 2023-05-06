@@ -4,7 +4,7 @@ import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight, faArrowCircleRight, faArrowDown, faArrowDown19, faArrowDownLong, faArrowDownShortWide, faArrowDownWideShort, faArrowTrendDown, faDownload, faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone, faSortDown } from "@fortawesome/free-solid-svg-icons";
-const ProductData = () => {
+const ProductData = ({data}) => {
   return (
 <div className="Description flex flex-col items-center gap-4">
                 <div className="youtube">
@@ -13,14 +13,14 @@ const ProductData = () => {
                 <div className="flex justify-around w-full">
                   <div className="flex flex-col gap-6">
                     <div className="Website self-center">
-                      <a href="#" className="underline"> www.FlamingoCafe.com </a>
+                      <a href="#" className="underline"> {data?.website_url}</a>
                     </div>
                     <div className="SocialMedia flex gap-4 items-center ">
-                      <a href="#" className="text-2xl font-light hover:text-btn"><FaFacebook /></a>
-                      <a href="#" className="text-2xl font-light hover:text-btn"><FaInstagram /></a>
-                      <a href="#" className="text-2xl font-light hover:text-btn"><FaWhatsapp /></a>
-                      <a href="#" className="text-2xl font-light hover:text-btn"><FaTiktok /></a>
-                      <a href="#" className="text-2xl font-light hover:text-btn"><FaYoutube /></a>
+                      <a href={data?.facebook_url} className="text-2xl font-light hover:text-btn"><FaFacebook /></a>
+                      <a href={data?.instagram_url} className="text-2xl font-light hover:text-btn"><FaInstagram /></a>
+                      <a href={data?.whatsapp_url} className="text-2xl font-light hover:text-btn"><FaWhatsapp /></a>
+                      <a href={data?.tiktok_url} className="text-2xl font-light hover:text-btn"><FaTiktok /></a>
+                      <a href={data?.youtube_url} className="text-2xl font-light hover:text-btn"><FaYoutube /></a>
                     </div>
                   </div>
                   <div className="QrCode"><img src={qr} alt="qrcode" className="w-20 rounded-md" /></div>
