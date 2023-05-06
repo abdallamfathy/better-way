@@ -121,7 +121,7 @@ return (
           </div>
           </div>
           <div className="md:flex hidden flex-col items-center -mr-16 gap-6 justify-center w-1/2  rounded-xl">
-          <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg "></iframe>
+          {/* <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className="rounded-lg "></iframe> */}
           <div><img src={qr} alt="qrcode" className="w-36" /></div>
           </div>
         </div>

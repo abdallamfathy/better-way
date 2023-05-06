@@ -1,15 +1,30 @@
 import { Products } from './Products';
 import { Filter } from './Filter';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Footer, Navbar } from "../../components";
 import zara from "../../assets/topPlaces/zara.jpg";
 import brand from "../../assets/topBrands/brand.jpg";
 import { RiStarSFill } from "react-icons/ri";
 import Pagination from "./Pagination";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
+import API_BASE_URL from '../../../config';
 
 const Category = () => {
+
+  const {categoryId}  = useParams();
+  const [myData, setMyData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`${API_BASE_URL}api/v1/categories/${categoryId}`);
+      const data = await response.json();
+      setMyData(data.data.shops);
+    };
+
+    fetchData();
+  }, [categoryId]);
+  console.log(myData);
   return (
     <>
       <Navbar />
@@ -30,9 +45,9 @@ const Category = () => {
                  <Filter     />
               </div>
               <div className="md:w-3/4 flex flex-col items-center justify-between">
-                <Link to="/shop">
-                <Products     />
-                </Link>
+                {
+                  myData && <Products  data={myData}   />
+                }
                 <div className="my-5">
                   <Pagination />
                 </div>
