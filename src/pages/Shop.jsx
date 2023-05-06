@@ -60,7 +60,7 @@ const Shop = () => {
             <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
               <div className="Title w-full "><h2 className="md:text-6xl text-3xl font-bold text-btn ">Flamingo Cafe</h2></div>
               <Offers />
-              <Description />
+              <Description description={myData?.description}/>
            
               <Rates/>
 
