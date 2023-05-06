@@ -8,7 +8,7 @@ const ProductData = ({data}) => {
   return (
 <div className="Description flex flex-col items-center gap-4">
                 <div className="youtube">
-                  {/* <iframe className="max-md:w-80 max-md:h-72" width="460" height="315" src="https://www.youtube.com/embed/znnC9q86ptI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+                  {/* <iframe className="max-md:w-80 max-md:h-72" width="460" height="315" src={data?.video_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
                 </div>
                 <div className="flex justify-around w-full">
                   <div className="flex flex-col gap-6">

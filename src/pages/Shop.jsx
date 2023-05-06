@@ -52,7 +52,7 @@ const Shop = () => {
       <Navbar />
       <div className="md:mx-20 md:my-8 m-5">
         <section className="sectionI">
-          <ProductInfo />
+          <ProductInfo data={myData} />
         </section>
 
         <section className="sectionII my-4">

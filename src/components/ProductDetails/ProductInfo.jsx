@@ -22,7 +22,7 @@ import { faArrowAltCircleRight, faArrowCircleRight, faArrowDown, faArrowDown19, 
 import { Rating } from "flowbite-react";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
-export function ProductInfo() {
+export function ProductInfo({data}) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     let image = [];
@@ -37,7 +37,7 @@ export function ProductInfo() {
             <div className="flex flex-col items-start  justify-center md:w-1/3 my-8  text-txt ">
               <div className="flex flex-col items-center gap-10">
                 <div className="md:h-96 md:w-96 flex justify-center items-center">
-                  <img src={brand} alt="logo" className="h-full w-full " />
+                  <img src={data?.logo} alt="logo" className="h-full w-full " />
                 </div>
                 <div className="flex text-3xl text-btn rounded-md   justify-center items-center">
                   <RiStarSFill />
@@ -56,7 +56,7 @@ export function ProductInfo() {
                   <p> Masr el gededa </p>
                 </div>
                 <div>
-                  <h2 className="font-bold text-2xl">Gained Points : <span className="text-btn">5</span></h2>
+                  <h2 className="font-bold text-2xl">Gained Points : <span className="text-btn">{data?.gained_points}</span></h2>
                 </div>
               </div>
             </div>
