@@ -23,8 +23,15 @@ const Comments = () => {
                   <p className="mb-2 font-light ">This is my third time shopping from BetterWay. They are just fantastic value for money. This one arrived yesterday and the first thing I did was set the time, popped on an identical strap from another Invicta and went in the shower with it to test the waterproofing.... No problems.</p>
                   <p className="mb-3 font-light ">It is obviously not the same build quality as those very expensive watches. But that is like comparing a Citroën to a Ferrari. This watch was well under 100EGP! An absolute bargain.</p>
                 </article>
+                <div className='flex flex-col 
+                  gap-10  '>
+                <textarea name="comment" id="" cols="30" rows="5"
+                className='rounded-xl bg-bg my-5'
+                placeholder='Add your comment here ..'
+                ></textarea>
+                  <button className='bg-btn p-2 my-5 rounded-lg md:h-full'>Submit</button>
 
-              </div>
+  </div>              </div>
   )
 }
 

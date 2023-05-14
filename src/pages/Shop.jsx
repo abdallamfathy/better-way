@@ -76,9 +76,9 @@ const Shop = () => {
 
         <section className="sectionIII">
           <div className="">
-            <div className="text-left text-txt font-bold text-2xl">
+            {/* <div className="text-left text-txt font-bold text-2xl">
               <h2>Related shops</h2>
-            </div>
+            </div> */}
             <div className="mt-4">
               {/* desktop version */}
               {/* <div className=" max-md:hidden">

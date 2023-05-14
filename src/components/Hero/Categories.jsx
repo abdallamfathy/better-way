@@ -30,8 +30,9 @@ const Categories = ({ show, updateState }) => {
       <div className="w-full h-full">
         <ul
           className="flex flex-col w-full h-full"
-          onMouseEnter={() => toggle()}
-          onMouseLeave={() => toggle()}>
+          // onMouseEnter={() => toggle()}
+          // onMouseLeave={() => toggle()}
+          >
           {myData?.map((category) => {
             return (
                 <Link key={category.id} to={`/category/${category.id}`}>
