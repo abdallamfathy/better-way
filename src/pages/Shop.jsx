@@ -38,7 +38,6 @@ const Shop = () => {
 
     fetchData();
   }, [shopId]);
-  console.log(myData);
   return (
     <>
       <Navbar />

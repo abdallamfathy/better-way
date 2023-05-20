@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import brand from "../../assets/topBrands/brand.jpg"
-
-
+import API_BASE_URL from "../../../config";
 
 
 const TopBrands = () => {
+  const [myData, setMyData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`${API_BASE_URL}api/v1/shops/top-deal`);
+      const data = await response.json();
+      setMyData(data.data);
+    };
+
+    fetchData();
+  }, []);
+  console.log(myData);
   return (
     <>
         <div className='my-7 md:my-8 md:mx-40 '>
@@ -14,31 +25,15 @@ const TopBrands = () => {
       <div className='mx-3 my-5 md:my-8 md:mx-0'>
 
         <div className='flex flex-wrap  justify-between items-center gap-[1.68rem]  md:gap-10'>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
+          {
+            myData?.map((item, index) => (
+              <div key={index}>
+            <img src={item.logo} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36 grayscale' />
           </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
+            ))
+          }
           </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
-          </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
-          </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
-          </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
-          </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
-          </div>
-          <div>
-            <img src={brand} alt="logo" className='w-28 h-16 rounded-md md:w-64 md:h-36' />
-          </div>
-        </div>
+         
         </div>
       </div>
     </>
