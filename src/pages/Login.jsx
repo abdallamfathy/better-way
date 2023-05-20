@@ -38,6 +38,9 @@ const Login = () => {
           },
         });
         if (res.status === 200) {
+         if (res.data.data.type === "1") {
+          navigate('/merchant-dashboard')
+         } else {
           Swal.fire({
             title: "مرحبا بك",
             confirmButtonColor: "#F1D975",
@@ -49,6 +52,7 @@ const Login = () => {
             },
           });
           navigate("/");
+         }
         }
       } catch (error) {
         if (error.response.status === 401) {
