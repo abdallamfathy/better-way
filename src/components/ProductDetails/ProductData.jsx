@@ -32,8 +32,8 @@ const ProductData = ({data}) => {
                   {
                     data?.addresses.map((address, index) => {
                       return (
-                        <div className='flex flex-col  items-center gap-4'>
-                        <div className="flex self-start items-center gap-2 " key={index}>
+                        <div className='flex flex-col  items-center gap-4' key={index}>
+                        <div className="flex self-start items-center gap-2 " >
                           <h2><FontAwesomeIcon icon={faLocationDot} /></h2>
                           <p>{address?.address}</p>
                         </div>
