@@ -23,7 +23,7 @@ const Login = () => {
       // Handle form submission
       try {
         const res = await axios.post(
-          "http://betterway-egypt.com/api/v1/login",
+          "http://betterway-egypt.com/api/v1/users/login",
           formData
         );
   
@@ -33,7 +33,7 @@ const Login = () => {
           tokenType: "Bearer",
           authState: {
             email: res.data.data.email,
-            first_name: res.data.data.first_name,
+            name: res.data.data.name,
             token: res.data.data.token,
           },
         });

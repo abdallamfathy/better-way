@@ -10,12 +10,13 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const toggleShowPassword = () => setShowPassword(!showPassword);
     const [formData, setFormData] = useState({
-        full_name: "",
+        name: "",
         email: "",
         password: "",
         mobile: "",
     });
 
+    console.log(formData);
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -23,9 +24,10 @@ const Register = () => {
 
         try {
             const res = await axios.post(
-                "http://betterway-egypt.com/api/v1/register",
+                "http://betterway-egypt.com/api/v1/users/register",
                 formData
-            );
+                );
+                console.log(res);
             if (res.status === 200) {
                 Swal.fire({
                     position: "center",
@@ -34,7 +36,6 @@ const Register = () => {
                     showConfirmButton: false,
                     timer: 3000,
                 });
-
                 navigate("/login");
             }
         } catch (error) {
@@ -73,8 +74,8 @@ const Register = () => {
                     <div className='flex flex-col items-start gap-2'>
                         <h2>Full Name</h2>
                         <input type="text"
-                            name="first_name"
-                            id="first_name"
+                            name="name"
+                            id="name"
                             value={formData.first_name}
                             onChange={handleChange}
                             placeholder="name"

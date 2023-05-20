@@ -4,6 +4,7 @@ import Loader from "./components/Loader"
 import {BrowserRouter as Router , Routes , Route} from "react-router-dom"
 import UserDashboard from "./pages/UserDashboard"
 import MerchantDashboard from "./pages/MerchantDashboard"
+import { AuthProvider } from "./utils/AuthContext"
 
 function App() {
   const [loading , setLoading] = useState(true)
@@ -16,6 +17,8 @@ function App() {
     <div className="bg-web overflow-x-hidden ">
       {!loading && 
         <Router>
+          <AuthProvider>
+
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/login" element={<Login/>}/>
@@ -25,6 +28,7 @@ function App() {
             <Route path="/shop/:shopId" element={<Shop/>}/>
             <Route path="/category/:categoryId" element={<Category/>}/>
           </Routes>
+          </AuthProvider>
         </Router>
       }
       {loading && <Loader/>}
