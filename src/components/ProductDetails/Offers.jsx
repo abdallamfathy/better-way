@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 export function Offers({ offers }) {
   const [postData , setPostData] = useState([{
-    id: offers.id,
-    shop_id: offers.shop_id,
+    id: offers?.id,
+    shop_id: offers?.shop_id,
   }])
   return <div className="list w-full">
     <div className="SubTitle w-full my-4"><h2 className="md:text-5xl text-2xl font-semibold">Offers :</h2></div>

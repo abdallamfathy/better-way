@@ -16,14 +16,6 @@ import {
   A11y,
 } from "swiper";
 import { Footer, Navbar } from "../components";
-import zara from "../assets/topPlaces/zara.jpg";
-import brand from "../assets/topBrands/brand.jpg";
-import qr from "../assets/qr.jpeg";
-import { RiStarSFill, RiStarSLine } from "react-icons/ri";
-import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleRight, faArrowCircleRight, faArrowDown, faArrowDown19, faArrowDownLong, faArrowDownShortWide, faArrowDownWideShort, faArrowTrendDown, faDownload, faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone, faSortDown } from "@fortawesome/free-solid-svg-icons";
-import { Rating } from "flowbite-react";
 import { ProductInfo } from "../components/ProductDetails/ProductInfo";
 import { Offers } from "../components/ProductDetails/Offers";
 import Comments from "../components/ProductDetails/Comments";
@@ -55,8 +47,8 @@ const Shop = () => {
           <ProductInfo data={myData} />
         </section>
 
-        <section className="sectionII my-4">
-          <div className="Container flex md:flex-row flex-col justify-between gap-4">
+        <section className="sectionII my-28">
+          <div className="Container flex md:flex-row flex-col justify-between md:gap-20 gap-4">
             <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
               <div className="Title w-full "><h2 className="md:text-6xl text-3xl font-bold text-btn ">Flamingo Cafe</h2></div>
               <Offers offers={myData?.offers} />
