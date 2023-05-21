@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 import { useIsAuthenticated, useSignOut, useAuthUser } from "react-auth-kit";
+import ProfileMenu from '../ProfileMenu'
 
 
 const Navbar = () => {
@@ -17,11 +18,15 @@ const Navbar = () => {
   
   const [show, setShow] = useState(false)  
   const [showMenu, setShowMenu] = useState(false)
-  const toggleMenu = (prev) => {
+  const [showProfile, setShowProfile] = useState(false)
+  const toggleMenu = () => {
     setShow(!show);
   }
+  const toggleProfile = () => {
+    setShowProfile(!showProfile);
+  }
   const [lang, setLang] = useState(false)  
-  const toggleLang = (prev) => {
+  const toggleLang = () => {
     setLang(!lang);
   }
   return (
@@ -34,11 +39,18 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-28 h-24 ' />
 
           </div>
-        <div>
-        <CgProfile className='w-10 h-12 text-white'/>
+        <div className='relative' onClick={() => toggleProfile()}>
+        <CgProfile className='w-10 h-12 text-white' />
+        {
+          showProfile &&
+          <ProfileMenu/>
+        }
         </div>
         
         </div>
+
+
+
 
         {/* Desktop version  */}
 
