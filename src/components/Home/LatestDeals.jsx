@@ -25,7 +25,6 @@ const LatestDeals = () => {
   
       fetchData();
     }, []);
-    console.log(myData);
 return (
     <>
     <div className='my-7 md:my-8 md:mx-40'>
