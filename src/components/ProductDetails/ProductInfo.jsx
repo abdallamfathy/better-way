@@ -29,9 +29,9 @@ export function ProductInfo({data}) {
       );
     }
   return <div className="flex md:flex-row flex-col-reverse justify-between">
-            <div className="flex flex-col items-start  justify-center md:w-1/3 my-8  text-txt ">
+            <div className="flex flex-col items-center md:items-start  justify-center md:w-1/3 my-8  text-txt ">
               <div className="flex flex-col items-center gap-10">
-                <div className="md:h-96 md:w-96 flex justify-center items-center">
+                <div className="2xl:h-96 xl:h-80 lg:h-72 h-56 2xl:w-96 xl:w-80 lg:w-72 w-56  flex justify-center items-center">
                   <img src={data?.logo} alt="logo" className="h-full w-full " />
                 </div>
                 <div className="flex text-3xl text-btn rounded-md   justify-center items-center">

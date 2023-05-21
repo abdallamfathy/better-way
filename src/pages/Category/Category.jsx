@@ -27,7 +27,7 @@ const Category = () => {
   return (
     <>
       <Navbar />
-      <div className="md:mx-20 md:my-8 m-5">
+      <div className="2xl:mx-20 xl:mx-16 lg:mx-10 md:my-8 m-5">
         <div className="flex flex-col gap-6 text-txt">
           <section className="sectionI">
             <div className="w-full md:h-96 h-36 object-cover">

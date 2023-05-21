@@ -11,7 +11,7 @@ const Footer = () => {
 return (
     <div className="bg-bg">
       <div className="flex flex-col gap-10 ">
-          <div className="md:flex hidden justify-between bg-slate-800 p-10 px-40">
+          <div className="md:flex hidden justify-between bg-slate-800 p-10 2xl:px-40 xl:px-20 px-10">
             <a href="#"><img src={logo} alt="logo" className="w-60"/></a>
             <div className="flex justify-between">
               <div className="flex flex-col gap-2 justify-start items-start text-white">
@@ -39,7 +39,7 @@ return (
               </div>
             </div>
             </div>
-        <div className="flex flex-wrap justify-between items-start my-10 md:mx-40 px-10">
+        <div className="flex flex-wrap justify-between items-start my-10 2xl:mx-40 xl:mx-20 lg:mx-10 px-10">
           <div className="flex flex-col justify-betwee text-txt  gap-6 w-1/2">
           <div className="flex justify-between">
           <div className="flex flex-col gap-10">
