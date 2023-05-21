@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../../assets/logo.png'
-import {BiSearchAlt , IoMdArrowDropdown , CgProfile, GiHamburgerMenu, GiEgypt, GiArabicDoor, FaLanguage, GrLanguage, HiLanguage, GiEgyptianBird, GiEgyptianProfile, GiUsaFlag, FaFlag, GiEuropeanFlag} from 'react-icons/all'
+import {CgProfile} from 'react-icons/all'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import Categories from '../Hero/Categories'
 import { Link, useParams } from 'react-router-dom'
@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 import { useIsAuthenticated, useSignOut, useAuthUser } from "react-auth-kit";
 import ProfileMenu from '../ProfileMenu'
+import SearchBar from '../Search/SearchBar'
 
 
 const Navbar = () => {
@@ -74,11 +75,7 @@ const Navbar = () => {
             <div>
             <a href="/"><img src={logo} alt="logo" className='w-28 h-24 ' /></a>
             </div>
-            <div className='bg-white rounded-lg 2xl:w-[900px] xl:w-[600px] h-12 flex justify-between '>
-            <button className='bg-btn  p-2  w-12 rounded-l-lg'><BiSearchAlt className='w-7 h-7 text-white'/></button>
-            <input type="text" placeholder='' className='bg-white text-black rounded-xl pl-4 py-2 w-96 text-right border-0' />
-            <button className='bg-gray-200  pl-1 py-2 w-20 border-l border-[#E8F6EF] rounded-r-lg flex items-center gap-1 font-semibold'> <IoMdArrowDropdown/>  Search</button>
-            </div>
+            <SearchBar/>
 
             <div className='flex gap-4'>
         {user() && (
