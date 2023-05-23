@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 import { useIsAuthenticated, useSignOut, useAuthUser } from "react-auth-kit";
+import ProfileMenu from '../ProfileMenu'
 
 
 const Navbar = () => {
@@ -17,11 +18,15 @@ const Navbar = () => {
   
   const [show, setShow] = useState(false)  
   const [showMenu, setShowMenu] = useState(false)
-  const toggleMenu = (prev) => {
+  const [showProfile, setShowProfile] = useState(false)
+  const toggleMenu = () => {
     setShow(!show);
   }
+  const toggleProfile = () => {
+    setShowProfile(!showProfile);
+  }
   const [lang, setLang] = useState(false)  
-  const toggleLang = (prev) => {
+  const toggleLang = () => {
     setLang(!lang);
   }
   return (
@@ -34,11 +39,18 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-28 h-24 ' />
 
           </div>
-        <div>
-        <CgProfile className='w-10 h-12 text-white'/>
+        <div className='relative' onClick={() => toggleProfile()}>
+        <CgProfile className='w-10 h-12 text-white' />
+        {
+          showProfile &&
+          <ProfileMenu/>
+        }
         </div>
         
         </div>
+
+
+
 
         {/* Desktop version  */}
 
@@ -62,7 +74,7 @@ const Navbar = () => {
             <div>
             <a href="/"><img src={logo} alt="logo" className='w-28 h-24 ' /></a>
             </div>
-            <div className='bg-white rounded-lg w-[900px] h-12 flex justify-between '>
+            <div className='bg-white rounded-lg 2xl:w-[900px] xl:w-[600px] h-12 flex justify-between '>
             <button className='bg-btn  p-2  w-12 rounded-l-lg'><BiSearchAlt className='w-7 h-7 text-white'/></button>
             <input type="text" placeholder='' className='bg-white text-black rounded-xl pl-4 py-2 w-96 text-right border-0' />
             <button className='bg-gray-200  pl-1 py-2 w-20 border-l border-[#E8F6EF] rounded-r-lg flex items-center gap-1 font-semibold'> <IoMdArrowDropdown/>  Search</button>

@@ -20,7 +20,7 @@ export function Slider({ Navigation, Pagination, Scrollbar, A11y }) {
     fetchData();
   }, []);
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
     <Swiper
       className="hero" // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -31,9 +31,9 @@ export function Slider({ Navigation, Pagination, Scrollbar, A11y }) {
         {
         myData?.map((slide) => {
           return (
-            <SwiperSlide key={slide.id}  className="w-full  z-50">
+            <SwiperSlide key={slide.id}  className="w-full h-full z-50">
 
-          <div  className= "h-36 w-80 flex justify-center items-center text-center rounded-md sm:h-[500px] sm:w-full">
+          <div  className= "h-36  flex justify-center items-center text-center rounded-md lg:h-[500px] w-full">
           <div className="">
             <img src={slide.image} alt="image"  />
             <h2 className="text-txt z-50 absolute inset-0 translate-y-60">{slide.title}</h2>

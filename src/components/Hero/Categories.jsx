@@ -39,9 +39,9 @@ const Categories = ({ show, updateState }) => {
               <div  className="flex items-center gap-4 cursor-pointer  hover:text-btn w-full  h-12 ">
                 <li className="font-medium text-xl">
                   {/* <FontAwesomeIcon icon={category.icon} key={category.icon} /> */}
-                  <img src={category.logo} alt="logo" className="w-10 h-10" />
+                  <img src={category.logo} alt="logo" className="xl:w-10 xl:h-10 w-7 h-7" />
                 </li>
-                <li className="text-lg font-medium">
+                <li className="xl:text-lg lg:text-base font-medium">
                   {category.title}
                 </li>
               </div>
