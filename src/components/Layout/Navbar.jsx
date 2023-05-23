@@ -6,9 +6,14 @@ import Categories from '../Hero/Categories'
 import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNavicon } from '@fortawesome/free-solid-svg-icons'
+import { useIsAuthenticated, useSignOut, useAuthUser } from "react-auth-kit";
+
 
 const Navbar = () => {
-
+  
+  const user = useIsAuthenticated();
+  const SignOut = useSignOut();
+  const auth = useAuthUser();
   
   const [show, setShow] = useState(false)  
   const [showMenu, setShowMenu] = useState(false)
@@ -32,9 +37,10 @@ const Navbar = () => {
         <div>
         <CgProfile className='w-10 h-12 text-white'/>
         </div>
+        
         </div>
 
-        {/* Mobile version  */}
+        {/* Desktop version  */}
 
         <div className={show ? 'flex flex-col justify-start items-start bg-bg  h-screen w-full md:hidden' : 'hidden'}>
         <Categories/>
@@ -61,10 +67,36 @@ const Navbar = () => {
             <input type="text" placeholder='' className='bg-white text-black rounded-xl pl-4 py-2 w-96 text-right border-0' />
             <button className='bg-gray-200  pl-1 py-2 w-20 border-l border-[#E8F6EF] rounded-r-lg flex items-center gap-1 font-semibold'> <IoMdArrowDropdown/>  Search</button>
             </div>
-            <div className='flex gap-4  '>
+
+            <div className='flex gap-4'>
+        {user() && (
+              <p className='text-white'>
+                welcome{" "}
+                <span className="font-semibold mr-2 text-white">{auth()?.name}</span>
+              </p>
+            )}
+            {user() ? (
+              <p
+                className="hover:text-primary cursor-pointer"
+                onClick={() => {
+                  SignOut();
+                  window.location.reload();
+                }}>
+                تسجيل الخروج
+              </p>
+            ) : (
+              <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>Sign Up</button></Link>
+            )}
+        </div>
+
+            {/* <div className='flex gap-4  '>
             <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button></Link>
             <Link to="/login"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Login</button></Link>
-            </div>
+            </div> */}
+
+
+
+
             {lang ? <div className='flex cursor-pointer  gap-2' onClick={() => toggleLang()}>
               <p className='text-white'>العربية</p>
             <img src="https://hatscripts.github.io/circle-flags/flags/eg.svg" alt="eg flag" className='w-8 h-8'/>

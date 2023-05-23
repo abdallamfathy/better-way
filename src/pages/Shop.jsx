@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -16,37 +16,42 @@ import {
   A11y,
 } from "swiper";
 import { Footer, Navbar } from "../components";
-import zara from "../assets/topPlaces/zara.jpg";
-import brand from "../assets/topBrands/brand.jpg";
-import qr from "../assets/qr.jpeg";
-import { RiStarSFill, RiStarSLine } from "react-icons/ri";
-import { FaFacebook, FaInstagram, FaLocationArrow, FaMap, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowAltCircleRight, faArrowCircleRight, faArrowDown, faArrowDown19, faArrowDownLong, faArrowDownShortWide, faArrowDownWideShort, faArrowTrendDown, faDownload, faLocation, faLocationCrosshairs, faLocationDot, faLocationPin, faMobilePhone, faPhone, faSortDown } from "@fortawesome/free-solid-svg-icons";
-import { Rating } from "flowbite-react";
 import { ProductInfo } from "../components/ProductDetails/ProductInfo";
 import { Offers } from "../components/ProductDetails/Offers";
 import Comments from "../components/ProductDetails/Comments";
 import Rates from "../components/ProductDetails/Rates";
 import Description from "../components/ProductDetails/Description";
 import ProductData from "../components/ProductDetails/ProductData";
+import API_BASE_URL from "../../config";
+import { useParams } from "react-router-dom";
 
 const Shop = () => {
+  const {shopId}  = useParams();
+  const [myData, setMyData] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`${API_BASE_URL}api/v1/shops/${shopId}`);
+      const data = await response.json();
+      setMyData(data.data);
+    };
+
+    fetchData();
+  }, [shopId]);
   return (
     <>
       <Navbar />
       <div className="md:mx-20 md:my-8 m-5">
         <section className="sectionI">
-          <ProductInfo />
+          <ProductInfo data={myData} />
         </section>
 
-        <section className="sectionII my-4">
-          <div className="Container flex md:flex-row flex-col justify-between gap-4">
+        <section className="sectionII my-28">
+          <div className="Container flex md:flex-row flex-col justify-between md:gap-20 gap-4">
             <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
               <div className="Title w-full "><h2 className="md:text-6xl text-3xl font-bold text-btn ">Flamingo Cafe</h2></div>
-              <Offers />
-              <Description />
+              <Offers offers={myData?.offers} />
+              <Description description={myData?.description}/>
            
               <Rates/>
 
@@ -55,16 +60,16 @@ const Shop = () => {
 
 
             <div className="ShopSection flex flex-col items-center gap-6 md:w-1/3 text-txt">
-              <ProductData/>
+              <ProductData data={myData}/>
             </div>
           </div>
         </section>
 
         <section className="sectionIII">
           <div className="">
-            <div className="text-left text-txt font-bold text-2xl">
+            {/* <div className="text-left text-txt font-bold text-2xl">
               <h2>Related shops</h2>
-            </div>
+            </div> */}
             <div className="mt-4">
               {/* desktop version */}
               {/* <div className=" max-md:hidden">
