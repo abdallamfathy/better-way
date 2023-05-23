@@ -24,7 +24,7 @@ const Register = () => {
 
         try {
             const res = await axios.post(
-                "http://betterway-egypt.com/api/v1/users/register",
+                "https://maykel.betterway-egypt.com/api/v1/users/register",
                 formData
                 );
                 console.log(res);
