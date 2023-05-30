@@ -29,7 +29,7 @@ const Category = () => {
       <Navbar />
       <div className="2xl:mx-20 xl:mx-16 lg:mx-10 md:my-8 m-5">
         <div className="flex flex-col gap-6 text-txt">
-          <section className="sectionI">
+          {/* <section className="sectionI">
             <div className="w-full md:h-96 h-36 object-cover">
               <img
                 src={zara}
@@ -37,7 +37,7 @@ const Category = () => {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-          </section>
+          </section> */}
           <section className="sectionII">
             <div className="flex md:flex-row flex-col max-md:gap-4 justify-between">
               <div className="md:w-1/4 h-full max-md:hidden bg-bg  rounded-md ">
@@ -48,7 +48,7 @@ const Category = () => {
                   myData && <Products  data={myData}   />
                 }
                 <div className="my-5">
-                  <Pagination />
+                  {/* <Pagination /> */}
                 </div>
               </div>
             </div>

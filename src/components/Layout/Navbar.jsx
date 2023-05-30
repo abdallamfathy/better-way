@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../assets/logo.png'
-import {CgProfile} from 'react-icons/all'
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+import { CgProfile, RxAvatar } from 'react-icons/all'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import Categories from '../Hero/Categories'
 import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,12 +12,12 @@ import SearchBar from '../Search/SearchBar'
 
 
 const Navbar = () => {
-  
+
   const user = useIsAuthenticated();
   const SignOut = useSignOut();
   const auth = useAuthUser();
-  
-  const [show, setShow] = useState(false)  
+
+  const [show, setShow] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
   const [showProfile, setShowProfile] = useState(false)
   const toggleMenu = () => {
@@ -26,79 +26,105 @@ const Navbar = () => {
   const toggleProfile = () => {
     setShowProfile(!showProfile);
   }
-  const [lang, setLang] = useState(false)  
+  const [lang, setLang] = useState(false)
   const toggleLang = () => {
     setLang(!lang);
   }
+  const {categoryId} = useParams()
+  console.log(categoryId);
+  const handleMenu = () => {
+    setShow(false)
+  }
+
+  useEffect(() => {
+    handleMenu()
+  }, [categoryId])
+  
   return (
     <>
-        <nav className='bg-bg '>
+      <nav className='bg-bg '>
         <div className='sm:hidden flex justify-between items-center mx-5'>
           <div className='flex justify-center items-center'>
-        {!show && <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>}
-        {show && <AiOutlineClose className='w-8 h-10 text-white' onClick={() => toggleMenu()}/>}
-          <img src={logo} alt="logo" className='w-28 h-24 ' />
+            {!show && <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()} />}
+            {show && <AiOutlineClose className='w-8 h-10 text-white' onClick={() => toggleMenu()} />}
+           <Link to="/"> <img src={logo} alt="logo" className='w-20 h-20 py-2 ' /></Link>
 
           </div>
-        <div className='relative' onClick={() => toggleProfile()}>
-        <CgProfile className='w-10 h-12 text-white' />
-        {
-          showProfile &&
-          <ProfileMenu/>
-        }
-        </div>
-        
+          <div className='relative' onClick={() => toggleProfile()}>
+            <CgProfile className='w-10 h-12 text-white' />
+            {
+              showProfile &&
+              <ProfileMenu />
+            }
+          </div>
+
         </div>
 
 
+        <div className={show ? 'flex flex-col justify-start items-start bg-bg  h-screen w-full md:hidden' : 'hidden'}>
+          <Categories />
+        </div>
 
 
         {/* Desktop version  */}
 
-        <div className={show ? 'flex flex-col justify-start items-start bg-bg  h-screen w-full md:hidden' : 'hidden'}>
-        <Categories/>
-        </div>
 
 
-        <div className='sm:flex hidden flex-row grow-0 items-center justify-between mx-20 text-[#4C4C6D]  '>
-            <div className={`${window.location.pathname === "/" && 'hidden'}`}
-             onMouseEnter={() => setShowMenu(!show)}
-             >
-              <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12 cursor-pointer " />
+        <div className='sm:flex hidden flex-row grow-0 items-center justify-between 2xl:mx-20 xl:mx-16 lg:mx-10  text-[#4C4C6D]  py-1'>
+          <div className={`${window.location.pathname === "/" && 'hidden'}`}
+            onMouseEnter={() => setShowMenu(!show)}
+          >
+            <FontAwesomeIcon icon={faNavicon} className="text-txt w-full h-12 cursor-pointer mr-10" />
+          </div>
+          {
+            showMenu &&
+            <div className='absolute inset-0 top-20 left-[2.5rem] bg-web bg-opacity-90 rounded-lg h-[32rem] w-96' onMouseLeave={() => setShowMenu(false)}>
+              <Categories />
             </div>
-            {
-              showMenu &&
-               <div className='absolute inset-0 top-20 left-20 bg-web bg-opacity-90 rounded-lg h-[32rem] w-96' onMouseLeave={() => setShowMenu(false)}>
-                  <Categories/>
+          }
+          <div>
+            <Link to="/"><img src={logo} alt="logo" className='w-20 h-16 -ml-5' /></Link>
+          </div>
+          <SearchBar />
+
+          <div className='flex items-center gap-4 text-txt'>
+            {lang ? <div className='flex items-center cursor-pointer  gap-2' onClick={() => toggleLang()}>
+              <p className='text-white'>العربية</p>
+              <img src="https://hatscripts.github.io/circle-flags/flags/eg.svg" alt="eg flag" className='w-8 h-8' />
+            </div>
+              : !lang ?
+                <div className='flex items-center cursor-pointer gap-2' onClick={() => toggleLang()}>
+                  <p className='text-white'>English</p>
+                  <img src="https://hatscripts.github.io/circle-flags/flags/uk.svg" alt="uk flag" className='w-8 h-8' />
+                </div>
+                : null}
+
+            <Link to="/"><button className='bg-web text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>Product</button></Link>
+            {user() && (
+              <div className='flex items-center'>
+                <p className='text-white'>
+                  Welcome{" "}
+                  <span className="font-semibold mr-2 text-white capitalize">{auth()?.name}</span>
+                </p>
+                <RxAvatar size={24} />
               </div>
-            }
-            <div>
-            <a href="/"><img src={logo} alt="logo" className='w-28 h-24 ' /></a>
-            </div>
-            <SearchBar/>
-
-            <div className='flex gap-4'>
-        {user() && (
-              <p className='text-white'>
-                welcome{" "}
-                <span className="font-semibold mr-2 text-white">{auth()?.name}</span>
-              </p>
             )}
             {user() ? (
               <p
-                className="hover:text-primary cursor-pointer"
+                className="text-txt hover:text-btn cursor-pointer"
                 onClick={() => {
                   SignOut();
                   window.location.reload();
                 }}>
-                تسجيل الخروج
+                Sign Out
               </p>
             ) : (
               <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>Sign Up</button></Link>
             )}
-        </div>
 
-            {/* <div className='flex gap-4  '>
+          </div>
+
+          {/* <div className='flex gap-4  '>
             <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button></Link>
             <Link to="/login"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Login</button></Link>
             </div> */}
@@ -106,18 +132,8 @@ const Navbar = () => {
 
 
 
-            {lang ? <div className='flex cursor-pointer  gap-2' onClick={() => toggleLang()}>
-              <p className='text-white'>العربية</p>
-            <img src="https://hatscripts.github.io/circle-flags/flags/eg.svg" alt="eg flag" className='w-8 h-8'/>
-            </div> 
-            : !lang ? 
-            <div className='flex cursor-pointer gap-2' onClick={() => toggleLang()}>
-              <p className='text-white'>English</p>
-            <img src="https://hatscripts.github.io/circle-flags/flags/uk.svg" alt="uk flag" className='w-8 h-8'/>
-            </div>
-             : null}
-            </div>
-        </nav>
+        </div>
+      </nav>
     </>
   )
 }

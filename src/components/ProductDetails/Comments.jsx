@@ -2,9 +2,10 @@ import React from 'react'
 
 const Comments = () => {
   return (
-    <div className="Comments text-txt">
+    <div className="Comments text-txt md:w-2/3">
 
                 <article>
+                  <p className='my-5 font-semibold'>SHOP REVIEWS (<span className='text-btn'>5</span>) </p>
                   <div className="flex items-center mb-4 space-x-4">
                     <img className="w-10 h-10 rounded-full" src="https://avatars.githubusercontent.com/u/191027?v=4" alt="" />
                     <div className="space-y-1 font-medium dark:text-white">

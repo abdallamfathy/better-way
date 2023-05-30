@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../assets/logo2.png";
-import qr from "../../assets/qr.jpeg";
+import qr from "../../assets/qr.jpg";
 import googleApp from "../../assets/googleApp.png";
 import appleApp from "../../assets/appleApp.png";
-import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMailBulk, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMailBulk, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { faEnvelope, faMailForward, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -11,7 +11,7 @@ const Footer = () => {
 return (
     <div className="bg-bg">
       <div className="flex flex-col gap-10 ">
-          <div className="md:flex hidden justify-between bg-slate-800 p-10 2xl:px-40 xl:px-20 px-10">
+          <div className="md:flex hidden justify-between bg-slate-800 p-10 py-3 2xl:px-40 xl:px-20 px-10">
             <a href="#"><img src={logo} alt="logo" className="w-60"/></a>
             <div className="flex justify-between">
               <div className="flex flex-col gap-2 justify-start items-start text-white">
@@ -54,11 +54,12 @@ return (
           <div className="flex flex-col gap-2 text-txt">
           <h2 className="font-bold mb-2">JOIN US ON</h2>
           <div className="flex gap-4 items-center ">
-          <a href="#" className="text-lg font-light hover:text-btn"><FaFacebook/></a>
-          <a href="#" className="text-lgfont-light hover:text-btn"><FaInstagram/></a>
-          <a href="#" className="text-lg font-light hover:text-btn"><FaYoutube/></a>
-          <a href="#" className="text-lg font-light hover:text-btn"><FaWhatsapp/></a>
-          <a href="#" className="text-lg font-light hover:text-btn"><FaTiktok/></a>
+          <a href="https://www.facebook.com/betterwayegypt" target="_blank" className="text-lg font-light hover:text-btn"><FaFacebook/></a>
+          <a href="https://www.instagram.com/betterwayegypt/" target="_blank" className="text-lgfont-light hover:text-btn"><FaInstagram/></a>
+          <a href="https://www.youtube.com/channel/UC2eu2CL0yr05rf-bcCsM7_A" target="_blank" className="text-lg font-light hover:text-btn"><FaYoutube/></a>
+          <a href="https://twitter.com/betterwayegypt" target="_blank" className="text-lg font-light hover:text-btn"><FaTwitter/></a>
+          <a href="#" target="_blank" className="text-lg font-light hover:text-btn"><FaWhatsapp/></a>
+          <a href="https://www.tiktok.com/@betterwayegy" target="_blank" className="text-lg font-light hover:text-btn"><FaTiktok/></a>
           </div>
           </div>
           </div>
@@ -121,7 +122,7 @@ return (
           </div>
           </div>
           <div className="md:flex hidden flex-col items-center -mr-16 gap-6 justify-center w-1/2  rounded-xl">
-          <iframe width="460" height="315" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="rounded-lg "></iframe>
+          <iframe width="360" height="215" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="rounded-lg "></iframe>
           <div><img src={qr} alt="qrcode" className="w-36" /></div>
           </div>
         </div>

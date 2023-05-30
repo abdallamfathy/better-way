@@ -3,7 +3,7 @@ import React from 'react'
 const Rates = () => {
   return (
     <div className="Rating">
-              <div className="SubTitle w-full "><h2 className="md:text-5xl text-2xl font-semibold">Rating & Reviews :</h2></div>
+              <div className="SubTitle w-full "><h2 className="md:text-3xl text-xl font-semibold">Rating & Reviews :</h2></div>
               <div className="Stars my-6 text-txt">
 
                 <div className="flex items-center mb-3">
@@ -15,7 +15,7 @@ const Rates = () => {
                   <p className="ml-2 text-sm font-medium ">4.95 out of 5</p>
                 </div>
                 <p className="text-sm font-medium">1,745 global ratings</p>
-                <div className="flex items-center mt-4">
+                <div className="flex items-center mt-4 w-[30rem]">
                   <span className="text-sm font-medium ">5 star</span>
                   <div className="w-2/4 h-5 mx-4 bg-gray-200 rounded dark:bg-gray-700">
                     <div className="h-5 bg-btn rounded w-11/12" ></div>

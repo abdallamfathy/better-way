@@ -41,22 +41,48 @@ const Login = () => {
          if (res.data.data.type === "1") {
           navigate('/merchant-dashboard')
          } else {
-          Swal.fire({
-            title: "مرحبا بك",
-            confirmButtonColor: "#F1D975",
-            showClass: {
-              popup: "animate__animated animate__fadeInDown",
-            },
-            hideClass: {
-              popup: "animate__animated animate__fadeOutUp",
-            },
-          });
           navigate("/");
          }
         }
       } catch (error) {
-        if (error.response.status === 401) {
-          setError("البريد الالكتروني او كلمة المرور غير صحيحة");
+        if (error.response.status === 422) {
+          // setError("البريد الالكتروني او كلمة المرور غير صحيحة");
+          console.log(error);
+          const err = error.response.data.errors;
+                console.log(err.password);
+                if (err.password) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.password[0],
+                    // });
+                    setError(err.password)
+
+                }
+                if (err.email) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.email[0],
+                    // });
+                    setError(err.email)
+                }
+                if (err.mobile) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.mobile[0],
+                    // });
+                    setError(err.mobile)
+                }
+                if (err.name) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.name[0],
+                    // });
+                    setError(err.name)
+                }
         }
       }
     };
@@ -72,7 +98,7 @@ const Login = () => {
         <form onSubmit={handleSubmit} className='flex justify-between  items-center '>
             <div className='flex flex-col justify-center items-center  px-20 gap-6 text-white bg-bg  max-md:bg-login  w-full h-screen '>
                 <div className='flex flex-col gap-2 justify-center items-center max-md:text-center mb-10'>
-                        <img src={logo} alt="logo" className='w-20 h-20'/>
+                        <Link to="/" ><img src={logo} alt="logo" className='w-20 h-20'/></Link>
                         <h2>What's your email address?</h2>
                         <h2>Type your email to log in or create a BetterWay account.</h2>
                 </div>

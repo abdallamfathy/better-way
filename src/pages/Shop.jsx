@@ -46,10 +46,10 @@ const Shop = () => {
           <ProductInfo data={myData} />
         </section>
 
-        <section className="sectionII my-28">
+        <section className="sectionII my-20">
           <div className="Container flex md:flex-row flex-col lg:gap-10 gap-4 justify-between ">
             <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
-              <div className="Title w-full "><h2 className="md:text-6xl text-3xl font-bold text-btn ">{myData?.title}</h2></div>
+              <div className="Title w-full "><h2 className="md:text-5xl text-2xl font-bold text-btn ">{myData?.title}</h2></div>
               <Offers offers={myData?.offers} />
               <Description description={myData?.description}/>
            

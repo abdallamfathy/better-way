@@ -13,7 +13,8 @@ const Register = () => {
         name: "",
         email: "",
         password: "",
-        mobile: "",
+        phone: "",
+        photo: new FormData(),
     });
 
     console.log(formData);
@@ -29,29 +30,69 @@ const Register = () => {
                 );
                 console.log(res);
             if (res.status === 200) {
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "تم التسجيل بنجاح",
-                    showConfirmButton: false,
-                    timer: 3000,
-                });
+                
                 navigate("/login");
             }
         } catch (error) {
             if (error.response.status === 422) {
-                setError("هذا البريد الالكتروني موجود بالفعل");
+                const err = error.response.data.errors;
+                console.log(err);
+                if (err.password) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.password[0],
+                    // });
+                    setError(err.password)
+
+                }
+                if (err.email) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.email[0],
+                    // });
+                    setError(err.email)
+                }
+                if (err.phone) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.mobile[0],
+                    // });
+                    setError(err.phone)
+                }
+                if (err.photo) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.mobile[0],
+                    // });
+                    setError(err.photo)
+                }
+                if (err.name) {
+                    // Swal.fire({
+                    //     icon: "error",
+                    //     title: "Oops...",
+                    //     text: err.name[0],
+                    // });
+                    setError(err.name)
+                }
+                    
             }
         }
     };
 
+    
     const handleChange = (e) => {
-        setFormData({
+        
+          setFormData({
             ...formData,
             [e.target.name]: e.target.value,
-        });
-    };
-
+          });
+        
+      };
+    //   const formDataImage = new FormData();
     const handleInvalid = (event) => {
         event.target.setCustomValidity("برجاء ادخال البيانات");
     };
@@ -59,12 +100,15 @@ const Register = () => {
     const handleInput = (event) => {
         event.target.setCustomValidity("");
     };
+   // imageFile represents the selected image file
+
     return (
         <>
             <form onSubmit={handleSubmit} className='flex md:justify-between justify-center'>
                 <div className='flex flex-col justify-center items-center px-20 gap-6 text-white bg-bg  w-full   h-screen '>
                     <div className='flex flex-col gap-2 justify-center items-center '>
-                        <img src={logo} alt="logo" className='w-20 h-20' />
+                    <Link to="/" ><img src={logo} alt="logo" className='w-20 h-20'/></Link>
+
                     </div>
                     <div className='flex justify-around gap-24 font-bold  border-b border-b-gray-400'>
                         <Link to="/login"><h2 className='text-center md:w-36 w-32 pb-3'>Login</h2></Link>
@@ -114,15 +158,28 @@ const Register = () => {
                     <div className='flex flex-col items-start gap-2'>
                         <h2>Mobile Number</h2>
                         <input  type="tel"
-          name="mobile"
-          id="mobile"
-          value={formData.mobile}
+          name="phone"
+          id="phone"
+          value={formData.phone}
           onChange={handleChange}
           placeholder="mobile"
           required
           onInvalid={handleInvalid}
           onInput={handleInput}
            className='w-72 rounded-md border border-gray-300 h-10 p-4 text-bg placeholder:text-opacity-50' />
+                    </div>
+                    <div className='flex flex-col items-start justify-center gap-2'>
+                        <h2>Photo</h2>
+                        <input  type="file"
+          name="photo"
+          id="photo"
+        //   value={formData.photo}
+          onChange={handleChange}
+          placeholder="photo"
+        //   required
+          onInvalid={handleInvalid}
+          onInput={handleInput}
+           className='w-72 rounded-md border border-gray-300 h-10  text-bg placeholder:text-opacity-50' />
                     </div>
                     <div >
                         <button type='submit' className=' cursor-pointer text-white bg-btn rounded-md drop-shadow-lg h-9 w-72 my-6'>Create an account</button>

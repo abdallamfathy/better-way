@@ -267,27 +267,27 @@ export function Filter({ }) {
             <div className="p-5 flex flex-col gap-2">
                 <div className="flex gap-2 items-center">
                     <p>From</p>
-                    <input type="number" placeholder="0" className="2xl:w-20 xl:w-16 lg:w-14 text-black font-semibold" />
+                    <input type="number" placeholder="0" className="2xl:w-20 xl:w-16 lg:w-16 text-black font-semibold text-sm" />
                     <p>To</p>
-                    <input type="number" placeholder="100" className="2xl:w-20 xl:w-16 lg:w-14 text-black font-semibold" />{" "}
+                    <input type="number" placeholder="100" className="2xl:w-20 xl:w-16 lg:w-16 text-black font-semibold text-sm" />{" "}
                     <p className="text-xl font-bold">%</p>
                 </div>
                 <div className="flex gap-2 items-center">
                     <p>From</p>
-                    <input type="number" placeholder="0" className="2xl:w-20 xl:w-16 lg:w-14 text-black font-semibold " />
+                    <input type="number" placeholder="0" className="2xl:w-20 xl:w-16 lg:w-16 text-black font-semibold  text-sm" />
                     <p>To</p>
-                    <input type="number" placeholder="100" className="2xl:w-20 xl:w-16 lg:w-14 text-black font-semibold" />{" "}
+                    <input type="number" placeholder="100" className="2xl:w-20 xl:w-16 lg:w-16 text-black font-semibold text-sm" />{" "}
                     <p className="text-xl font-bold">EGP</p>{" "}
                 </div>
             </div>
         </div>
         <div className="GAINED flex flex-col justify-center items-start p-4">
             <h1 className="2xl:text-3xl xl:text-2xl text-xl font-bold">GAINT POINT</h1>
-            <div className="flex m-5 gap-2 items-center">
+            <div className="flex m-5 gap-2 items-center ">
                 <p>From</p>
-                <input type="number" placeholder="0" className="2xl:w-20 xl:w-16 lg:w-14 text-black font-semibold" />
+                <input type="number" placeholder="0" className="2xl:w-20 xl:w-16 lg:w-16 text-black font-semibold text-sm" />
                 <p>To</p>
-                <input type="number" placeholder="100" className="2xl:w-20 xl:w-16 lg:w-14 text-black font-semibold" />{" "}
+                <input type="number" placeholder="100" className="2xl:w-20 xl:w-16 lg:w-16 text-black font-semibold text-sm" />{" "}
             </div>
         </div>
         <div className="RATING flex flex-col justify-center items-start p-4 border-t border-txt">

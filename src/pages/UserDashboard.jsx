@@ -4,7 +4,7 @@ import UserPanel from '../components/UserPanel/UserPanel'
 
 const UserDashboard = () => {
   return (
-    <div className='m-5 md:my-20 md:mx-40 flex flex-col items-center'>
+    <div className='mx-5 my-5 md:my-20 md:mx-40 flex flex-col items-center'>
         <UserPanel/>
         <UserOffers/>
     </div>

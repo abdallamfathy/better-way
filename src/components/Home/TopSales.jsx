@@ -1,7 +1,7 @@
 import zara from "../../assets/topPlaces/zara.jpg"
 
 import { RiStarSFill, RiStarSLine } from 'react-icons/ri'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y , Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -32,7 +32,7 @@ const TopSales = () => {
     return (
         <>
             <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 md:mx-10'>
-                <div className='flex justify-center items-center  bg-bg py-1 md:h-20'>
+                <div className='flex justify-center items-center  bg-bg py-1 md:h-16'>
                     <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>TOP PLACES</h2>
                 </div>
 
@@ -81,17 +81,23 @@ const TopSales = () => {
                     <Link to="/shop">
                         <Swiper
                             // install Swiper modules
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
                             slidesPerView={2}
                             breakpoints={{
                                 768: {
-                                    slidesPerView: 3
+                                    slidesPerView: 3.5
                                   },
                                   1200: {
-                                    slidesPerView: 4
+                                    slidesPerView: 4.5
                                   }
                             }}
                             navigation
+                            autoplay={
+                                {
+                                    disableOnInteraction: false
+                                }
+                            }
+                            loop={true}
                         >
 
                            {
