@@ -3,7 +3,7 @@ import zara from "../../assets/topPlaces/zara.jpg";
 import { RiStarSFill } from 'react-icons/ri';
 import { Link } from "react-router-dom";
 
-export function ProductCard({ id, title, logo, price, rating}) {
+export function ProductCard({ id, title, logo, price, rating , category}) {
   return <div className="md:w-64 md:h-80 w-40  h-56 bg-txt rounded-md hover:shadow-lg hover:shadow-btn m-10 transition">
     <Link to={`/shop/${id}`}>
     <div className="flex flex-col md:h-80 h-56 ">
@@ -13,7 +13,7 @@ export function ProductCard({ id, title, logo, price, rating}) {
       <div className="flex md:flex-row flex-col items-center justify-around  md:h-1/4 h-1/2 ">
         <div className=" text-sm  text-black  font-semibold flex flex-col md:items-start items-center justify-center">
           <h2 className="text-btn">{title}</h2>
-          <h3>WOMEN CLOTHES</h3>
+          <h3>{category}</h3>
         </div>
         <div className="flex  text-btn bg-bg rounded-md  p-2 justify-center items-center">
           <RiStarSFill />

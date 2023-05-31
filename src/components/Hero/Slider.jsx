@@ -41,7 +41,7 @@ export function Slider({ Navigation, Pagination, Scrollbar, A11y , Autoplay }) {
 
           <div  className= "h-36  flex justify-center items-center text-center rounded-md lg:h-[500px] w-full">
           <div className="">
-            <img src={slide.image} alt="image"  />
+            <img src={slide.image} alt="image" className="w-full h-full object-cover" />
             <h2 className="text-txt z-50 absolute inset-0 translate-y-96 text-2xl">{slide.title}</h2>
           </div>
         </div>

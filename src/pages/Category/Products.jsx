@@ -13,6 +13,7 @@ export function Products({data}) {
                         logo={item.logo}
                         price={item.price}
                         rating={item.rating}
+                        category={item.category}
                       />
                     ))
                   }

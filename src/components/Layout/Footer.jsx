@@ -6,6 +6,7 @@ import appleApp from "../../assets/appleApp.png";
 import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMailBulk, FaMoneyBill, FaPaypal, FaSnapchat, FaTiktok, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { faEnvelope, faMailForward, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FooterCategories from "./FooterCategories";
 
 const Footer = () => {
 return (
@@ -83,43 +84,7 @@ return (
           </div>
           </div>
           </div>
-          <div className="md:flex hidden flex-wrap items-en gap-y-1 w-full mt-8 ">
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Activ</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Dejavu</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Defacto</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Cottonil</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Casio</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Casio</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Braun</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Apple</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Andora</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">American Eagle</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">American Eagle</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">ADIDAS</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">BetterWay</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">XIAOMI</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Tornado</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Tornado</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Sokany</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">SHEIN</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Samsung</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Ravin</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">OPPO</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Nokia</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">NIVEA</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Mothercare</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Mesery</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Maybelline</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Lenovo</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">LC Waikiki</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">L'Oreal Paris</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Kady</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Izor</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">HP</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Garnier</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Fresh</a>
-          <a href="#" className="text-sm font-light hover:text-btn w-28">Dice</a>
-          </div>
+          <FooterCategories/>
           </div>
           <div className="md:flex hidden flex-col items-center -mr-16 gap-6 justify-center w-1/2  rounded-xl">
           <iframe width="360" height="215" src="https://www.youtube.com/embed/OaahfdtbYZM" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="rounded-lg "></iframe>

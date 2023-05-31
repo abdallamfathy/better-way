@@ -6,17 +6,18 @@ import { Link } from 'react-router-dom';
 
 const TopBrands = () => {
   const [myData, setMyData] = useState(null);
-
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`${API_BASE_URL}api/v1/shops/top-deal`);
+      const response = await fetch(`${API_BASE_URL}api/v1/shops`);
       const data = await response.json();
       setMyData(data.data);
       console.log(data.data);
     };
-
+    
+    
     fetchData();
   }, []);
+  const randomItems = myData?.sort(() => 0.5 - Math.random()).slice(0, 15);
   return (
     <>
         <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 md:mx-10 '>
@@ -27,7 +28,8 @@ const TopBrands = () => {
 
         <div className='flex flex-wrap  md:justify-between justify-center items-center gap-x-2 gap-4   '>
           {
-            myData?.slice(0,15).map((item, index) => (
+            
+            randomItems.map((item, index) => (
               <div key={index}>
             <Link to={`/shop/${item?.id}`}><img src={item.logo} alt="logo" className='w-28 h-16 rounded-md 2xl:w-64 xl:w-56 lg:w-48 xl:h-36 lg:h-28 grayscale' /></Link>
           </div>

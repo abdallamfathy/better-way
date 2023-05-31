@@ -47,9 +47,7 @@ const Login = () => {
       } catch (error) {
         if (error.response.status === 422) {
           // setError("البريد الالكتروني او كلمة المرور غير صحيحة");
-          console.log(error);
           const err = error.response.data.errors;
-                console.log(err.password);
                 if (err.password) {
                     // Swal.fire({
                     //     icon: "error",

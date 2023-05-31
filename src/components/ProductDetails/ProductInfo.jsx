@@ -19,8 +19,6 @@ import {
 import zara from "../../assets/topPlaces/zara.jpg";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 export function ProductInfo({data}) {
-
-  console.log(data && data[0]);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     let image = [];
@@ -50,8 +48,8 @@ export function ProductInfo({data}) {
                     <h2 className="font-semibold">Branches  </h2>
                     {/* <a href="#"><FontAwesomeIcon icon={faSortDown} /></a> */}
                   </div>
-                  <p> Cairo </p>
-                  <p> Masr el gededa </p>
+                  <p> {data?.addresses[0].government} </p>
+                  <p> {data?.addresses[0].area} </p>
                 </div>
                 <div>
                   <h2 className="font-bold text-2xl">Gained Points : <span className="text-btn">{data?.gained_points}</span></h2>
@@ -69,7 +67,7 @@ export function ProductInfo({data}) {
     } spaceBetween={10} navigation={true} thumbs={{
         swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
       }} className="mySwiper2 rounded-t-md">
-                {data && data[0]?.images?.map((item, index) => {
+                {data?.images?.map((item, index) => {
                   return <SwiperSlide key={index}>
                       <img src={item?.image} alt="image" className="w-full h-96 object-cover" />
                     </SwiperSlide>;
@@ -79,7 +77,7 @@ export function ProductInfo({data}) {
               </Swiper>
               <div className="py-2 rounded-b-md">
                 <Swiper modules={[FreeMode, Navigation, Thumbs]} navigation onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={6} freeMode={true} watchSlidesProgress={true} className="mySwiper">
-                { data && data[0]?.images?.map((item, index) => {
+                { data?.images?.map((item, index) => {
                   return <SwiperSlide key={index}>
                       <img src={item?.image} alt="image" className="w-full h-24 object-cover" />
                     </SwiperSlide>;

@@ -23,7 +23,12 @@ const SpecialOffers = () => {
                                                 spaceBetween={10}
                                                 slidesPerView={4}
                                                 scrollbar
-                                                autoplay={{ delay: 500 }}
+                                                autoplay={
+                                                        {
+                                                            disableOnInteraction: false
+                                                        }
+                                                    }
+                                                    loop={true}
                                         >
                                                 <SwiperSlide>
                                                         <div className='relative w-20 h-20 overflow-hidden'>
@@ -80,7 +85,11 @@ const SpecialOffers = () => {
                                                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                                                 spaceBetween={15}
                                                 slidesPerView={6}
-                                                //     autoplay = {{delay : 2000}}
+                                                autoplay={
+                                                        {
+                                                            disableOnInteraction: false
+                                                        }
+                                                    }
                                                 navigation
                                         >
                                                 <SwiperSlide>

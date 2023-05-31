@@ -25,8 +25,6 @@ const SearchBar = () => {
       setShow(true)
     }
   },[searchTerm])
-  console.log(myData);
-  console.log(searchTerm);
   return (
     <div>
       <div className='bg-white rounded-lg 2xl:w-[800px] xl:w-[500px] h-12 flex justify-between '>

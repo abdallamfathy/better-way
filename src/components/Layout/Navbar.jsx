@@ -31,7 +31,6 @@ const Navbar = () => {
     setLang(!lang);
   }
   const {categoryId} = useParams()
-  console.log(categoryId);
   const handleMenu = () => {
     setShow(false)
   }

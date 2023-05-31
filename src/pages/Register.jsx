@@ -9,89 +9,182 @@ const Register = () => {
     const [error, setError] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const toggleShowPassword = () => setShowPassword(!showPassword);
+
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         password: "",
         phone: "",
-        photo: new FormData(),
+        photo: null,
     });
 
-    console.log(formData);
     const navigate = useNavigate();
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+      
         try {
-            const res = await axios.post(
-                "https://maykel.betterway-egypt.com/api/v1/users/register",
-                formData
-                );
-                console.log(res);
-            if (res.status === 200) {
-                
+          const formData = new FormData();
+          formData.append('photo', e.target.photo.files[0]);
+          formData.append('name', e.target.name.value);
+          formData.append('password', e.target.password.value);
+          formData.append('phone', e.target.phone.value);
+          formData.append('email', e.target.email.value);
+          // Append other form fields as needed
+      
+          const res = await axios.post(
+            "https://maykel.betterway-egypt.com/api/v1/users/register",
+            formData,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }
+          );
+            console.log(formData);
+          if (res.status === 200) {
                 navigate("/login");
-            }
+          }
         } catch (error) {
-            if (error.response.status === 422) {
-                const err = error.response.data.errors;
-                console.log(err);
-                if (err.password) {
-                    // Swal.fire({
-                    //     icon: "error",
-                    //     title: "Oops...",
-                    //     text: err.password[0],
-                    // });
-                    setError(err.password)
-
-                }
-                if (err.email) {
-                    // Swal.fire({
-                    //     icon: "error",
-                    //     title: "Oops...",
-                    //     text: err.email[0],
-                    // });
-                    setError(err.email)
-                }
-                if (err.phone) {
-                    // Swal.fire({
-                    //     icon: "error",
-                    //     title: "Oops...",
-                    //     text: err.mobile[0],
-                    // });
-                    setError(err.phone)
-                }
-                if (err.photo) {
-                    // Swal.fire({
-                    //     icon: "error",
-                    //     title: "Oops...",
-                    //     text: err.mobile[0],
-                    // });
-                    setError(err.photo)
-                }
-                if (err.name) {
-                    // Swal.fire({
-                    //     icon: "error",
-                    //     title: "Oops...",
-                    //     text: err.name[0],
-                    // });
-                    setError(err.name)
-                }
-                    
-            }
+          // Handle error
+          console.log(error);
+                    if (error.response.status === 422) {
+                        const err = error.response.data.errors;
+                        if (err.password) {
+                            // Swal.fire({
+                            //     icon: "error",
+                            //     title: "Oops...",
+                            //     text: err.password[0],
+                            // });
+                            setError(err.password)
+        
+                        }
+                        if (err.email) {
+                            // Swal.fire({
+                            //     icon: "error",
+                            //     title: "Oops...",
+                            //     text: err.email[0],
+                            // });
+                            setError(err.email)
+                        }
+                        if (err.phone) {
+                            // Swal.fire({
+                            //     icon: "error",
+                            //     title: "Oops...",
+                            //     text: err.mobile[0],
+                            // });
+                            setError(err.phone)
+                        }
+                        if (err.photo) {
+                            // Swal.fire({
+                            //     icon: "error",
+                            //     title: "Oops...",
+                            //     text: err.mobile[0],
+                            // });
+                            setError(err.photo)
+                        }
+                        if (err.name) {
+                            // Swal.fire({
+                            //     icon: "error",
+                            //     title: "Oops...",
+                            //     text: err.name[0],
+                            // });
+                            setError(err.name)
+                        }
+                            
+                    }
         }
-    };
-
-    
-    const handleChange = (e) => {
-        
-          setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-          });
-        
       };
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+
+    //     try {
+    //         const res = await axios.post(
+    //             "https://maykel.betterway-egypt.com/api/v1/users/register",
+    //             formData
+    //             );
+    //         if (res.status === 200) {
+                
+    //             navigate("/login");
+    //         }
+    //     } catch (error) {
+    //         if (error.response.status === 422) {
+    //             const err = error.response.data.errors;
+    //             if (err.password) {
+    //                 // Swal.fire({
+    //                 //     icon: "error",
+    //                 //     title: "Oops...",
+    //                 //     text: err.password[0],
+    //                 // });
+    //                 setError(err.password)
+
+    //             }
+    //             if (err.email) {
+    //                 // Swal.fire({
+    //                 //     icon: "error",
+    //                 //     title: "Oops...",
+    //                 //     text: err.email[0],
+    //                 // });
+    //                 setError(err.email)
+    //             }
+    //             if (err.phone) {
+    //                 // Swal.fire({
+    //                 //     icon: "error",
+    //                 //     title: "Oops...",
+    //                 //     text: err.mobile[0],
+    //                 // });
+    //                 setError(err.phone)
+    //             }
+    //             if (err.photo) {
+    //                 // Swal.fire({
+    //                 //     icon: "error",
+    //                 //     title: "Oops...",
+    //                 //     text: err.mobile[0],
+    //                 // });
+    //                 setError(err.photo)
+    //             }
+    //             if (err.name) {
+    //                 // Swal.fire({
+    //                 //     icon: "error",
+    //                 //     title: "Oops...",
+    //                 //     text: err.name[0],
+    //                 // });
+    //                 setError(err.name)
+    //             }
+                    
+    //         }
+    //     }
+    // };
+
+    const handleChange = (e) => {
+        console.log("haha");
+        // if (e.target.type === 'file') {
+        //   // Handle image file
+        //   const file = e.target.files[0];
+        //   setFormData({
+        //     ...formData,
+        //     [e.target.name]: file,
+        //   });
+        // } else {
+        //   // Handle other form inputs
+        //   setFormData({
+        //     ...formData,
+        //     [e.target.name]: e.target.value,
+        //   });
+        // }
+      };
+      
+    // const handleChange = (e) => {
+        
+    //       setFormData({
+    //         ...formData,
+    //         [e.target.name]: e.target.value,
+    //       });
+        
+    //   };
     //   const formDataImage = new FormData();
     const handleInvalid = (event) => {
         event.target.setCustomValidity("برجاء ادخال البيانات");
@@ -120,7 +213,7 @@ const Register = () => {
                         <input type="text"
                             name="name"
                             id="name"
-                            value={formData.first_name}
+                            // value={formData.first_name}
                             onChange={handleChange}
                             placeholder="name"
                             required
@@ -134,7 +227,7 @@ const Register = () => {
                         <input type="email"
                             name="email"
                             id="email"
-                            value={formData.email}
+                            // value={formData.email}
                             onChange={handleChange}
                             placeholder="email"
                             required
@@ -147,7 +240,7 @@ const Register = () => {
                         <input type="password"
             name="password"
             id="password"
-            value={formData.password}
+            // value={formData.password}
             onChange={handleChange}
             placeholder="password"
             required
@@ -160,7 +253,7 @@ const Register = () => {
                         <input  type="tel"
           name="phone"
           id="phone"
-          value={formData.phone}
+        //   value={formData.phone}
           onChange={handleChange}
           placeholder="mobile"
           required
@@ -170,16 +263,14 @@ const Register = () => {
                     </div>
                     <div className='flex flex-col items-start justify-center gap-2'>
                         <h2>Photo</h2>
-                        <input  type="file"
-          name="photo"
+                        <input  type="file" name="photo" onChange={handleChange}
           id="photo"
         //   value={formData.photo}
-          onChange={handleChange}
           placeholder="photo"
-        //   required
+          required
           onInvalid={handleInvalid}
           onInput={handleInput}
-           className='w-72 rounded-md border border-gray-300 h-10  text-bg placeholder:text-opacity-50' />
+           className='w-72 rounded-md border border-gray-300 h-10  text-white placeholder:text-opacity-50' />
                     </div>
                     <div >
                         <button type='submit' className=' cursor-pointer text-white bg-btn rounded-md drop-shadow-lg h-9 w-72 my-6'>Create an account</button>

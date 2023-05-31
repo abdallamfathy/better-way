@@ -22,6 +22,7 @@ const LatestDeals = () => {
         const response = await fetch(`${API_BASE_URL}api/v1/shops/latest`);
         const data = await response.json();
         setMyData(data.data);
+        console.log(data.data);
       };
   
       fetchData();
@@ -34,7 +35,6 @@ return (
     </div>
     <div className='my-8 max-md:mx-3'>
 
-                    <Link to="/shop">
                         <Swiper
                             // install Swiper modules
                             modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
@@ -58,35 +58,8 @@ return (
                         >
 
                            {
-                               myData?.map((item , index) => (
+                               myData?.slice(0,20).map((item , index) => (
                                 <SwiperSlide key={index}>
-                                {/* <div className="md:w-60 md:h-72 w-36 h-44 bg-white rounded-2xl">
-                                    <div className="flex flex-col md:h-72 max-md:justify-center">
-                                        <div className="h-3/4">
-                                            <img className="rounded-t-2xl w-48 h-36 md:w-full md:h-full" src={item.logo} alt="product image" />
-                                        </div>
-                                        <div className="flex items-center md:justify-center gap-4 md:h-1/4">
-                                            <div className="mx-2  max-md:my-1  text-black text-[6px] md:text-[12px] font-semibold flex flex-col items-start md:justify-center justify-start">
-                                                <h2 className="text-btn">{item.title}</h2>
-                                                <h3>WOMEN CLOTHES</h3>
-                                            </div>
-                                            <div className="flex md:w-20  w-10 text-btn bg-bg rounded-md h-3 md:p-2 max-md:px-1 justify-center items-center">
-                                                <RiStarSFill />
-                                                <RiStarSFill />
-                                                <RiStarSFill />
-                                                <RiStarSFill />
-                                                <RiStarSLine />
-                                            </div>
-                                        </div>
-                                        <div className=" max-md:hidden rounded-full flex justify-center items-center bg-btn bg-opacity-80 border border-white w-10 h-10 absolute  z-50 translate-x-44  translate-y-5">
-                                            <h2 className="md:text-sm text-[8px]  text-txt md:text-center">11%</h2>
-                                        </div>
-                                        <div className="md:hidden rounded-full p-1 bg-btn bg-opacity-80 border border-white absolute top-1 right-1">
-                                        <h2 className="text-[8px] text-txt">11%</h2>
-                                    </div>
-                                    </div>
-
-                                </div> */}
                                     <ProductCard
                                     key={item.id}
                                     id={item.id}
@@ -94,6 +67,7 @@ return (
                                     logo={item.logo}
                                     price={item.price}
                                     rating={item.rating}
+                                    category={item.category}
                                     />
                             </SwiperSlide>
                                ))
@@ -101,7 +75,6 @@ return (
 
 
                         </Swiper>
-                    </Link>
                 </div>
   </div>
 </>

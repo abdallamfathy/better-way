@@ -7,7 +7,6 @@ const ProfileMenu = () => {
     const user = useIsAuthenticated();
     const SignOut = useSignOut();
     const auth = useAuthUser();
-    console.log(user());
   return (
     <div className='absolute top-12 right-0 z-50'>
         <div className='flex flex-col  gap-4 bg-bg w-36 p-4  text-white rounded-md'>
