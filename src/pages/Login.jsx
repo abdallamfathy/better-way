@@ -35,6 +35,7 @@ const Login = () => {
             email: res.data.data.email,
             name: res.data.data.name,
             token: res.data.data.token,
+            photo: res.data.data.photo,
           },
         });
         if (res.status === 200) {

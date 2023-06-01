@@ -105,7 +105,15 @@ const Navbar = () => {
                   Welcome{" "}
                   <span className="font-semibold mr-2 text-white capitalize">{auth()?.name}</span>
                 </p>
-                <RxAvatar size={24} />
+                {console.log(auth())}
+                {auth()?.photo ? ( <img src={auth()?.photo} alt="profile" className='w-10 h-10 rounded-full object-fill' />) : (
+                  <RxAvatar
+                    className="w-10 h-10 rounded-full"
+                    name={auth()?.name}
+                    color="#000"
+                    textSizeRatio={1.75}
+                  />
+                )}
               </div>
             )}
             {user() ? (

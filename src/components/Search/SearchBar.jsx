@@ -27,7 +27,7 @@ const SearchBar = () => {
   },[searchTerm])
   return (
     <div>
-      <div className='bg-white rounded-lg 2xl:w-[800px] xl:w-[500px] h-12 flex justify-between '>
+      <div className='bg-white rounded-lg 2xl:w-[650px] xl:w-[500px] h-12 flex justify-between '>
         <button className='bg-btn  p-2  w-12 rounded-l-lg'><BiSearchAlt className='w-7 h-7 text-white' /></button>
         <input type="search"
           placeholder='What are you looking for ?'

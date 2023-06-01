@@ -19,25 +19,25 @@ const RelatedShops = ({ data }) => {
         slidesPerView={2}
         breakpoints={{
           768: {
-            slidesPerView: 3.5
+            slidesPerView: 3
           },
           1200: {
-            slidesPerView: 4.5
+            slidesPerView: 4
           }
 
         }}
         navigation
         autoplay={
           {
-            disableOnInteraction: false
+              disableOnInteraction: false
           }
         }
+        rewind
         loop={true}
       >
 
         {
-          data?.related_shops.map((item,index) => {
-            console.log(item);
+          data?.related_shops?.map((item,index) => {
             return (
               <SwiperSlide key={index}>
 
