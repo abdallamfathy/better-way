@@ -29,7 +29,7 @@ const TopBrands = () => {
         <div className='flex flex-wrap  md:justify-between justify-center items-center gap-x-2 gap-4   '>
           {
             
-            randomItems.map((item, index) => (
+            randomItems?.map((item, index) => (
               <div key={index}>
             <Link to={`/shop/${item?.id}`}><img src={item.logo} alt="logo" className='w-28 h-16 rounded-md 2xl:w-64 xl:w-56 lg:w-48 xl:h-36 lg:h-28 grayscale' /></Link>
           </div>
