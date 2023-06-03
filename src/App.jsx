@@ -6,6 +6,7 @@ import UserDashboard from "./pages/UserDashboard"
 import MerchantDashboard from "./pages/MerchantDashboard"
 import { AuthProvider } from "./utils/AuthContext"
 import { RequireAuth } from "react-auth-kit"
+import Contact from "./pages/Contact"
 
 function App() {
   const [loading , setLoading] = useState(true)
@@ -33,6 +34,7 @@ function App() {
             <Route path="/register" element={<Register/>}/>
             <Route path="/shop/:shopId" element={<Shop/>}/>
             <Route path="/category/:categoryId" element={<Category/>}/>
+            <Route path="/contact-us" element={<Contact/>}/>
           </Routes>
           </AuthProvider>
         </Router>

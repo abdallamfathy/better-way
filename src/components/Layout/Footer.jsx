@@ -7,6 +7,7 @@ import { FaCcMastercard, FaCcVisa, FaFacebook, FaFacebookF, FaInstagram, FaMailB
 import { faEnvelope, faMailForward, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FooterCategories from "./FooterCategories";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 return (
@@ -47,7 +48,7 @@ return (
           <div className="flex flex-col gap-2 text-txt">
           <h2 className="font-bold mb-2">LET US HELP YOU</h2>
           <a href="#" className="text-sm font-light hover:text-btn">Help Center</a>
-          <a href="#" className="text-sm font-light hover:text-btn">Contact Us</a>
+          <Link to="/contact-us" className="text-sm font-light hover:text-btn">Contact Us</Link>
           <a href="#" className="text-sm font-light hover:text-btn">How to shop on BetterWay?</a>
           <a href="#" className="text-sm font-light hover:text-btn">How to pay on BetterWay?</a>
           <a href="#" className="text-sm font-light hover:text-btn">Dispute Resolution Policy</a>

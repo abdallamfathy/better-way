@@ -21,14 +21,6 @@ import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 export function ProductInfo({data}) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    let image = [];
-    for (let i = 0; i < 6; i++) {
-      image.push(
-        <SwiperSlide key={i}>
-          <img src={zara} alt="image" className="w-full object-cover" />
-        </SwiperSlide>
-      );
-    }
   return <div className="flex md:flex-row flex-col-reverse justify-between">
             <div className="flex flex-col items-center md:items-start  justify-center md:w-1/5 my-8  text-txt ">
               <div className="flex flex-col items-center gap-10">
@@ -56,7 +48,7 @@ export function ProductInfo({data}) {
                 </div>
               </div>
             </div>
-            <div className="swiperr my-8 md:w-4/5">
+            <div className="swiperr my-8 md:w-4/5 ">
               <Swiper style={{
         "--swiper-navigation-color": "#fff",
         "--swiper-pagination-color": "#fff"
@@ -69,7 +61,7 @@ export function ProductInfo({data}) {
       }} className="mySwiper2 rounded-t-md">
                 {data?.images?.map((item, index) => {
                   return <SwiperSlide key={index}>
-                      <img src={item?.image} alt="image" className="w-full h-96 object-cover" />
+                      <img src={item?.image} alt="image" className="w-full md:h-[27rem] object-cover" />
                     </SwiperSlide>;
                 })
 
@@ -79,7 +71,7 @@ export function ProductInfo({data}) {
                 <Swiper modules={[FreeMode, Navigation, Thumbs]} navigation onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={6} freeMode={true} watchSlidesProgress={true} className="mySwiper">
                 { data?.images?.map((item, index) => {
                   return <SwiperSlide key={index}>
-                      <img src={item?.image} alt="image" className="w-full h-24 object-cover" />
+                      <img src={item?.image} alt="image" className="w-full h-24 object-cover max-md:hidden" />
                     </SwiperSlide>;
                 })
 
