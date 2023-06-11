@@ -38,7 +38,7 @@ const Categories = ({ show, updateState }) => {
                 <Link key={category.id} to={`/category/${category.id}`}>
               <div  className="flex items-center gap-4 cursor-pointer  hover:text-btn w-full  h-12 ">
                 <li className="font-medium text-xl">
-                <FontAwesomeIcon icon="fa-solid fa-house" />
+                <FontAwesomeIcon icon={category.icon} />
                                   {/* <FontAwesomeIcon icon={category.icon} key={category.icon} /> */}
                   {/* <img src={category.logo} alt="logo" className="xl:w-10 xl:h-10 w-7 h-7" /> */}
                 </li>

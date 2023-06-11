@@ -68,6 +68,7 @@ return (
                                     price={item.price}
                                     rating={item.rating}
                                     category={item.category}
+                                    offer_value={item.offer_value}
                                     />
                             </SwiperSlide>
                                ))

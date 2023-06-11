@@ -19,6 +19,7 @@ import {
 import zara from "../../assets/topPlaces/zara.jpg";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 export function ProductInfo({data}) {
+  console.log(data);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return <div className="flex md:flex-row flex-col-reverse justify-between">
@@ -37,11 +38,13 @@ export function ProductInfo({data}) {
                 </div>
                 <div className="flex flex-col items-center gap-4  text-2xl">
                   <div className="flex gap-2 items-center">
-                    <h2 className="font-semibold">Branches  </h2>
+                    {
+                      data?.is_branch === "0" ? <h2 className="font-semibold">Brand  </h2> : <h2 className="font-semibold">Branches  </h2>
+                    }
                     {/* <a href="#"><FontAwesomeIcon icon={faSortDown} /></a> */}
                   </div>
-                  <p> {data?.addresses[0].government} </p>
-                  <p> {data?.addresses[0].area} </p>
+                  <p> {data?.addresses[0]?.governorate} </p>
+                  <p> {data?.addresses[0]?.area} </p>
                 </div>
                 <div>
                   <h2 className="font-bold text-2xl">Gained Points : <span className="text-btn">{data?.gained_points}</span></h2>
