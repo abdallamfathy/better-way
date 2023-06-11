@@ -103,7 +103,7 @@ const Navbar = () => {
               <div className='flex items-center'>
                 <p className='text-white'>
                   Welcome{" "}
-                  <span className="font-semibold mr-2 text-white capitalize">{auth()?.name}</span>
+                  <Link to="user-dashboard" ><span className="cursor-pointer font-semibold mr-2 text-white capitalize">{auth()?.name}</span></Link>
                 </p>
                 {console.log(auth())}
                 {auth()?.photo ? ( <img src={auth()?.photo} alt="profile" className='w-10 h-10 rounded-full object-fill' />) : (

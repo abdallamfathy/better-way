@@ -35,9 +35,9 @@ const SpecialOffers = () => {
                                                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                                                 spaceBetween={10}
                                                 slidesPerView={6}
-                                                
+                                                navigation
                                                 autoplay={
-                                                        {
+                                                        {       
                                                                 disableOnInteraction: false
                                                         }
                                                 }
@@ -47,7 +47,7 @@ const SpecialOffers = () => {
                                                          myData?.map((item, index) => {
                                                                 return (
                                                                         <SwiperSlide key={index}>
-                                                        <div className='relative w-20 h-20 overflow-hidden md:h-44 md:w-64'>
+                                                        <div className='relative w-20 h-20 overflow-hidden md:h-40 md:w-60'>
                                                                 <img src={item?.logo} alt="logo" className='rounded-2xl w-full h-full  brightness-75 object-cover ' />
                                                                 <div className="rounded-tr-2xl rotate-45   w-14  md:w-24 md:h-5    bg-btn bg-opacity-80 text-center  md:top-4 md:-right-5  absolute -right-3 top-3">
                                                                         <h2 className="text-[7px] font-semibold text-txt md:text-sm">{item?.offer}</h2>
