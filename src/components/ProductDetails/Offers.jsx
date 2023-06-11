@@ -12,8 +12,8 @@ export function Offers({ offers }) {
         return (
           <div className="Offers flex flex-col gap-8 my-4   md:text-xl" key={index}>
             <div className="flex justify-between w-full items-center ">
-              <p> <input type="radio" name="1st" className="mr-3" />{offer?.offer_title}</p>
-              <p className="text-btn font-bold">{offer?.offer_percentage}%</p>
+              <p> <input type="radio" name="1st" className="mr-3" />{offer?.title}</p>
+              <p className="text-btn font-bold">{offer?.value}%</p>
             </div>
 
           </div>
