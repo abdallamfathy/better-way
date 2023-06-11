@@ -1,5 +1,8 @@
 import React from "react";
 import { RiStarSFill } from "react-icons/ri";
+import CatNames from "./CatNames";
+import CatGover from "./CatGover";
+import CatArea from "./CatArea";
 
 
 export function Filter({ }) {
@@ -10,256 +13,19 @@ export function Filter({ }) {
         <div className="CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-80">
             <h1 className="2xl:text-3xl xl:text-2xl text-xl font-bold">CATEGORIES</h1>
             <div className="p-5 flex flex-col gap-2 h-full w-full overflow-y-auto">
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Super Market
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Fashion
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Eductaion
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cafe & Restaurant
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cafe & Restaurant
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cafe & Restaurant
-                        </div>
-                    </div>
-                </>
+                <CatNames/>
             </div>
         </div>
         <div className="CITY flex flex-col justify-center items-start p-4 border-b border-txt h-80  ">
             <h1 className="2xl:text-3xl xl:text-2xl text-xl font-bold">GOVERNORATE</h1>
             <div className="p-5 flex flex-col gap-2 h-full w-full  overflow-y-auto">
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cairo
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Alexandira
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Ismailia
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Suez
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cairo
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Alexandira
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Ismailia
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Suez
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cairo
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Alexandira
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Ismailia
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Suez
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cairo
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Alexandira
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Ismailia
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Suez
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Cairo
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Alexandira
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Ismailia
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Suez
-                        </div>
-                    </div>
-                </>
+                <CatGover/>
             </div>
         </div>
         <div className="AREA flex flex-col justify-center items-start p-4 border-b border-txt h-80">
             <h1 className="2xl:text-3xl xl:text-2xl text-xl font-bold">AREA</h1>
-            <div className="m-5 flex flex-col gap-2 w-80 overflow-y-auto">
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Misr El gededa
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Shubra
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Tagamo3
-                        </div>
-                    </div>
-                </>
-                <>
-                    <div className="flex gap-4 items-center">
-                        <input type="checkbox" name="" id="" />
-                        <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            Zayed
-                        </div>
-                    </div>
-                </>
+            <div className="p-5 flex flex-col gap-2 w-full h-full overflow-y-auto">
+                <CatArea/>
             </div>
         </div>
         <div className="DISCOUNT flex flex-col justify-center items-start p-4 border-b border-txt">
