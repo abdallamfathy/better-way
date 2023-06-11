@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 const UserPanel = () => {
      const [error, setError] = useState("");
-     const [showPassword, setShowPassword] = useState(false);
-     const toggleShowPassword = () => setShowPassword(!showPassword);
      const user = useIsAuthenticated();
      const auth = useAuthUser();
      const SignOut = useSignOut();

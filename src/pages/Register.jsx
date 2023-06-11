@@ -267,7 +267,6 @@ const Register = () => {
           id="photo"
         //   value={formData.photo}
           placeholder="photo"
-          required
           onInvalid={handleInvalid}
           onInput={handleInput}
            className='w-72 rounded-md border border-gray-300 h-10  text-white placeholder:text-opacity-50' />
