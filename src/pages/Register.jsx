@@ -27,7 +27,10 @@ const Register = () => {
       
         try {
           const formData = new FormData();
-          formData.append('photo', e.target.photo.files[0]);
+          if (formData.photo) {
+              formData.append('photo', e.target.photo.files[0]);
+            
+        }
           formData.append('name', e.target.name.value);
           formData.append('password', e.target.password.value);
           formData.append('phone', e.target.phone.value);
@@ -44,14 +47,14 @@ const Register = () => {
             }
           );
             console.log(formData);
-          if (res.status === 200) {
+          if (res?.status === 200) {
                 navigate("/login");
           }
         } catch (error) {
           // Handle error
           console.log(error);
-                    if (error.response.status === 422) {
-                        const err = error.response.data.errors;
+                    if (error?.response?.status === 422) {
+                        const err = error?.response?.data?.errors;
                         if (err.password) {
                             // Swal.fire({
                             //     icon: "error",

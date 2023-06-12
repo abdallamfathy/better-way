@@ -25,7 +25,10 @@ const MerchantPanel = () => {
 
           try {
                const formData = new FormData();
-               formData.append('photo', e.target.photo.files[0]);
+               if (formData.photo) {
+                    formData.append('photo', e.target.photo.files[0]);
+                  
+              }
                formData.append('name', e.target.name.value);
                formData.append('password', e.target.password.value);
                formData.append('phone', e.target.phone.value);
