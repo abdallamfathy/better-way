@@ -49,6 +49,7 @@ return (
           <h2 className="font-bold mb-2">LET US HELP YOU</h2>
           <a href="#" className="text-sm font-light hover:text-btn">Help Center</a>
           <Link to="/contact-us" className="text-sm font-light hover:text-btn">Contact Us</Link>
+          <Link to="/page/1" className="text-sm font-light hover:text-btn">About Us</Link>
           <a href="#" className="text-sm font-light hover:text-btn">How to shop on BetterWay?</a>
           <a href="#" className="text-sm font-light hover:text-btn">How to pay on BetterWay?</a>
           <a href="#" className="text-sm font-light hover:text-btn">Dispute Resolution Policy</a>
