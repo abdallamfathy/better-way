@@ -21,10 +21,10 @@ const UserPanel = () => {
      const navigate = useNavigate();
 
      const [formValues, setFormValues] = useState({
-      name: '',
-      phone: '',
-      password: '',
-      email: '',
+      name: null,
+      phone: null,
+      password: null,
+      email: null,
       photo: null
     });
   
