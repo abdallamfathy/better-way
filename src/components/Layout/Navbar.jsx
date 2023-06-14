@@ -38,7 +38,7 @@ const Navbar = () => {
   useEffect(() => {
     handleMenu()
   }, [categoryId])
-  
+  console.log(auth());
   return (
     <>
       <nav className='bg-bg '>

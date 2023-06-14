@@ -1,31 +1,23 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useAuthUser, useIsAuthenticated, useSignOut } from 'react-auth-kit';
+import { useAuthUser, useIsAuthenticated, useSignIn, useSignOut } from 'react-auth-kit';
 import { useNavigate } from 'react-router-dom';
 
 const UserPanel = () => {
      const [error, setError] = useState("");
      const user = useIsAuthenticated();
      const auth = useAuthUser();
-     const SignOut = useSignOut();
-     
+     const login = useSignIn();
      const token = auth()?.token;
-    //  const [formData, setFormData] = useState({
-    //      name: "",
-    //      email: "",
-    //      password: "",
-    //      phone: "",
-    //      photo: null,
-    //  });
  
      const navigate = useNavigate();
 
      const [formValues, setFormValues] = useState({
-      name: null,
-      phone: null,
-      password: null,
-      email: null,
-      photo: null
+      name: undefined,
+      phone: undefined,
+      password: undefined,
+      email: undefined,
+      photo: undefined
     });
   
     const handleChange = (e) => {
@@ -40,10 +32,19 @@ const UserPanel = () => {
       e.preventDefault();
   
       const formData = new FormData();
-      formData.append('name', formValues.name);
-      formData.append('phone', formValues.phone);
-      formData.append('password', formValues.password);
-      formData.append('email', formValues.email);
+      if (formValues.name) {
+        formData.append('name', formValues.name);
+      }
+      if (formValues.phone) {
+        formData.append('phone', formValues.phone);
+      }
+      if (formValues.password) {
+        formData.append('password', formValues.password);
+      }
+      if (formValues.email) {
+        formData.append('email', formValues.email);
+      }
+      
       if (formValues.photo) {
         formData.append('photo', formValues.photo);
       }
@@ -58,6 +59,17 @@ const UserPanel = () => {
       })
         .then((response) => {
           console.log('Registration successful:', response.data);
+          login({
+            token: response.data.data,
+            expiresIn: 3600,
+            tokenType: "Bearer",
+            authState: {
+              email: response.data.data.email,
+              name: response.data.data.name,
+              token: response.data.data.token,
+              photo: response.data.data.photo,
+            },
+          });
           setFormValues({
             name: '',
             phone: '',
@@ -65,6 +77,7 @@ const UserPanel = () => {
             email: '',
             photo: null
           });
+          navigate("/")
         })
         .catch((error) => {
           console.error('Registration failed:', error);
