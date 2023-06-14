@@ -7,6 +7,7 @@ import MerchantDashboard from "./pages/MerchantDashboard"
 import { AuthProvider } from "./utils/AuthContext"
 import { RequireAuth } from "react-auth-kit"
 import Contact from "./pages/Contact"
+import Page from "./pages/Page"
 
 function App() {
   const [loading , setLoading] = useState(true)
@@ -35,6 +36,7 @@ function App() {
             <Route path="/shop/:shopId" element={<Shop/>}/>
             <Route path="/category/:categoryId" element={<Category/>}/>
             <Route path="/contact-us" element={<Contact/>}/>
+            <Route path="/page/:pageId" element={<Page/>}/>
           </Routes>
           </AuthProvider>
         </Router>
