@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import API_BASE_URL from '../../../config';
-import { useAuthUser } from 'react-auth-kit';
+import { useAuthUser, useIsAuthenticated } from 'react-auth-kit';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import StarRating from './StarRating';
@@ -11,7 +11,7 @@ const Comments = () => {
   const [formData, setFormData] = useState({
     shop_id,
     comment: "",
-    rate: 3,
+    rate: 5,
   });
 
   const handleStarClick = (rating) => {
@@ -33,7 +33,7 @@ const Comments = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!auth()) {
-      setError(true)
+      alert("please log in to add review!")
     }
     const res = await axios.post(
       `${API_BASE_URL}api/v1/users/comment/store`,
