@@ -51,7 +51,7 @@ const Comments = () => {
     setFormData({
       shop_id,
       comment:"",
-      rate:3
+      rate:5
   })
   };
   return (
