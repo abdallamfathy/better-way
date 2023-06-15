@@ -38,7 +38,6 @@ const Navbar = () => {
   useEffect(() => {
     handleMenu()
   }, [categoryId])
-  console.log(auth());
   return (
     <>
       <nav className='bg-bg '>
@@ -105,7 +104,6 @@ const Navbar = () => {
                   Welcome{" "}
                   <Link to="user-dashboard" ><span className="cursor-pointer font-semibold mr-2 text-white capitalize">{auth()?.name}</span></Link>
                 </p>
-                {console.log(auth())}
                 {auth()?.photo ? ( <img src={auth()?.photo} alt="profile" className='w-10 h-10 rounded-full object-fill' />) : (
                   <RxAvatar
                     className="w-10 h-10 rounded-full"

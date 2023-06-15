@@ -10,7 +10,6 @@ const FooterCategories = () => {
           const response = await fetch(`${API_BASE_URL}api/v1/categories`);
           const data = await response.json();
           setMyData(data.data);
-          console.log(data.data);
         };
     
         fetchData();

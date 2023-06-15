@@ -19,7 +19,6 @@ import {
 import zara from "../../assets/topPlaces/zara.jpg";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 export function ProductInfo({data}) {
-  console.log(data);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return <div className="flex md:flex-row flex-col-reverse justify-between">

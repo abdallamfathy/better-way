@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const RelatedShops = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <Swiper

@@ -11,7 +11,6 @@ const TopBrands = () => {
       const response = await fetch(`${API_BASE_URL}api/v1/shops`);
       const data = await response.json();
       setMyData(data.data);
-      console.log(data.data);
     };
     
     

@@ -85,7 +85,7 @@ const MerchantPanel = () => {
     };
      return (
           <div className=' text-white'>
-               <h2 className='md:text-5xl text-2xl font-bold text-left '>Merchant Settings</h2>
+               <h2 className='md:text-5xl text-2xl font-bold text-left '>Edit Merchant Profile</h2>
                <div className='h-full w-full bg-web/5 md:py-20 py-10'>
                     <form onSubmit={handleSubmit} className='flex flex-col flex-wrap gap-8 w-full  bg-bg md:p-10 p-2 rounded-2xl'>
 

@@ -17,7 +17,6 @@ const SpecialOffers = () => {
                         const response = await fetch(`${API_BASE_URL}api/v1/shops/special-offers`);
                         const data = await response.json();
                         setMyData(data.data);
-                        console.log(data.data);
                 };
 
                 fetchData();

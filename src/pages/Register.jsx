@@ -46,13 +46,11 @@ const Register = () => {
               },
             }
           );
-            console.log(formData);
           if (res?.status === 200) {
                 navigate("/login");
           }
         } catch (error) {
           // Handle error
-          console.log(error);
                     if (error?.response?.status === 422) {
                         const err = error?.response?.data?.errors;
                         if (err.password) {
@@ -163,7 +161,6 @@ const Register = () => {
     // };
 
     const handleChange = (e) => {
-        console.log("haha");
         // if (e.target.type === 'file') {
         //   // Handle image file
         //   const file = e.target.files[0];
@@ -277,12 +274,12 @@ const Register = () => {
                     <div >
                         <button type='submit' className=' cursor-pointer text-white bg-btn rounded-md drop-shadow-lg h-9 w-72 my-6'>Create an account</button>
                     </div>
-                    <div className='flex gap-4 items-center'>
+                    {/* <div className='flex gap-4 items-center'>
                         <h3>SignUp with social:</h3>
                         <a href="https://www.facebook.com/"><FaFacebook className='text-xl text-blue-600' /></a>
                         <a href="https://twitter.com/"><FaTwitter className='text-xl text-blue-300' /></a>
                         <a href='https://www.google.com/intl/ar/gmail/about/'><FaGoogle className='text-xl text-red-500 ' /></a>
-                    </div>
+                    </div> */}
                 </div>
             </form>
         </>
