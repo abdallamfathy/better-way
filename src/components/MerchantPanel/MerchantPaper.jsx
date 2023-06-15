@@ -29,7 +29,7 @@ const MerchantPaper = () => {
     fetchData();
   }, []);
   return (
-    <div className='flex flex-wrap'>
+    <div className='flex flex-wrap my-7 md:my-8 2xl:mx-40 xl:mx-20 lg:mx-10'>
       {
         myData?.map((item, index) => (
           <div key={index} className='text-txt w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/5 p-2'>
