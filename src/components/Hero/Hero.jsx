@@ -25,7 +25,7 @@ const Hero = ({state}) => {
        <Slider   Navigation={Navigation} Pagination={Pagination} Scrollbar={Scrollbar} A11y={A11y} Autoplay={Autoplay} />
     </div> :
     <div className="w-3/4 h-full rounded-md bg-bg">
-      <SubCategory/>
+      <SubCategory show={show} updateState={updateState}/>
     </div>
      }
     </div>

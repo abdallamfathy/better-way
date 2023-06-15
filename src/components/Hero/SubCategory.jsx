@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 
-const SubCategory = () => {
+const SubCategory = ({ show, updateState }) => {
   const [myData, setMyData] = useState(null);
     useEffect(() => {
       const fetchData = async () => {
@@ -17,10 +17,20 @@ const SubCategory = () => {
   
       fetchData();
     }, []);
+    const toggle = () => {
+      // updating state of CatContext
+      updateState(show);
+    };
+    const toggle2 = () => {
+      // updating state of CatContext
+      updateState(!show);
+    };
   return (
-    <div className="flex flex-col items-start text-white m-4 w-full">
-      <div className="w-full h-full">
+    <div onMouseEnter={() => toggle()}
+    onMouseLeave={() => toggle2()} className="flex flex-col items-start text-white m-4 w-full">
+      <div  className="w-full h-full">
         <ul
+          
           className="flex flex-col w-full h-full"
           >
           {myData?.map((category) => {

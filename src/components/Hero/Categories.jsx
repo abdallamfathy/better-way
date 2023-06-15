@@ -10,7 +10,7 @@ const Categories = ({ show, updateState }) => {
   // function to show category details
   const toggle = () => {
     // updating state of CatContext
-    updateState(!show);
+    updateState(false);
   };
   // font awesome function
   library.add(fas);
@@ -31,7 +31,7 @@ const Categories = ({ show, updateState }) => {
         <ul
           className="flex flex-col w-full h-full"
           onMouseEnter={() => toggle()}
-          onMouseLeave={() => toggle()}
+          // onMouseLeave={() => toggle()}
           >
           {myData?.map((category) => {
             return (
