@@ -19,6 +19,7 @@ const Category = () => {
     const fetchData = async () => {
       const response = await fetch(`${API_BASE_URL}api/v1/categories/${categoryId}`);
       const data = await response.json();
+      console.log(data.data.shops);
       setMyData(data.data.shops);
     };
 
@@ -41,7 +42,7 @@ const Category = () => {
           <section className="sectionII">
             <div className="flex md:flex-row flex-col max-md:gap-4 justify-between">
               <div className="md:w-1/4 h-full max-md:hidden bg-bg  rounded-md ">
-                 <Filter     />
+                 <Filter  setMyData={setMyData}   />
               </div>
               <div className="md:w-3/4 flex flex-col items-center justify-between">
                 {
