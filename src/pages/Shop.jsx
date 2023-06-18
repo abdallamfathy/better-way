@@ -25,18 +25,21 @@ import ProductData from "../components/ProductDetails/ProductData";
 import API_BASE_URL from "../../config";
 import { useParams } from "react-router-dom";
 import RelatedShops from "../components/ProductDetails/RelatedShops";
+import Reviews from "../components/ProductDetails/Reviews";
 
 const Shop = () => {
   const {shopId}  = useParams();
   const [myData, setMyData] = useState(null);
   const [related, setRelated] = useState(null);
+  const [reviews, setReviews] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${API_BASE_URL}api/v1/shops/${shopId}`);
       const data = await response.json();
       setMyData(data?.data[0]);
-      setRelated(data?.data[1]);
+      setReviews(data?.data[1])
+      setRelated(data?.data[2]);
     };
 
     fetchData();
@@ -58,7 +61,7 @@ const Shop = () => {
                  <Description description={myData?.description}/>
               
                  <Rates/>
-   
+                 <Reviews reviews={reviews?.comments} count={reviews}/>
                  <Comments/>
             </div>
 
