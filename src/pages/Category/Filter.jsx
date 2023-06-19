@@ -27,7 +27,8 @@ export function Filter({ setMyData }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const res = await axios.get(`https://maykel.betterway-egypt.com/api/v1/categories/${categoryId}/filter`, form)
-        setMyData(res?.data);
+        console.log(res);
+        setMyData(res?.data?.data);
       };
 
     const handleChange = (event) => {
