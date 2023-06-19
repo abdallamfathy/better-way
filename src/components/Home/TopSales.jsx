@@ -27,7 +27,7 @@ const TopSales = () => {
 
         fetchData();
     }, []);
-
+    console.log(myData);
     return (
         <>
             <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 md:mx-10'>
@@ -47,7 +47,7 @@ const TopSales = () => {
                             slidesPerView={2}
                             breakpoints={{
                                 768: {
-                                    slidesPerView: 3.5
+                                    slidesPerView: 3.8
                                   },
                                   1200: {
                                     slidesPerView: 4.5

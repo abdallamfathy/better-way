@@ -15,7 +15,7 @@ const Reviews = ({ reviews  , count}) => {
                     return (
                         <article>
                             <div className="flex items-center mb-4 space-x-4">
-                                <img className="w-10 h-10 rounded-full" src={review?.user_img} alt="" />
+                                <img className="w-10 h-10 rounded-full" src={review?.user_img} alt="userImg" />
                                 <div className="space-y-1 font-medium dark:text-white">
                                     <p>{review?.user_name}</p>
                                 </div>

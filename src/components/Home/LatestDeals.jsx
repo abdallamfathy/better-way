@@ -38,9 +38,10 @@ return (
                             // install Swiper modules
                             modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
                             slidesPerView={2}
+                            // spaceBetween={5}
                             breakpoints={{
                                 768: {
-                                  slidesPerView: 3.5
+                                  slidesPerView: 3.8
                                 },
                                 1200: {
                                   slidesPerView: 4.5
