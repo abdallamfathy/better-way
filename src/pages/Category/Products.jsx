@@ -2,7 +2,7 @@ import React from "react";
 import { ProductCard } from "./ProductCard";
 
 export function Products({data}) {
-  return <div className="flex  flex-wrap justify-end gap-6 ">
+  return <div className="flex  flex-wrap justify-center gap- ">
 
                   {
                     data?.map((item) => (
@@ -14,6 +14,7 @@ export function Products({data}) {
                         price={item.price}
                         rating={item.rating}
                         category={item.category}
+                        offer={item.offer}
                       />
                     ))
                   }

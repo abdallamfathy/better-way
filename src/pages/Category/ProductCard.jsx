@@ -12,7 +12,7 @@ export function ProductCard({ id, title, logo, price, rating , category , offer}
       </div>
       <div className="flex md:flex-row flex-col items-center justify-around  md:h-1/4 h-1/2 ">
         <div className=" text-sm  text-black  font-semibold flex flex-col md:items-start items-center justify-center">
-          <h2 className="text-btn">{title}</h2>
+          <h2 className="text-btn text-base">{title}</h2>
           <h3>{category}</h3>
         </div>
         <div className="flex  text-btn bg-bg rounded-md  p-2 justify-center items-center">
