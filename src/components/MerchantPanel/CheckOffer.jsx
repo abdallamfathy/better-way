@@ -10,7 +10,7 @@ const CheckOffer = () => {
     const navigate = useNavigate();
 
     const [formValues, setFormValues] = useState({
-     code: number
+     code: 0
    });
  
    const handleChange = (e) => {
@@ -47,14 +47,14 @@ const CheckOffer = () => {
        });
    };
   return (
-    <div className=' text-white'>
-               <h2 className='md:text-5xl text-2xl font-bold text-left '>Edit Merchant Profile</h2>
+    <div className=' text-white md:mx-40 mx-10'>
+               <h2 className='md:text-5xl text-2xl font-bold text-left '>Check User Code</h2>
                <div className='h-full w-full bg-web/5 md:py-20 py-10'>
                     <form onSubmit={handleSubmit} className='flex flex-col flex-wrap gap-8 w-full  bg-bg md:p-10 p-2 rounded-2xl'>
 
                          <div className='md:w-96 flex flex-col'>
-                              <label htmlFor="name" className='m-2'>Enter Code Here :</label>
-                              <input type="number" name="number" className='bg-gray-400 rounded-lg border-gray-300' />
+                              <label htmlFor="code" className='m-2'>Enter Code Here :</label>
+                              <input type="number" name="code" className='bg-gray-400 rounded-lg border-gray-300' />
                          </div>
                          <button type='submit' className='bg-btn p-4 rounded-md text-lg'>Check</button>
                     </form>

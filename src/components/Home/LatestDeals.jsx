@@ -64,7 +64,7 @@ return (
                                     key={item.id}
                                     id={item.id}
                                     title={item.title}
-                                    logo={item.logo}
+                                    logo={item.image}
                                     price={item.price}
                                     rating={item.rating}
                                     category={item.category}
