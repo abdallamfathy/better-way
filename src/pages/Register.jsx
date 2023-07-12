@@ -38,7 +38,7 @@ const Register = () => {
           // Append other form fields as needed
       
           const res = await axios.post(
-            "https://maykel.betterway-egypt.com/api/v1/users/register",
+            "https://betterway.balkosolar.de/api/v1/users/register",
             formData,
             {
               headers: {
@@ -104,7 +104,7 @@ const Register = () => {
 
     //     try {
     //         const res = await axios.post(
-    //             "https://maykel.betterway-egypt.com/api/v1/users/register",
+    //             "https://betterway.balkosolar.de/api/v1/users/register",
     //             formData
     //             );
     //         if (res.status === 200) {

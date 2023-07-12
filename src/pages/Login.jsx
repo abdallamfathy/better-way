@@ -23,7 +23,7 @@ const Login = () => {
       // Handle form submission
       try {
         const res = await axios.post(
-          "https://maykel.betterway-egypt.com/api/v1/users/login",
+          "https://betterway.balkosolar.de/api/v1/users/login",
           formData
         );
   

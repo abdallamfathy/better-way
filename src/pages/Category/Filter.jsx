@@ -26,7 +26,7 @@ export function Filter({ setMyData }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.get(`https://maykel.betterway-egypt.com/api/v1/categories/${categoryId}/filter`, form)
+        const res = await axios.get(`https://betterway.balkosolar.de/api/v1/categories/${categoryId}/filter`, form)
         console.log(res);
         setMyData(res?.data?.data);
       };

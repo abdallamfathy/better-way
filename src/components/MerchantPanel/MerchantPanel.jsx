@@ -49,7 +49,7 @@ const MerchantPanel = () => {
         formData.append('photo', formValues.photo);
       }
   
-      axios.post("https://maykel.betterway-egypt.com/api/v1/users/profile/edit",
+      axios.post("https://betterway.balkosolar.de/api/v1/users/profile/edit",
       formData,
       {
         headers: {
