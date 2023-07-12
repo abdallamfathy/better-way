@@ -28,10 +28,10 @@ function App() {
             <Route path="/user-dashboard" element={<UserDashboard/>}/>
             {/* <Route path="/merchant-dashboard" element={<MerchantDashboard/>}/> */}
             <Route  path="/merchant-dashboard" element={
-            <RequireAuth loginPath={'/login'}>
-            <MerchantDashboard />
-          </RequireAuth>
+              <MerchantDashboard />
             }/>
+            {/* <RequireAuth loginPath={'/login'}>
+          </RequireAuth> */}
             <Route path="/register" element={<Register/>}/>
             <Route path="/shop/:shopId" element={<Shop/>}/>
             <Route path="/category/:categoryId" element={<Category/>}/>

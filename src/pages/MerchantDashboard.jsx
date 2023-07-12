@@ -3,6 +3,7 @@ import MerchantOffers from '../components/MerchantPanel/MerchantOffers'
 import MerchantPanel from '../components/MerchantPanel/MerchantPanel'
 import MerchantPaper from '../components/MerchantPanel/MerchantPaper'
 import MerchantShops from '../components/MerchantPanel/MerchantShops'
+import CheckOffer from '../components/MerchantPanel/CheckOffer'
 
 const MerchantDashboard = () => {
   return (
@@ -11,6 +12,7 @@ const MerchantDashboard = () => {
         <MerchantPanel/>
         <MerchantOffers/>
     </div>
+        <CheckOffer/>
         <MerchantShops/>
         <MerchantPaper/>
 
