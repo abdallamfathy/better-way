@@ -1,29 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useAuthUser } from 'react-auth-kit';
+import API_BASE_URL from '../../../config';
+import axios from 'axios';
 
 const MerchantOffers = () => {
+    const [myData, setMyData] = useState(null);
+    const auth = useAuthUser();
+    const token = auth()?.token;
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}api/v1/merchants/merchant-offers`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+    
+        const data = response.data.data;
+        console.log(data);
+        setMyData(data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    
+    useEffect(() => {
+      fetchData();
+    }, []);
   return (
     <div className='bg-bg rounded-xl md:p-20 p-5'>
         <div className='flex flex-col '>
             <div className='flex  justify-around items-center md:gap-40 gap-14 text-btn font-semibold text-2xl border-b border-gray-100 md:p-10 p-2'>
-                <p>Offer</p>
-                <p>My Shops</p>
-                <p>Contract Date</p>
+                <p>Offer_id</p>
+                <p>Offer_full_title</p>
+                <p>Shop Name</p>
+                <p>User Id</p>
             </div>
-            <div className='flex  justify-around items-center md:gap-40 gap-14 text-white  text-lg border-b border-gray-100 md:p-10 p-2'>
-                <p className='w-1/3'>50 % discount on first 100 product</p>
-                <p className='w-1/3'>EL slaab</p>
-                <p className='w-1/3'>5/5/2021</p>
-            </div>
-            <div className='flex  justify-around items-center md:gap-40 gap-14 text-white  text-lg border-b border-gray-100 md:p-10 p-2'>
-                <p className='w-1/3'>10 % discount on first 100 product</p>
-                <p className='w-1/3'>EL abd</p>
-                <p className='w-1/3'>2/1/2023</p>
-            </div>
-            <div className='flex  justify-around items-center md:gap-40 gap-14 text-white  text-lg border-b border-gray-100 md:p-10 p-2'>
-                <p className='w-1/3'>50 % discount on first 100 product</p>
-                <p className='w-1/3'>Toshiba</p>
-                <p className='w-1/3'>20/2/2024</p>
-            </div>
+            {
+               myData &&  myData?.map((item, index) => {
+                    return (
+                        <div className='flex justify-around items-center md:gap-40 gap-14 text-txt  text-xl border-b border-gray-100 md:p-10 p-2' key={index}>
+                            <p>{item?.offer_id}</p>
+                            <p>{item?.offer_full_title}</p>
+                            <p>{item?.shop_name}</p>
+                            <p>{item?.user_id}</p>
+                        </div>
+                    )
+                })
+            }
+
         </div>
     </div>
   )

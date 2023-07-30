@@ -1,29 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import API_BASE_URL from '../../../config';
+import { useAuthUser } from 'react-auth-kit';
+import axios from 'axios';
 
 const UserOffers = () => {
+    
+    const [myData, setMyData] = useState(null);
+    const auth = useAuthUser();
+    const token = auth()?.token;
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}api/v1/users/user-offers`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+    
+        const data = response.data.data;
+        console.log(data);
+        setMyData(data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    
+    useEffect(() => {
+      fetchData();
+    }, []);
   return (
     <div className='bg-bg rounded-xl md:p-20 p-5 '>
         <div className='flex flex-col '>
-            <div className='flex  justify-around items-center md:gap-40 gap-8 text-btn font-semibold text-2xl border-b border-gray-100 md:p-10 p-2'>
-                <p>Offer</p>
+        <div className='flex  justify-around items-center md:gap-40 gap-14 text-btn font-semibold text-2xl border-b border-gray-100 md:p-10 p-2'>
+                <p>Offer_id</p>
+                <p>Offer_full_title</p>
                 <p>Shop Name</p>
-                <p>Redeam  Date</p>
+                <p>User Id</p>
             </div>
-            <div className='flex  justify-around items-center md:gap-40 gap-8 text-white  text-lg border-b border-gray-100 md:p-10 p-2'>
-                <p className='w-1/3'>50 % discount on first 100 product</p>
-                <p className='w-1/3'>Monginis</p>
-                <p className='w-1/3'>20/5/2023</p>
-            </div>
-            <div className='flex  justify-around items-center md:gap-40 gap-8 text-white  text-lg border-b border-gray-100 md:p-10 p-2'>
-                <p className='w-1/3'>10 % discount on first 100 product</p>
-                <p className='w-1/3'>La poire</p>
-                <p className='w-1/3'>10/6/2023</p>
-            </div>
-            <div className='flex  justify-around items-center md:gap-40 gap-8 text-white  text-lg border-b border-gray-100 md:p-10 p-2'>
-                <p className='w-1/3'>50 % discount on first 100 product</p>
-                <p className='w-1/3'>Monginis</p>
-                <p className='w-1/3'>20/5/2023</p>
-            </div>
+            {
+               myData &&  myData?.map((item, index) => {
+                    return (
+                        <div className='flex justify-around items-center md:gap-40 gap-14 text-txt  text-xl border-b border-gray-100 md:p-10 p-2' key={index}>
+                            <p>{item?.offer_id}</p>
+                            <p>{item?.offer_full_title}</p>
+                            <p>{item?.shop_name}</p>
+                            <p>{item?.user_id}</p>
+                        </div>
+                    )
+                })
+            }
         </div>
     </div>
   )

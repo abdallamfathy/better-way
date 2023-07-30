@@ -1,14 +1,13 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { useAuthUser, useSignIn } from 'react-auth-kit';
-import { useNavigate } from 'react-router-dom';
 
 const CheckOffer = () => {
     const auth = useAuthUser();
-    const login = useSignIn();
     const token = auth()?.token;
 
-    const navigate = useNavigate();
-
+    const [error, setError] = useState('');
+    const [message, setMessage] = useState('');
     const [formValues, setFormValues] = useState({
      code: 0
    });
@@ -22,12 +21,8 @@ const CheckOffer = () => {
    const handleSubmit = (e) => {
      e.preventDefault();
  
-     const formData = new FormData();
-     if (formValues.code) {
-       formData.append('code', formValues.code);
-     }
      axios.post("https://betterway.balkosolar.de/api/v1/merchants/check-offer",
-     formData,
+     formValues,
      {
        headers: {
          Authorization: `Bearer ${token}`,
@@ -35,15 +30,21 @@ const CheckOffer = () => {
        },
      })
        .then((response) => {
-         console.log('Code valid:', response.data);
-         alert('Code valid:', response.data);
+         setMessage(response?.data.message);
+         // Clear the message after 3 seconds
+        setTimeout(() => {
+          setMessage('');
+        }, 3000);
          setFormValues({
            code: '',
          });
        })
        .catch((error) => {
-         alert('Check this error:', error);
-         console.log('Check this error:', error);
+         setError(error?.response?.data?.message);
+         // Clear the message after 3 seconds
+        setTimeout(() => {
+          setError('');
+        }, 3000);
        });
    };
   return (
@@ -54,7 +55,9 @@ const CheckOffer = () => {
 
                          <div className='md:w-96 flex flex-col'>
                               <label htmlFor="code" className='m-2'>Enter Code Here :</label>
-                              <input type="number" name="code" className='bg-gray-400 rounded-lg border-gray-300' />
+                              <input value={formValues.code} onChange={handleChange} type="number" name="code" className='bg-gray-400 rounded-lg border-gray-300' />
+                              <p className='text-red-500 text-lg font-semibold'>{error}</p>
+                              <p className='text-green-500 text-lg font-semibold'>{message}</p>
                          </div>
                          <button type='submit' className='bg-btn p-4 rounded-md text-lg'>Check</button>
                     </form>

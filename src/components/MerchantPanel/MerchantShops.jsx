@@ -1,6 +1,3 @@
-import zara from "../../assets/topPlaces/zara.jpg"
-
-import {RiStarSFill , RiStarSLine} from 'react-icons/ri'
 import { Navigation, Pagination, Scrollbar, A11y , Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,7 +6,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import API_BASE_URL from "../../../config";
 import { ProductCard } from "../../pages/Category/ProductCard";
@@ -51,6 +47,7 @@ return (
 
                         <Swiper
                             // install Swiper modules
+                            dir="rtl"
                             modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
                             slidesPerView={2}
                             breakpoints={{
@@ -78,7 +75,7 @@ return (
                                     key={item.id}
                                     id={item.id}
                                     title={item.title}
-                                    logo={item.logo}
+                                    logo={item.image}
                                     price={item.price}
                                     rating={item.rating}
                                     category={item.category}
