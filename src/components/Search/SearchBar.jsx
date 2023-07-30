@@ -31,15 +31,15 @@ const SearchBar = () => {
 
   return (
     <div>
-      <div className='bg-white rounded-lg 2xl:w-[650px] xl:w-[500px] h-12 flex justify-between '>
-        <button className='bg-btn  p-2  w-12 rounded-l-lg'><BiSearchAlt className='w-7 h-7 text-white' /></button>
+      <div dir='rtl' className='bg-white rounded-lg 2xl:w-[650px] xl:w-[500px] h-12 flex justify-between '>
+        <button className='bg-btn  p-2  w-14 rounded-sm'><BiSearchAlt className='w-7 h-7 text-white' /></button>
         <input type="search"
           placeholder={language ? "Search for products" : "ابحث عن المنتجات"}
           value={searchTerm}
           onChange={handleChange}
           onMouseEnter={() => setShow(!show)}
           className='bg-white text-black rounded-xl pl-2 py-2 w-full mx-1 text-left border-none focus:ring-0' />
-        <button className='bg-gray-200  pr-2 py-2 w-20 text-sm border-l border-[#E8F6EF] rounded-r-lg flex items-center gap-[1px] font-semibold'> <IoMdArrowDropdown />  
+        <button className='bg-gray-200  px-2 py-2 w-20 text-sm border-l border-[#E8F6EF] rounded-md flex items-center gap-[1px] font-semibold'> <IoMdArrowDropdown />  
         {
           language ? "Search" :  " ابحث"
         }

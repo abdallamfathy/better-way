@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export function ProductCard({ id, title, logo, price, rating , category , offer}) {
   console.log(category);
-  return <div className="relative md:w-64 md:h-80 w-40  h-56 bg-txt rounded-md hover:shadow-lg hover:shadow-btn m-10 transition">
+  return <div dir="ltr" className="relative md:w-64 md:h-80 w-40  h-56 bg-txt rounded-md hover:shadow-lg hover:shadow-btn m-10 transition">
     <Link to={`/shop/${id}`}>
     <div className="flex flex-col md:h-80 h-56 ">
       <div className="md:h-3/4 h-1/2">
