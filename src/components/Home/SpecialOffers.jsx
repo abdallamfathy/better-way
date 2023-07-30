@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import API_BASE_URL from '../../../config';
+import { useLangContext } from '../../utils/LangContext';
 const SpecialOffers = () => {
         const [myData, setMyData] = useState(null);
 
@@ -21,16 +22,22 @@ const SpecialOffers = () => {
 
                 fetchData();
         }, []);
+        const { language } = useLangContext();
+
         return (
                 <>
                         <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 md:mx-10'>
                                 <div className='flex justify-center items-center  bg-bg py-1 md:h-16'>
-                                        <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>SPECIAL OFFERS</h2>
+                                        <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>
+                                                {
+                                                        language ? "Special Offers" : "العروض المميزة"
+                                                }
+                                        </h2>
                                 </div>
                                 <div className='h-24 flex justify-center max-md:my-5 max-md:-mb-2  max-md:mx-3 md:h-full md:mt-8 '>
 
                                         <Swiper
-                                                // install Swiper modules
+                                                dir='rtl'
                                                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                                                 spaceBetween={10}
                                                 slidesPerView={6}

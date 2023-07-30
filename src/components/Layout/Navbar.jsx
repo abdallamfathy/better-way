@@ -9,6 +9,7 @@ import { faNavicon } from '@fortawesome/free-solid-svg-icons'
 import { useIsAuthenticated, useSignOut, useAuthUser } from "react-auth-kit";
 import ProfileMenu from '../ProfileMenu'
 import SearchBar from '../Search/SearchBar'
+import { useLangContext } from '../../utils/LangContext'
 
 
 const Navbar = () => {
@@ -27,10 +28,13 @@ const Navbar = () => {
     setShowProfile(!showProfile);
   }
   const [lang, setLang] = useState(false)
+  const { language, setLanguage } = useLangContext();
   const toggleLang = () => {
     setLang(!lang);
+    setLanguage(!language);
+    console.log(language);
   }
-  const {categoryId} = useParams()
+  const { categoryId } = useParams()
   const handleMenu = () => {
     setShow(false)
   }
@@ -38,6 +42,7 @@ const Navbar = () => {
   useEffect(() => {
     handleMenu()
   }, [categoryId])
+
   return (
     <>
       <nav className='bg-bg '>
@@ -45,7 +50,7 @@ const Navbar = () => {
           <div className='flex justify-center items-center'>
             {!show && <AiOutlineMenu className='w-8 h-10 text-white' onClick={() => toggleMenu()} />}
             {show && <AiOutlineClose className='w-8 h-10 text-white' onClick={() => toggleMenu()} />}
-           <Link to="/"> <img src={logo} alt="logo" className='w-20 h-20 py-2 ' /></Link>
+            <Link to="/"> <img src={logo} alt="logo" className='w-20 h-20 py-2 ' /></Link>
 
           </div>
           <div className='relative' onClick={() => toggleProfile()}>
@@ -86,25 +91,31 @@ const Navbar = () => {
           <SearchBar />
 
           <div className='flex items-center gap-4 text-txt'>
-            {lang ? <div className='flex items-center cursor-pointer  gap-2' onClick={() => toggleLang()}>
+            {lang ? <div className='flex items-center cursor-pointer  gap-2' onClick={() => { toggleLang() }}>
               <p className='text-white'>العربية</p>
               <img src="https://hatscripts.github.io/circle-flags/flags/eg.svg" alt="eg flag" className='w-8 h-8' />
             </div>
               : !lang ?
-                <div className='flex items-center cursor-pointer gap-2' onClick={() => toggleLang()}>
+                <div className='flex items-center cursor-pointer gap-2' onClick={() => { toggleLang() }}>
                   <p className='text-white'>English</p>
                   <img src="https://hatscripts.github.io/circle-flags/flags/uk.svg" alt="uk flag" className='w-8 h-8' />
                 </div>
                 : null}
 
-            <Link to="/"><button className='bg-web text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>Product</button></Link>
+            <Link to="/"><button className='bg-web text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>
+              {
+                language ? 'Product' : 'منتج'
+              }
+              </button></Link>
             {user() && (
               <div className='flex items-center'>
                 <p className='text-white'>
-                  Welcome{" "}
-                  <Link to="user-dashboard" ><span className="cursor-pointer font-semibold mr-2 text-white capitalize">{auth()?.name}</span></Link>
+                  {
+                    language ? 'Welcome ' : 'مرحبا '
+                  }
+                  <Link to="/user-dashboard" ><span className="cursor-pointer font-semibold mr-2 text-white capitalize">{auth()?.name}</span></Link>
                 </p>
-                {auth()?.photo ? ( <img src={auth()?.photo} alt="profile" className='w-10 h-10 rounded-full object-fill' />) : (
+                {auth()?.photo ? (<img src={auth()?.photo} alt="profile" className='w-10 h-10 rounded-full object-fill' />) : (
                   <RxAvatar
                     className="w-10 h-10 rounded-full"
                     name={auth()?.name}
@@ -121,22 +132,19 @@ const Navbar = () => {
                   SignOut();
                   window.location.reload();
                 }}>
-                Sign Out
+                {
+                  language ? 'Logout' : 'تسجيل الخروج'
+                }
               </p>
             ) : (
-              <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>Sign Up</button></Link>
+              <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-400'>
+                {
+                  language ? 'Login' : 'تسجيل الدخول'
+                }
+              </button></Link>
             )}
 
           </div>
-
-          {/* <div className='flex gap-4  '>
-            <Link to="/register"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Sign Up</button></Link>
-            <Link to="/login"><button className='bg-btn text-white  rounded-xl px-4 py-2 w-32 h-12 font-semibold hover:bg-orange-700'>Login</button></Link>
-            </div> */}
-
-
-
-
         </div>
       </nav>
     </>

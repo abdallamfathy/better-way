@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import brand from "../../assets/topBrands/brand.jpg"
 import API_BASE_URL from "../../../config";
 import { Link } from 'react-router-dom';
+import { useLangContext } from '../../utils/LangContext';
 
 
 const TopBrands = () => {
@@ -17,11 +18,17 @@ const TopBrands = () => {
     fetchData();
   }, []);
   const randomItems = myData?.sort(() => 0.5 - Math.random()).slice(0, 15);
+  const { language } = useLangContext();
+
   return (
     <>
         <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 md:mx-10 '>
         <div className='flex justify-center items-center  bg-bg py-1 md:h-16'>
-          <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>TOP BRANDS</h2>
+          <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>
+            {
+              language ? "Top Brands" : "أفضل الماركات"
+            }
+          </h2>
         </div>
       <div className='mx-3 my-5 md:my-8 md:mx-0'>
 

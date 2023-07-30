@@ -3,6 +3,7 @@ import { useCatContext } from '../Home/CatContext';
 import API_BASE_URL from '../../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import { useLangContext } from '../../utils/LangContext';
 
 
 const SubCategory = ({ show, updateState }) => {
@@ -24,7 +25,9 @@ const SubCategory = ({ show, updateState }) => {
       // updating state of CatContext
       updateState(!show);
     };
-    console.log(myData);
+
+    const { language } = useLangContext();
+
   return (
     <div onMouseEnter={() => toggle()}
     onMouseLeave={() => toggle2()} className="flex flex-col items-start text-white m-4 w-full">
@@ -41,7 +44,9 @@ const SubCategory = ({ show, updateState }) => {
                 <FontAwesomeIcon icon={category.icon} />
                 </li>
                 <li className="xl:text-lg lg:text-base font-medium">
-                  {category.title}
+                  {
+                    language ? category.title : category.title_ar
+                  }
                 </li>
               </div>
                 </Link>

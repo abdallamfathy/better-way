@@ -22,6 +22,7 @@ export function Slider({ Navigation, Pagination, Scrollbar, A11y , Autoplay }) {
   return (
     <div className="w-full h-full">
     <Swiper
+      dir="rtl"
       className="hero" // install Swiper modules
       modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
       slidesPerView={1}

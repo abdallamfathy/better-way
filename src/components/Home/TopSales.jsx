@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import API_BASE_URL from "../../../config";
 import { useEffect, useState } from "react";
 import { ProductCard } from "../../pages/Category/ProductCard";
+import { useLangContext } from "../../utils/LangContext";
 
 const TopSales = () => {
 
@@ -27,12 +28,17 @@ const TopSales = () => {
 
         fetchData();
     }, []);
-    console.log(myData);
+    const { language } = useLangContext();
+
     return (
         <>
             <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 md:mx-10'>
                 <div className='flex justify-center items-center  bg-bg py-1 md:h-16'>
-                    <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>TOP PLACES</h2>
+                    <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>
+                        {
+                            language ? "Top Sales" : "أفضل المبيعات"
+                        }
+                    </h2>
                 </div>
 
 
@@ -42,7 +48,7 @@ const TopSales = () => {
 
                     <Link to="/shop">
                         <Swiper
-                            // install Swiper modules
+                            dir="rtl"
                             modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
                             slidesPerView={2}
                             breakpoints={{
@@ -68,11 +74,15 @@ const TopSales = () => {
                                     <ProductCard
                                     key={item.id}
                                     id={item.id}
-                                    title={item.title}
+                                    title={
+                                        language ? item.title : item.title_ar
+                                    }
                                     logo={item.image}
                                     price={item.price}
                                     rating={item.rating}
-                                    category={item.category}
+                                    category={
+                                        language ? item.category : item.category_ar
+                                    }
                                     offer={item.offer}
                                     />
                             </SwiperSlide>

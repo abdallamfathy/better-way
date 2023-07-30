@@ -4,6 +4,7 @@ import { useAuthUser, useIsAuthenticated } from 'react-auth-kit';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import StarRating from './StarRating';
+import { useLangContext } from '../../utils/LangContext';
 
 const Comments = () => {
   const { shopId } = useParams();
@@ -54,15 +55,17 @@ const Comments = () => {
       rate:5
   })
   };
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
   return (
-    <div className="Comments text-txt md:w-2/3">
+    <div dir={lang} className="Comments text-txt md:w-2/3">
 
                 {/* <Reviews/> */}
                 <form onSubmit={handleSubmit} className='flex flex-col 
                   gap-10  '>
                 <textarea name="comment" id="" cols="30" rows="5"
                 className='rounded-xl bg-bg my-5'
-                placeholder='Add your comment here ..'
+                placeholder={language ? 'Add your comment' : 'أضف تعليقك'}
                 value={formData.comment}
                 onChange={handleChange}
                 ></textarea>
@@ -73,7 +76,11 @@ const Comments = () => {
               onClick={handleStarClick}
             />
           </div>
-                  <button type='submit' className='bg-btn p-2 my-5 rounded-lg md:h-full'>Submit</button>
+                  <button type='submit' className='bg-btn p-2 my-5 rounded-lg md:h-full'>
+                    {
+                      language ? 'Add Comment' : 'أضف تعليق'
+                    }
+                  </button>
 
   </form>              </div>
   )

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import API_BASE_URL from '../../../config';
+import { useLangContext } from '../../utils/LangContext';
 
 const CatGover = ({setForm}) => {
     const [myData , setMyData] = useState(null)
@@ -21,7 +22,7 @@ const CatGover = ({setForm}) => {
           [name]: value,
         }));
       };
-      
+      const { language } = useLangContext();
   return (
     <>
         {
@@ -36,7 +37,9 @@ const CatGover = ({setForm}) => {
                         onChange={handleChange}
                         />
                         <div className="flex justify-between 2xl:text-2xl xl:text-xl lg:text-lg">
-                            {item?.title}
+                            {
+                                language ? item?.title : item?.title_ar
+                            }
                         </div>
                     </div>
                 );

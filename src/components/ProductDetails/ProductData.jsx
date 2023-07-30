@@ -3,9 +3,12 @@ import qr from "../../assets/qr.jpeg";
 import { FaFacebook, FaInstagram,  FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  faLocationDot,  faPhone,  } from "@fortawesome/free-solid-svg-icons";
+import { useLangContext } from '../../utils/LangContext';
 const ProductData = ({ data }) => {
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
   return (
-    <div className="Description flex flex-col items-center gap-4 max-md:mx-5">
+    <div dir={lang} className="Description flex flex-col items-center gap-4 max-md:mx-5">
       <div className="youtube">
         <iframe className="max-md:w-80 max-md:h-72" width="360" height="315" src={data?.video_url} title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
@@ -34,7 +37,9 @@ const ProductData = ({ data }) => {
               <div className='flex flex-col  items-center gap-4' key={index}>
                 <div className="flex self-start items-center gap-2 " >
                   <h2><FontAwesomeIcon icon={faLocationDot} /></h2>
-                  <p>{address?.address}</p>
+                  <p>{
+                    language? address?.address : address?.address_ar
+                    }</p>
                 </div>
                 <div className="Phones flex items-center gap-4 xl:text-lg lg:text-base font-semibold">
                   <div className="flex self-start items-center gap-2 ">

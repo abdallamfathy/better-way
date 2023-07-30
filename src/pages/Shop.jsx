@@ -26,6 +26,7 @@ import API_BASE_URL from "../../config";
 import { useParams } from "react-router-dom";
 import RelatedShops from "../components/ProductDetails/RelatedShops";
 import Reviews from "../components/ProductDetails/Reviews";
+import { useLangContext } from "../utils/LangContext";
 
 const Shop = () => {
   const {shopId}  = useParams();
@@ -44,10 +45,13 @@ const Shop = () => {
 
     fetchData();
   }, [shopId]);
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
+
   return (
     <>
       <Navbar />
-      <div className="md:mx-20 md:my-8 m-5">
+      <div dir={lang}  className="md:mx-20 md:my-8 m-5">
         <section className="sectionI">
            <ProductInfo data={myData} />
         </section>
@@ -55,10 +59,14 @@ const Shop = () => {
         <section className="sectionII my-20">
           <div className="Container flex md:flex-row flex-col lg:gap-10 gap-4 justify-between ">
             <div className="×OffersSection flex flex-col items-start  justify-center gap-4 h-full md:w-2/3   text-txt">
-              <div className="Title w-full "><h2 className="md:text-5xl text-2xl font-bold text-btn ">{myData?.title}</h2></div>
+              <div className="Title w-full "><h2 className="md:text-5xl text-2xl font-bold text-btn ">{
+                language ? myData?.title : myData?.title_ar
+              }</h2></div>
              
                  <Offers offers={myData?.offers} />
-                 <Description description={myData?.description}/>
+                 <Description description={
+                    language ? myData?.description : myData?.description_ar
+                 }/>
               
                  <Rates/>
                  <Reviews reviews={reviews?.comments} count={reviews}/>
@@ -74,8 +82,10 @@ const Shop = () => {
 
         <section className="sectionIII">
           <div className="">
-            <div className="text-left text-txt font-bold text-2xl">
-              <h2>Related shops</h2>
+            <div className=" text-txt font-bold text-2xl">
+              <h2>
+                {language ? "Related Shops" : "المتاجر المتعلقة"}
+              </h2>
             </div>
             <div className="mt-4">
               <RelatedShops data={related}/>

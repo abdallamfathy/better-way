@@ -1,9 +1,16 @@
 import React from 'react'
+import { useLangContext } from '../../utils/LangContext';
 
 const Rates = () => {
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
   return (
-    <div className="Rating">
-              <div className="SubTitle w-full "><h2 className="md:text-3xl text-xl font-semibold">Rating & Reviews :</h2></div>
+    <div dir={lang} className="Rating">
+              <div className="SubTitle w-full "><h2 className="md:text-3xl text-xl font-semibold">
+                {
+                  language ? 'Rating & Reviews : ' : 'التقييم والمراجعات : '
+                }
+                </h2></div>
               <div className="Stars my-6 text-txt">
 
                 <div className="flex items-center mb-3">

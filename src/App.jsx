@@ -8,6 +8,7 @@ import { AuthProvider } from "./utils/AuthContext"
 import { RequireAuth } from "react-auth-kit"
 import Contact from "./pages/Contact"
 import Page from "./pages/Page"
+import { useLangContext } from "./utils/LangContext"
 
 function App() {
   const [loading , setLoading] = useState(true)
@@ -15,11 +16,13 @@ function App() {
     setTimeout(() => setLoading(false) , 1000)
   }, [])
   
-
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
   return (
-    <div className="bg-web overflow-x-hidden ">
+    <div dir={lang} className="bg-web overflow-x-hidden" >
       {!loading && 
         <Router>
+          
           <AuthProvider>
 
           <Routes>

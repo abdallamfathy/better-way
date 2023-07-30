@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import API_BASE_URL from "../../../config";
 import { ProductCard } from "../../pages/Category/ProductCard";
+import { useLangContext } from "../../utils/LangContext";
 
 const LatestDeals = () => {
     const [myData, setMyData] = useState(null);
@@ -26,16 +27,22 @@ const LatestDeals = () => {
   
       fetchData();
     }, []);
+    const { language } = useLangContext();
+
 return (
     <>
     <div className='my-7 md:my-8 2xl:mx-40 xl:mx-20 lg:mx-10'>
     <div className='flex justify-center items-center  bg-bg py-1 md:h-16'>
-      <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>LAST DEALS</h2>
+      <h2 className='text-txt  text-lg md:text-3xl md:font-semibold'>
+        {
+            language ? "Latest Deals" : "أحدث العروض"
+        }
+      </h2>
     </div>
     <div className='my-8 max-md:mx-3'>
 
                         <Swiper
-                            // install Swiper modules
+                            dir="rtl"
                             modules={[Navigation, Pagination, Scrollbar, A11y , Autoplay]}
                             slidesPerView={2}
                             // spaceBetween={5}
@@ -63,11 +70,15 @@ return (
                                     <ProductCard
                                     key={item.id}
                                     id={item.id}
-                                    title={item.title}
+                                    title={
+                                        language ? item.title : item.title_ar
+                                    }
                                     logo={item.image}
                                     price={item.price}
                                     rating={item.rating}
-                                    category={item.category}
+                                    category={
+                                        language ? item.category : item.category_ar
+                                    }
                                     offer={item.offer}
                                     />
                             </SwiperSlide>

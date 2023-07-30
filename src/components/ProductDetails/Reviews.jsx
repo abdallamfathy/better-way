@@ -1,16 +1,20 @@
 import React from 'react'
+import { useLangContext } from '../../utils/LangContext';
 
 const Reviews = ({ reviews  , count}) => {
-    // console.log(count?.length());
-    console.log(reviews?.length);
-
+    const { language } = useLangContext();
+    const lang = language === true ? 'ltr' : 'rtl';
     
     return (
-        <>
-            <p className='my-5 font-semibold'>SHOP REVIEWS (<span className='text-btn'>{reviews?.length}</span>) </p>
+        <div dir={lang}>
+            <p className='my-5 font-semibold'>
+                {
+                    language ? 'SHOP REVIEWS' : 'التقييمات'
+                }
+                 (<span className='text-btn'>{reviews?.length}</span>) </p>
             {
                 reviews?.map((review) => {
-
+                    console.log(review);
                     const stars = Array(parseInt(review?.rate)).fill(null);
                     return (
                         <article>
@@ -31,7 +35,7 @@ const Reviews = ({ reviews  , count}) => {
                     )
                 })
             }
-        </>
+        </div>
     )
 }
 

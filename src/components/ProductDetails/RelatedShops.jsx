@@ -8,12 +8,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useLangContext } from '../../utils/LangContext';
 
 const RelatedShops = ({ data }) => {
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
   return (
     <div>
       <Swiper
-        // install Swiper modules
+        dir={lang}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={2}
         breakpoints={{
@@ -42,11 +45,15 @@ const RelatedShops = ({ data }) => {
 
                 <ProductCard key={item.id}
                   id={item.id}
-                  title={item.title}
+                  title={
+                    language ? item.title : item.title_ar
+                  }
                   logo={item.image}
                   price={item.price}
                   rating={item.rating}
-                  category={item.category}
+                  category={
+                    language ? item.category : item.category_ar
+                  }
                 />
               </SwiperSlide>
             )

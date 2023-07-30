@@ -3,6 +3,7 @@ import API_BASE_URL from "../../../config";
 import React, { useState } from "react";
 import { useAuthUser } from "react-auth-kit";
 import { useParams } from "react-router-dom";
+import { useLangContext } from "../../utils/LangContext";
 export function Offers({ offers }) {
   const { shopId } = useParams();
   const shop_id = shopId;
@@ -54,23 +55,31 @@ export function Offers({ offers }) {
     }));
   };
   console.log(auth());
-
-  return <div className="list w-full">
-    <div className="SubTitle w-full my-4"><h2 className="md:text-3xl text-xl font-semibold">Offers :</h2></div>
+  const { language } = useLangContext();
+  const lang = language === true ? 'ltr' : 'rtl';
+  return <div dir={lang} className="list w-full">
+    <div className="SubTitle w-full my-4"><h2 className="md:text-3xl text-xl font-semibold">
+      {
+        language ? 'Offers : ' : 'العروض : '
+      }
+      </h2></div>
     <form onSubmit={handleSubmit}>
 
     {
       offers?.map((offer, index) => {
         return (
           
-          <div className="Offers flex flex-col gap-8 my-4   md:text-xl" key={index}>
+          <div  className="Offers flex flex-col gap-8 my-4   md:text-xl" key={index}>
             <div className="flex justify-between w-full items-center ">
               <p> <input
                id={offer.id}
                onChange={handleChange}
                type="radio"
                name="offer"
-               className="mr-3" />{offer?.title}</p>
+               className="mx-3" />{
+                language ? offer?.title : offer?.title_ar
+               } {' '}</p>
+               {' '}
               <p className="text-btn font-bold">{offer?.value}%</p>
 
           </div>
@@ -78,7 +87,11 @@ export function Offers({ offers }) {
         )
       })
     }
-    <button className='bg-btn p-2 my-5 rounded-lg md:h-full'>Submit</button>
+    <button className='bg-btn p-2 my-5 rounded-lg md:h-full'>
+      {
+        language ? 'Take Offer' : 'احصل على العرض'
+      }
+    </button>
     </form>
   </div>;
 }

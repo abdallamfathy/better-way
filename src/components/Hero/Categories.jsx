@@ -5,6 +5,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import API_BASE_URL from '../../../config';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLangContext } from "../../utils/LangContext";
 
 const Categories = ({ show, updateState }) => {
   // function to show category details
@@ -25,26 +26,30 @@ const Categories = ({ show, updateState }) => {
 
     fetchData();
   }, []);
+  const { language } = useLangContext();
+
   return (
     <div className="flex flex-col items-start text-white m-4 w-full">
       <div className="w-full h-full ">
         <ul
           className="flex flex-col w-full h-full"
           onMouseEnter={() => toggle()}
-          // onMouseLeave={() => toggle()}
-          >
+        // onMouseLeave={() => toggle()}
+        >
           {myData?.map((category) => {
             return (
-                <Link key={category.id} to={`/category/${category.id}`}>
-              <div  className="flex items-center gap-4 cursor-pointer  hover:text-btn w-full  h-12 ">
-                <li className="font-medium text-xl">
-                <FontAwesomeIcon icon={category.icon} />
-                </li>
-                <li className="xl:text-lg lg:text-base font-medium">
-                  {category.title}
-                </li>
-              </div>
-                </Link>
+              <Link key={category.id} to={`/category/${category.id}`}>
+                <div className="flex items-center gap-4 cursor-pointer  hover:text-btn w-full  h-12 ">
+                  <li className="font-medium text-xl">
+                    <FontAwesomeIcon icon={category.icon} />
+                  </li>
+                  <li className="xl:text-lg lg:text-base font-medium">
+                    {
+                      language ? category.title : category.title_ar
+                    }
+                  </li>
+                </div>
+              </Link>
             );
           })}
         </ul>

@@ -8,8 +8,11 @@ import { faEnvelope, faMailForward, faMessage } from "@fortawesome/free-solid-sv
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FooterCategories from "./FooterCategories";
 import { Link } from "react-router-dom";
+import { useLangContext } from "../../utils/LangContext";
 
 const Footer = () => {
+  const { language } = useLangContext();
+
 return (
     <div className="bg-bg">
       <div className="flex flex-col gap-10 ">
@@ -17,11 +20,19 @@ return (
             <a href="#"><img src={logo} alt="logo" className="w-60"/></a>
             <div className="flex justify-between">
               <div className="flex flex-col gap-2 justify-start items-start text-white">
-                <h2>New to BetterWay ?</h2>
-                <p>Subscribe to our newsletter to get updates on our latest offers!</p>
+                <h2>
+                  {
+                    language ? "New to BetterWay ?" : "جديد في بيتر واي ؟"
+                  }
+                </h2>
+                <p>
+                  {
+                    language ? "Subscribe to our newsletter to get updates on our latest offers!" : "اشترك في النشرة الإخبارية لدينا للحصول على تحديثات حول أحدث عروضنا!"
+                  }
+                </p>
                 <div className="h-14 w-72  bg-white flex justify-center items-center  gap-4 px-0 rounded-md">
                 <FontAwesomeIcon icon={faEnvelope} className="text-gray-300 w-8 h-8" />
-                <input type="text" placeholder="Enter E-mail Address" className="placeholder:text-lg  focus:outline-none text-black border-0"/>
+                <input type="text" placeholder={language ? 'Enter E-mail Address' : 'ادخل البريد الالكتروني'} className="placeholder:text-lg  focus:outline-none text-black border-0"/>
                 </div>
               </div>
             </div>
@@ -31,8 +42,16 @@ return (
                     <img className="w-20 h-20" src={logo2} alt="logo" />
                   </div> */}
                   <div className="flex flex-col gap-2">
-                    <h2 className="font-bold">DOWNLOAD BETTERWAY FREE APP</h2>
-                    <p className="text-sm">Get the best shopping experience on your mobile</p>
+                    <h2 className="font-bold">
+                      {
+                        language ? "DOWNLOAD BETTERWAY FREE APP" : "حمل التطبيق"
+                      }
+                    </h2>
+                    <p className="text-sm">
+                      {
+                        language ? "Get access to exclusive offers!" : "احصل على عروض حصرية!"
+                      }
+                    </p>
                   </div>
               </div>
               <div className="flex justify-between gap-4">
@@ -46,16 +65,48 @@ return (
           <div className="flex justify-between">
           <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2 text-txt">
-          <h2 className="font-bold mb-2">LET US HELP YOU</h2>
-          <a href="#" className="text-sm font-light hover:text-btn">Help Center</a>
-          <Link to="/contact-us" className="text-sm font-light hover:text-btn">Contact Us</Link>
-          <Link to="/page/1" className="text-sm font-light hover:text-btn">About Us</Link>
-          <a href="#" className="text-sm font-light hover:text-btn">How to shop on BetterWay?</a>
-          <a href="#" className="text-sm font-light hover:text-btn">How to pay on BetterWay?</a>
-          <a href="#" className="text-sm font-light hover:text-btn">Dispute Resolution Policy</a>
+          <h2 className="font-bold mb-2">
+            {
+              language ? "LET US HELP YOU" : "دعنا نساعدك"
+            }
+          </h2>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "Help Center" : "مركز المساعدة"
+            }
+          </a>
+          <Link to="/contact-us" className="text-sm font-light hover:text-btn">
+            {
+              language ? "Contact Us" : "اتصل بنا"
+            }
+          </Link>
+          <Link to="/page/1" className="text-sm font-light hover:text-btn">
+            {
+              language ? "About Us" : "من نحن"
+            }
+          </Link>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "How to shop on BetterWay?" : "كيفية التسوق على بيتر واي؟"
+            }
+          </a>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "How to pay on BetterWay?" : "كيفية الدفع على بيتر واي؟"
+            }
+          </a>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "Dispute Resolution Policy" : "سياسة حل النزاعات"
+            }
+          </a>
           </div>
           <div className="flex flex-col gap-2 text-txt">
-          <h2 className="font-bold mb-2">JOIN US ON</h2>
+          <h2 className="font-bold mb-2">
+            {
+              language ? "JOIN US ON" : "انضم إلينا على"
+            }
+          </h2>
           <div className="flex gap-4 items-center ">
           <a href="https://www.facebook.com/betterwayegypt" target="_blank" className="text-lg font-light hover:text-btn"><FaFacebook/></a>
           <a href="https://www.instagram.com/betterwayegypt/" target="_blank" className="text-lgfont-light hover:text-btn"><FaInstagram/></a>
@@ -68,15 +119,43 @@ return (
           </div>
           <div className="md:flex hidden flex-col gap-10">
           <div className="flex flex-col gap-2 ">
-          <h2 className="font-bold mb-2">ABOUT BETTERWAY EGYPT</h2>
-          <a href="#" className="text-sm font-light hover:text-btn">BetterWay Logistics Services</a>
-          <a href="#" className="text-sm font-light hover:text-btn">BetterWay Careers</a>
-          <a href="#" className="text-sm font-light hover:text-btn">Terms and Conditions</a>
-          <a href="#" className="text-sm font-light hover:text-btn">Privacy Policy</a>
-          <a href="#" className="text-sm font-light hover:text-btn">Flash Sales</a>
+          <h2 className="font-bold mb-2">
+            {
+              language ? "ABOUT BETTERWAY" : "عن بيتر واي"
+            }
+          </h2>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "BetterWay Logistics Services" : "خدمات اللوجستية لبيتر واي"
+            }
+          </a>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "BetterWay Careers" : "وظائف بيتر واي"
+            }
+          </a>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "Terms and Conditions" : "الأحكام والشروط"
+            }
+          </a>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "Privacy Policy" : "سياسة الخصوصية"
+            }
+          </a>
+          <a href="#" className="text-sm font-light hover:text-btn">
+            {
+              language ? "Flash Sales" : "المبيعات السريعة"
+            }
+          </a>
           </div>
           <div className="flex flex-col gap-2 ">
-          <h2 className="font-bold mb-2">PAYMENT METHODS</h2>
+          <h2 className="font-bold mb-2">
+            {
+              language ? "PAYMENT METHODS" : "طرق الدفع"
+            }
+          </h2>
           <div className="flex gap-4 items-center ">
           <a href="#" className="text-lg font-light hover:text-btn"><FaCcMastercard/></a>
           <a href="#" className="text-lgfont-light hover:text-btn"><FaMoneyBill/></a>
