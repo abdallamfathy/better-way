@@ -27,7 +27,10 @@ export function Filter({ setMyData }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.get(`https://betterway.balkosolar.de/api/v1/categories/${categoryId}/filter`, form)
+        console.log(form);
+        const res = await axios.get(`https://betterway.balkosolar.de/api/v1/categories/${categoryId}/filter`, {
+            params : form
+        })
         console.log(res);
         setMyData(res?.data?.data);
       };
@@ -50,15 +53,7 @@ export function Filter({ setMyData }) {
       const lang = language === true ? 'ltr' : 'rtl';
 
       return <form dir={lang} onSubmit={handleSubmit} className="flex flex-col filter w-full">
-        {/* <div className="SEARCH m-6 ">
-            <input type="text" placeholder="Search" className="bg-gray-700  text-white rounded-3xl pl-4 py-2 w-full" />
-        </div>
-        <div className="CATEGORIES flex flex-col justify-center items-start p-4 border-b border-txt h-80">
-            <h1 className="2xl:text-3xl xl:text-2xl text-xl font-bold">CATEGORIES</h1>
-            <div className="p-5 flex flex-col gap-2 h-full w-full overflow-y-auto">
-                <CatNames/>
-            </div>
-        </div> */}
+         
         <div className="CITY flex flex-col justify-center items-start p-4 border-b border-txt h-80  ">
             <h1 className="2xl:text-3xl xl:text-2xl text-xl font-bold">
                 {
@@ -66,7 +61,7 @@ export function Filter({ setMyData }) {
                 }
             </h1>
             <div className="p-5 flex flex-col gap-2 h-full w-full  overflow-y-auto">
-                <CatGover setForm={setForm}/>
+                <CatGover setForm={setForm}/> 
             </div>
         </div>
         <div className="AREA flex flex-col justify-center items-start p-4 border-b border-txt h-80">
